@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &160364923814741107
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1375578613054562419}
+  - component: {fileID: 1194510889332446638}
+  m_Layer: 0
+  m_Name: SmallAsteroidField
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1375578613054562419
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 160364923814741107}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1194510889332446638
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 160364923814741107}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1211112ceb93004facd7c4caeb270c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  STARTING_ASTEROIDS: 2
+  MAX_ASTEROIDS: 6
+  FIELD_RADIUS: 3.25
+  ASTEROIDS_RESPAWN: 1
+  MIN_RESPAWN_RATE: 9
+  MAX_RESPAWN_RATE: 14
+  BIG_ASTEROID_CHANCE: 0
+  MAX_AI_MINES: 1
+  SMALL_ASTEROID: {fileID: 6240609709760065601, guid: 3fb8f0369cc97c0418b89006e8f59800,
+    type: 3}
+  MEDIUM_ASTEROID: {fileID: 5057324332943810590, guid: 06c82e6e0de10204d9fd09fbdb5ac9c4,
+    type: 3}
+  BIG_ASTEROID: {fileID: 6991140395242985567, guid: cc2383b1e2c19f043bf30f5a129c9113,
+    type: 3}

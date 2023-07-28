@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 12ea21fb2d6535840b0f1ae9b2f5e113, type: 3}
+  m_Name: FederationStation
+  m_EditorClassIdentifier: 
+  faction: Federation
+  building: {fileID: 6903687669478609984, guid: fa6091be3d7b2954c9b8bb4ce12f5821,
+    type: 3}
+  type: 2
+  buildingRadius: 2.5
+  buildTime: 12
+  mineralCost: 660
+  moneyCost: 16500

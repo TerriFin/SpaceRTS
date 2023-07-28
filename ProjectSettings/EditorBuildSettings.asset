@@ -1,0 +1,62 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: 6bd88d3512537a342b244049d480c125
+  - enabled: 1
+    path: Assets/Scenes/SkirmishMap.unity
+    guid: 2bbc2fc6aa09c3d4ebad38815e1cd9f6
+  - enabled: 1
+    path: Assets/Scenes/Federation/Federation1.unity
+    guid: ab909c23ed89cc047870e8de4ee2d42e
+  - enabled: 1
+    path: Assets/Scenes/Federation/Federation2.unity
+    guid: 1ab3720b45bc06f47a5bef75fc86f71f
+  - enabled: 1
+    path: Assets/Scenes/Federation/Federation3.unity
+    guid: 0c87667f0dfbbb24ba16de73066a5e00
+  - enabled: 1
+    path: Assets/Scenes/Federation/Federation4.unity
+    guid: 26d2c296fe394ed47ac6dd4e1ae93705
+  - enabled: 1
+    path: Assets/Scenes/Federation/Federation5.unity
+    guid: 9fd1cf1413832ee4abfb67dc717730d8
+  - enabled: 1
+    path: Assets/Scenes/Empire/Empire1.unity
+    guid: 9451afd2e88a3c44495a354cc0258346
+  - enabled: 1
+    path: Assets/Scenes/Empire/Empire2.unity
+    guid: 59aa696eb15fc7d428d29cbb2110fe6f
+  - enabled: 1
+    path: Assets/Scenes/Empire/Empire3.unity
+    guid: 041ffd6b500c02d449422041d3cc783c
+  - enabled: 1
+    path: Assets/Scenes/Empire/Empire4.unity
+    guid: f493c481939174640a1fd94ec2dc6a85
+  - enabled: 1
+    path: Assets/Scenes/Empire/Empire5.unity
+    guid: ba6a0bf8432bcd240831b9a39996e29b
+  - enabled: 1
+    path: Assets/Scenes/Pirate/Pirate1.unity
+    guid: 6c5f98b32258ae447bd114103249f703
+  - enabled: 1
+    path: Assets/Scenes/Pirate/Pirate2.unity
+    guid: 2af82ce158308b04789249050c590ee9
+  - enabled: 1
+    path: Assets/Scenes/Pirate/Pirate3.unity
+    guid: a5756d40802510b47aeeb187141816c2
+  - enabled: 1
+    path: Assets/Scenes/Pirate/Pirate4.unity
+    guid: c38aebd279b23784b9e68b9dadf8af5e
+  - enabled: 1
+    path: Assets/Scenes/Pirate/Pirate5.unity
+    guid: 7da092f434d89bb4580572fc7f3543ba
+  - enabled: 1
+    path: Assets/Scenes/Pirate/Pirate6.unity
+    guid: caaf84fd5b9cf7e46987b087964f619c
+  m_configObjects: {}

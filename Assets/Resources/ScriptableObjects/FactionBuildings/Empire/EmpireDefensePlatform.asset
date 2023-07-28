@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 12ea21fb2d6535840b0f1ae9b2f5e113, type: 3}
+  m_Name: EmpireDefensePlatform
+  m_EditorClassIdentifier: 
+  faction: Empire
+  building: {fileID: 4719421546167025344, guid: 986ed740533cb03498e17f7641af9058,
+    type: 3}
+  type: 3
+  buildingRadius: 4
+  buildTime: 5
+  mineralCost: 360
+  moneyCost: 3200
