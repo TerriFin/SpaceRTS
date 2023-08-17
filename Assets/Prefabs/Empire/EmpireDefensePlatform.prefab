@@ -120,6 +120,7 @@ MonoBehaviour:
   repairAmount: 14
   doesNotHeal: 0
   armed: 1
+  IGNORES_STAGE_BORDERS: 0
 --- !u!114 &-9063859829056819191
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -133,6 +134,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   FIGHTER: {fileID: 9049299962807796413, guid: ac05a702fc4cb7c48a9ee331237146b9, type: 3}
+  FIGHTER_DEAD_ZONE: 2
   MAX_AMOUNT: 1
   PRODUCTION_TIME: 20
   CHECK_ENEMIES_TIMER: 1

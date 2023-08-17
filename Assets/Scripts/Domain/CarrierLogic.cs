@@ -5,6 +5,7 @@ using UnityEngine;
 public class CarrierLogic : MonoBehaviour {
 
     public GameObject FIGHTER;
+    public float FIGHTER_DEAD_ZONE;
     public int MAX_AMOUNT;
     public float PRODUCTION_TIME;
     public float CHECK_ENEMIES_TIMER;
@@ -37,6 +38,7 @@ public class CarrierLogic : MonoBehaviour {
                 FighterMovement createdFighter = Instantiate(FIGHTER, transform.position, transform.rotation).GetComponent<FighterMovement>();
                 createdFighter.tag = tag;
                 createdFighter.CARRIER = gameObject;
+                createdFighter.TARGET_DEAD_AREA = FIGHTER_DEAD_ZONE;
                 Fighters.Add(createdFighter);
             }
         }

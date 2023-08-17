@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 8399453566840234675}
   - component: {fileID: 1818960883288239508}
   - component: {fileID: 2687328514078191841}
-  - component: {fileID: -7020222752303006770}
+  - component: {fileID: 2501259414949603302}
   - component: {fileID: 7959988731281995966}
   - component: {fileID: -5171109283058514181}
   - component: {fileID: 8399453566840234672}
@@ -240,7 +240,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fcaa5e4fb89cfaf48b3e672ae0eae6c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &-7020222752303006770
+--- !u!114 &2501259414949603302
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -249,12 +249,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 8399453566840234678}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 29626192559b9c54783f851c4007dc68, type: 3}
+  m_Script: {fileID: 11500000, guid: b798bb6302e5979469e37e58a13e26a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeSpentChasing: 8
-  CHANCE_TO_GO_AROUND: 0
-  CHANCE_TO_TARGET_UNDEFENDED_PLANETS: 0.5
+  timeSpentAtPoint: 8
+  shipPreference: 0.2
+  answerHelpRequestsPercentage: 0.75
+  patrolsMilitaryShips: 0
 --- !u!114 &7959988731281995966
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -286,6 +287,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   FIGHTER: {fileID: 9049299962807796413, guid: ac05a702fc4cb7c48a9ee331237146b9, type: 3}
+  FIGHTER_DEAD_ZONE: 1
   MAX_AMOUNT: 7
   PRODUCTION_TIME: 8.5
   CHECK_ENEMIES_TIMER: 1
