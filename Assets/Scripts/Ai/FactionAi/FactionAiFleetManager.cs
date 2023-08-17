@@ -14,7 +14,6 @@ public class FactionAiFleetManager : MonoBehaviour {
     public int howManyMoreDefenceFleets;
     public float updateTime;
     public bool ignoreCruisers;
-    public bool ignoreSpecialShips;
 
     public List<Fleet> AttackFleets { get; private set; }
     public List<Fleet> DefenceFleets { get; private set; }
@@ -38,8 +37,10 @@ public class FactionAiFleetManager : MonoBehaviour {
             yield return new WaitForSeconds(updateTime);
 
             if (factionAiBase.ON) {
-                List<Hitpoints> militaryShips = ignoreCruisers ? ShipsManager.MilShips[tag].FindAll(hitpoints => hitpoints.GetComponent<Selectable>().selectableType != Selectable.Types.cruiser) : ShipsManager.MilShips[tag];
-                if (ignoreSpecialShips) militaryShips = militaryShips.FindAll((Hitpoints ship) => ship.GetComponent<Selectable>().selectableType != Selectable.Types.specialShip);
+                List<Hitpoints> militaryShips = ignoreCruisers ? ShipsManager.MilShips[tag].FindAll(hitpoints => {
+                    Selectable data = hitpoints.GetComponent<Selectable>();
+                    return data.selectableType != Selectable.Types.cruiser && data.selectableType != Selectable.Types.specialShip;
+                }) : ShipsManager.MilShips[tag].FindAll(hitpoints => hitpoints.GetComponent<Selectable>().selectableType != Selectable.Types.specialShip);
                 int totalShips = 0;
                 foreach (Hitpoints ship in militaryShips) {
                     if (ship.CurrentHp > ship.maxHp * shipRequiredHpPercentage) totalShips++;

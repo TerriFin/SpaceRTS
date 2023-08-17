@@ -17,7 +17,7 @@ public class BrawlerCombatModule : CombatModule {
             }
         } else {
             Vector2 factionCenterPoint = BuildingManager.GetFactionCenterPoint(tag);
-            if (Vector2.Distance(transform.position, factionCenterPoint) < 10) {
+            if (factionCenterPoint == Vector2.zero || Vector2.Distance(transform.position, factionCenterPoint) < 10) {
                 Collider2D closestArmedEnemy = Sensors.GetClosestMilitaryEnemy();
                 if (closestArmedEnemy == null) {
                     closestArmedEnemy = Sensors.GetClosestArmedEnemy();

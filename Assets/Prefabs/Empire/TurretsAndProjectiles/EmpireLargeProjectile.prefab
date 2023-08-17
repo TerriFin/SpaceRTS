@@ -99,7 +99,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 18
-  timeExisting: 0.75
+  timeExisting: 0.8
   projectileSpeed: 11
   origin: {x: 0, y: 0}
   MINING_PROJECTILE: 0

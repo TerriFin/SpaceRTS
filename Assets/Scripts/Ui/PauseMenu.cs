@@ -27,7 +27,8 @@ public class PauseMenu : MonoBehaviour {
     private void Pause() {
         IS_PAUSED = true;
         PAUSE_MENU_UI.SetActive(true);
-        AudioListener.volume = 0f;
+        MusicManager.SetVolume("sfxVolume", 0.0f);
+        MusicManager.SetVolume("musicVolume", 0.75f);
         Time.timeScale = 0f;
     }
 
@@ -35,13 +36,15 @@ public class PauseMenu : MonoBehaviour {
         IS_PAUSED = false;
         PAUSE_MENU_UI.SetActive(false);
         if (!CommunicationMenu.IS_PAUSED) {
-            AudioListener.volume = 1f;
+            MusicManager.SetVolume("sfxVolume", 1.0f);
+            MusicManager.SetVolume("musicVolume", 1.0f);
             Time.timeScale = 1f;
         }
     }
 
     public void Quit() {
-        AudioListener.volume = 1f;
+        MusicManager.SetVolume("sfxVolume", 1.0f);
+        MusicManager.SetVolume("musicVolume", 1.0f);
         Time.timeScale = 1f;
         SceneManager.LoadScene(0);
     }

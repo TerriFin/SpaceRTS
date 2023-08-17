@@ -183,7 +183,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CARRIER: {fileID: 0}
   FIGHTER_RANGE: 12
-  TARGET_DEAD_AREA: 1.25
+  TARGET_DEAD_AREA: 2.25
   SPEED: 95
   TURN_RATE: 115
   CHECK_NEW_TARGET_TIMER: 3

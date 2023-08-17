@@ -5,6 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour {
 
+    private void Start() {
+        MusicManager.SetVolume("sfxVolume", 1.0f);
+        MusicManager.SetVolume("musicVolume", 1.0f);
+        MusicManager.PlayTheme("Menu");
+    }
+
     public void PlayGame() {
         print("STARTED GAME");
         FindObjectOfType<MapGeneratorManager>().WHERE_TO_RETURN_IN_MENU = "SkirmishMenu";

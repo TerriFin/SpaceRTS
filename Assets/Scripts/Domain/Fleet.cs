@@ -72,7 +72,10 @@ public class Fleet : MonoBehaviour {
 
     public void FillFleet() {
         if (!FleetFull()) {
-            List<Hitpoints> militaryShips = ignoreCruisers ? ShipsManager.MilShips[tag].FindAll(hitpoints => hitpoints.GetComponent<Selectable>().selectableType != Selectable.Types.cruiser) : ShipsManager.MilShips[tag];
+            List<Hitpoints> militaryShips = ignoreCruisers ? ShipsManager.MilShips[tag].FindAll(hitpoints => {
+                Selectable data = hitpoints.GetComponent<Selectable>();
+                return data.selectableType != Selectable.Types.cruiser && data.selectableType != Selectable.Types.specialShip;
+            }) : ShipsManager.MilShips[tag].FindAll(hitpoints => hitpoints.GetComponent<Selectable>().selectableType != Selectable.Types.specialShip);
             foreach (Hitpoints ship in militaryShips) {
                 MilitaryShipClickReact current = ship.GetComponent<MilitaryShipClickReact>();
                 if (current.attachedFleet == null && ship.CurrentHp > ship.maxHp * shipRequiredHpPercentage) {

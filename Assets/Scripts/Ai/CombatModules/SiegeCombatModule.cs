@@ -7,7 +7,15 @@ public class SiegeCombatModule : CombatModule {
     public bool TURRET;
 
     public override void SetNewTargetArmed() {
-        if (TURRET || Sensors.ArmedAllies.Count >= Sensors.ArmedEnemies.Count) {
+        if (TURRET) {
+            Collider2D closestMilitaryEnemy = Sensors.GetClosestMilitaryEnemy();
+            if (closestMilitaryEnemy != null && Vector2.Distance(transform.position, closestMilitaryEnemy.transform.position) <= preferredCombatDistance * 0.5f) {
+                Controls.SetSecondaryTargetPos(closestMilitaryEnemy.transform.position);
+                Controls.SetOnlyLook(true);
+            } else {
+                SetNewTargetNotArmed();
+            }
+        } else if (Sensors.ArmedAllies.Count >= Sensors.ArmedEnemies.Count) {
             SetNewTargetNotArmed();
         } else {
             Collider2D closestEnemy = GetClosestEnemy();

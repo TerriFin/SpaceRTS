@@ -11,6 +11,7 @@ public class Production : MonoBehaviour {
     public float productionTime;
     public int productionLimit;
     public bool on;
+    public bool follower;
     public GameObject productionBar;
 
     public int CurrentShips { get; private set; }
@@ -67,12 +68,15 @@ public class Production : MonoBehaviour {
         GameObject ship = Instantiate(producedShip);
         ship.tag = tag;
         ship.transform.position = transform.position;
+        ship.transform.rotation = transform.rotation;
         ship.GetComponent<IShipMovement>().SetOrigin(gameObject);
 
         if (Waypoint != null && Waypoint.WaypointSet) {
             ship.GetComponent<AiBase>().SetAiActive(false);
             ship.GetComponent<IShipMovement>().SetPrimaryTargetPos(Waypoint.CurrentWaypoint);
         }
+
+        if (follower) ship.GetComponent<AiBase>().ProductionComponent = this;
 
         Producing = false;
     }

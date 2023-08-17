@@ -12,6 +12,7 @@ public class AiBase : MonoBehaviour {
 
     private IAi Ai;
     public CombatModule CombatModule { get; private set; }
+    public Production ProductionComponent { get; set; }
     private Sensors Sensors;
     private IShipMovement Controls;
     private Coroutine CurrentCombatModuleActivationCoroutine;
@@ -33,8 +34,15 @@ public class AiBase : MonoBehaviour {
     private IEnumerator AiLoop() {
         while (true) {
             yield return new WaitForSeconds(updateTime);
-
-            if (aiActive && combatModuleActive && CombatModule != null) {
+            // If production component is set, follow it and attack if possible.
+            if (ProductionComponent != null) {
+                if (Sensors.Enemies.Count > 0 && CurrentCombatModuleActivationCoroutine == null && (Controls.AreWeThereYet() || Sensors.ArmedEnemiesMilitary.Count > 0 || Sensors.Enemies.Count > combatModuleActivationNeededCivilians)) {
+                    CurrentCombatModuleActivationCoroutine = StartCoroutine(CombatModuleActivationTimer());
+                } else {
+                    CombatModule.StopCombatModule();
+                    Controls.SetPrimaryTargetPos(ProductionComponent.transform.position);
+                }
+            } else if (aiActive && combatModuleActive && CombatModule != null) {
                 if (Sensors.Enemies.Count > 0 && CurrentCombatModuleActivationCoroutine == null && (Controls.AreWeThereYet() || Sensors.ArmedEnemiesMilitary.Count > 0 || Sensors.Enemies.Count > combatModuleActivationNeededCivilians)) {
                     CurrentCombatModuleActivationCoroutine = StartCoroutine(CombatModuleActivationTimer());
                 } else {

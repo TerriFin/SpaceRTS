@@ -77,7 +77,8 @@ public class FactionScoresManager : MonoBehaviour {
                 GAME_END_SCREEN.SetActive(true);
                 GAME_END_SCREEN.GetComponent<RectTransform>().SetAsLastSibling();
                 FACTION_WON_TEXT.text = new List<Faction>(FactionManager.Factions.Values)[0].factionTag + "\n HAS WON";
-                AudioListener.volume = 0f;
+                MusicManager.SetVolume("sfxVolume", 0.0f);
+                MusicManager.SetVolume("musicVolume", 0.75f);
                 Time.timeScale = 0f;
             }
 

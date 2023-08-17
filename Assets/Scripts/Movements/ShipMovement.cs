@@ -90,6 +90,8 @@ public class ShipMovement : MonoBehaviour, IShipMovement {
     }
 
     public void SetPrimaryTargetPos(Vector2 target) {
+        if (Vector2.Distance(transform.position, target) <= primaryDeadArea) return;
+
         if (target == Vector2.zero) {
             target = new Vector2(Random.Range(0.01f, 0.02f), Random.Range(0.01f, 0.02f));
         }
@@ -103,6 +105,8 @@ public class ShipMovement : MonoBehaviour, IShipMovement {
     }
 
     public void SetSecondaryTargetPos(Vector2 target) {
+        if (Vector2.Distance(transform.position, target) <= secondaryDeadArea) return;
+
         if (target == Vector2.zero) {
             target = new Vector2(Random.Range(0.01f, 0.02f), Random.Range(0.01f, 0.02f));
         }

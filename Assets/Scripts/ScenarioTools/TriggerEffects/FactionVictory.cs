@@ -16,7 +16,8 @@ public class FactionVictory : MonoBehaviour, IScenarioEffect {
         MapGeneratorManager mapManager = FindObjectOfType<MapGeneratorManager>();
         FACTION_WON_TEXT.text = winningFaction.factionTag + "\n HAS WON";
         if (FactionManager.PlayerFaction != null && winningFaction.factionTag == FactionManager.PlayerFaction.factionTag) PlayerPrefs.SetInt(WON_STAGE, 1);
-        AudioListener.volume = 0f;
+        MusicManager.SetVolume("sfxVolume", 0.0f);
+        MusicManager.SetVolume("musicVolume", 0.75f);
         Time.timeScale = 0f;
     }
 }

@@ -65,7 +65,7 @@ public class MapGeneratorManager : MonoBehaviour {
     private void Awake() {
         if (!DEVELOPMENT) {
             if (Instance != null && Instance != this) {
-                Destroy(this.gameObject);
+                Destroy(gameObject);
             } else {
                 DontDestroyOnLoad(transform.gameObject);
 

@@ -10,7 +10,6 @@ public class TouchInputHandler : MonoBehaviour {
     public float MIN_ZOOM_LEVEL;
     public float MAX_ZOOM_LEVEL;
     public float SMOOTH_MAX_ZOOM_LEVEL;
-    public AudioMixer MASTER_MIXER;
     public GameObject clickIndicator;
 
     private float timeTouchStarted;
@@ -20,7 +19,6 @@ public class TouchInputHandler : MonoBehaviour {
     private Vector3 ZoomStartCameraPos;
     private LevelBorderManager BorderManager;
     private MineralBarUi commandCenterMineralUpdater;
-    private float ZOOM_LEVEL_DIFFERENCE;
 
     private void Start() {
         timeTouchStarted = 0f;
@@ -30,7 +28,6 @@ public class TouchInputHandler : MonoBehaviour {
         ZoomStartCameraPos = Vector3.zero;
         BorderManager = FindObjectOfType<LevelBorderManager>();
         commandCenterMineralUpdater = FindObjectOfType<MineralBarUi>();
-        ZOOM_LEVEL_DIFFERENCE = MAX_ZOOM_LEVEL - MIN_ZOOM_LEVEL;
     }
 
     private void Update() {
@@ -122,7 +119,7 @@ public class TouchInputHandler : MonoBehaviour {
                     }
 
                     // Handle sound
-                    MASTER_MIXER.SetFloat("sfxVolume", -25.0f * (ZOOM_LEVEL_DIFFERENCE - (MAX_ZOOM_LEVEL - currentZoomLevel)) / ZOOM_LEVEL_DIFFERENCE + 20);
+                    MusicManager.SetVolume("sfxVolume", 1.0f - 0.5f * (currentZoomLevel / MAX_ZOOM_LEVEL));
                 }
             }
         }

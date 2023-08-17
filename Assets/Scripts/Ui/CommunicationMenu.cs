@@ -29,7 +29,8 @@ public class CommunicationMenu : MonoBehaviour {
 
         COMMUNICATION_MENU.SetActive(true);
         UpdateCommunicationMenu();
-        AudioListener.volume = 0f;
+        MusicManager.SetVolume("sfxVolume", 0.0f);
+        MusicManager.SetVolume("musicVolume", 0.75f);
         Time.timeScale = 0f;
         IS_PAUSED = true;
     }
@@ -38,7 +39,8 @@ public class CommunicationMenu : MonoBehaviour {
         index++;
         if (index >= MESSAGES.Length) {
             COMMUNICATION_MENU.SetActive(false);
-            AudioListener.volume = 1f;
+            MusicManager.SetVolume("sfxVolume", 1.0f);
+            MusicManager.SetVolume("musicVolume", 1.0f);
             Time.timeScale = 1f;
             IS_PAUSED = false;
         } else UpdateCommunicationMenu();

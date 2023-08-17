@@ -8,6 +8,7 @@ public class ComputerInputHandler : MonoBehaviour {
     public float TAP_LENGTH;
     public GameObject clickIndicator;
     public float enemyBuildingCheckRadiusInPath;
+    public string SCREENSHOT_PATH;
 
     private float timeClickStarted = 0f;
     private LevelBorderManager BorderManager;
@@ -20,6 +21,11 @@ public class ComputerInputHandler : MonoBehaviour {
     }
 
     private void Update() {
+        if (Input.GetKeyDown(KeyCode.Space)) {
+            ScreenCapture.CaptureScreenshot(SCREENSHOT_PATH + System.Guid.NewGuid().ToString() + ".png", 1);
+            print("SCREENSHOT TAKEN!");
+        }
+
         if (!PauseMenu.IS_PAUSED && CheckTapIsInPlayArea(Input.mousePosition)) {
             if (Input.GetMouseButtonDown(0)) {
                 timeClickStarted = Time.time;

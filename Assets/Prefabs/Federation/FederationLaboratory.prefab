@@ -122,11 +122,11 @@ MonoBehaviour:
   explosionSize: 9
   asteroid: 0
   DESTRUCTION_OPINION_PENALTY: 20
-  maxHp: 3500
-  repairDuration: 10
+  maxHp: 5000
+  repairDuration: 7
   repairAmount: 250
   doesNotHeal: 0
-  armed: 0
+  armed: 1
   IGNORES_STAGE_BORDERS: 0
 --- !u!114 &5514066007342664146
 MonoBehaviour:
@@ -190,9 +190,10 @@ MonoBehaviour:
     type: 3}
   moneyCost: 30000
   metalCost: 7500
-  productionTime: 100
+  productionTime: 200
   productionLimit: 1
   on: 1
+  follower: 0
   productionBar: {fileID: 3872933452904820574, guid: 84e7668b1b0dc1f47b821902fc0827ba,
     type: 3}
 --- !u!114 &1053889699239705758
