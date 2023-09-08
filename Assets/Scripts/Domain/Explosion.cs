@@ -16,7 +16,7 @@ public class Explosion : MonoBehaviour {
         transform.Rotate(new Vector3(0, 0, Random.Range(0, 360)));
     }
 
-    public void Explode(string factionName, float size, int damage, Vector2 origin, float givenAlphaDecayRate) {
+    public void Explode(string factionName, float size, int damage, Vector2 origin, float givenAlphaDecayRate, bool destroysAsteroids = false) {
         if (!FactionManager.Factions.ContainsKey(factionName)) {
             Destroy(gameObject);
             return;
@@ -35,7 +35,8 @@ public class Explosion : MonoBehaviour {
         foreach (Collider2D collider in colliders) {
             if (collider.gameObject.layer == LayerMask.NameToLayer("Ship") || collider.gameObject.layer == LayerMask.NameToLayer("Building") || collider.tag == "Asteroid") {
                 if (collider.tag == "Asteroid" || RelationShipManager.AreFactionsInWar(factionName, collider.tag)) {
-                    collider.GetComponent<Hitpoints>().TakeDamage(damage, origin, factionName);
+                    if (destroysAsteroids && collider.tag == "Asteroid") collider.GetComponent<Hitpoints>().TakeDamage(damage * 7, origin, factionName);
+                    else collider.GetComponent<Hitpoints>().TakeDamage(damage, origin, factionName);
                 }
             }
         }

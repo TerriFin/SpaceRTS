@@ -45,7 +45,7 @@ public class RaiderAi : MonoBehaviour, IAi {
 
     public GameObject GetNewTarget() {
         if (RelationShipManager.War[tag].Count > 0) {
-            string factionToRaid = RelationShipManager.GetRandomFactionWeAreAttacking(tag);
+            string factionToRaid = RelationShipManager.GetRandomOrGoodTargetFaction(tag);
             if (Random.Range(0.0f, 1.0f) < CHANCE_TO_TARGET_UNDEFENDED_PLANETS) {
                 PlanetCaptureLogic undefendedPlanet = GetClosestUndefendedFactionPlanet(factionToRaid);
                 if (undefendedPlanet != null) return undefendedPlanet.gameObject;

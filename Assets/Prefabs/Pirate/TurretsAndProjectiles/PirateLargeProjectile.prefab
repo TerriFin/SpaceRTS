@@ -102,6 +102,7 @@ MonoBehaviour:
   timeExisting: 2
   projectileSpeed: 5
   origin: {x: 0, y: 0}
+  MINING_PROJECTILE: 0
 --- !u!70 &6536429442038835154
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -116,5 +117,5 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.05, y: 0.16}
+  m_Size: {x: 0.09, y: 0.16}
   m_Direction: 0

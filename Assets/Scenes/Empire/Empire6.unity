@@ -6376,6 +6376,7 @@ Transform:
   - {fileID: 1789527806}
   - {fileID: 59136703}
   - {fileID: 1798536722}
+  - {fileID: 1884799072}
   - {fileID: 1817551705}
   - {fileID: 1595811017}
   m_Father: {fileID: 0}
@@ -14510,6 +14511,7 @@ MonoBehaviour:
   clickIndicator: {fileID: 4186882218027370042, guid: 5201bf13e074c304ca0f27756b1d3106,
     type: 3}
   enemyBuildingCheckRadiusInPath: 0
+  SCREENSHOT_PATH: 
 --- !u!1 &1059088305
 GameObject:
   m_ObjectHideFlags: 0
@@ -21459,7 +21461,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 431066859}
-  m_RootOrder: 15
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1595811018
 MonoBehaviour:
@@ -24558,7 +24560,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 431066859}
-  m_RootOrder: 14
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1817551706
 MonoBehaviour:
@@ -25497,6 +25499,118 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 180d9cda845bd0a49aa038fedc2d925c, type: 3}
+--- !u!1 &1884799071
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1884799072}
+  - component: {fileID: 1884799077}
+  - component: {fileID: 1884799076}
+  - component: {fileID: 1884799075}
+  - component: {fileID: 1884799074}
+  - component: {fileID: 1884799073}
+  m_Layer: 0
+  m_Name: PirateStartWarSpawnEmpireRaidersLoop
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1884799072
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1884799071}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 431066859}
+  m_RootOrder: 14
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1884799073
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1884799071}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47bff8ccc2b1e734db554d36704f15c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SHIP: {fileID: 5508972834936203583, guid: b1195f1cbc1038d48a9cc8f519fbc1ae, type: 3}
+  AMOUNT: 3
+--- !u!114 &1884799074
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1884799071}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53044c73cc0bf944a938edc39f04ac0a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TIMER: 1
+  OBJECTS_TO_DESTROY:
+  - {fileID: 2090790290}
+  - {fileID: 1488140861}
+--- !u!114 &1884799075
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1884799071}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 049852d182616c64f80ee90e79e98b36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TIMER: 1
+  FACTION: Pirate
+  AMOUNT: 54
+  LESS_THAN: 1
+  GREATER_THAN: 0
+  TYPE: 0
+  SPECIFIC_TYPE: 0
+--- !u!114 &1884799076
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1884799071}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97f59a7ce94acf1408e7017f7e6060f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TIMER: 8
+  LOOPS: 1
+--- !u!114 &1884799077
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1884799071}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf17f6ef1e1a34e4d99b491450dc3abc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TIMER: 1
 --- !u!1001 &1888792110
 PrefabInstance:
   m_ObjectHideFlags: 0

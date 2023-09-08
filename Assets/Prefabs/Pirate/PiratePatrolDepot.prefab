@@ -122,6 +122,7 @@ MonoBehaviour:
   repairAmount: 125
   doesNotHeal: 0
   armed: 0
+  IGNORES_STAGE_BORDERS: 0
 --- !u!114 &-212977949803535241
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -182,11 +183,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   producedShip: {fileID: 4222341225281556822, guid: 049b4664e1fcbe248a51a1866bcb1d45,
     type: 3}
-  moneyCost: 650
-  metalCost: 42
+  moneyCost: 500
+  metalCost: 48
   productionTime: 6
   productionLimit: 4
   on: 1
+  follower: 0
   productionBar: {fileID: 3872933452904820574, guid: 84e7668b1b0dc1f47b821902fc0827ba,
     type: 3}
 --- !u!114 &2657123196569134289
@@ -251,6 +253,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c281705f4bfb656438d5c5fa19cf9692, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PRICE: 0
   UPDATE_TIMER: 15
 --- !u!58 &3454698015457932809
 CircleCollider2D:

@@ -49,7 +49,7 @@ public class UseAttackFleets : FactionBlockWithSkips, ICallHelp {
         EnemyFactionScores = enemyFactionScores;
 
         if (RelationShipManager.IsFactionInWar(tag) && (BuildingManager.BuildingAmountsByFactionAndType[tag][Selectable.Types.commandCenter.ToString()].Count == 0 || EnemyFactionScores < FactionManager.FactionScoresManager.FactionMilitaryScores[tag] * REQUIRED_ENEMY_AMOUNT_TO_DEFEND * BuildingManager.BuildingsMineralStorageFillPercentage(tag) * FactionManager.Factions[tag].FactionMoneyStorageFillPercentage() || WarManager != null && WarManager.TotalWarTriggered)) {
-            string targetFaction = RelationShipManager.GetRandomFactionWeAreAttacking(tag);
+            string targetFaction = RelationShipManager.GetRandomOrGoodTargetFaction(tag);
             if (targetFaction == null) targetFaction = RelationShipManager.GetRandomFactionWeAreFighting(tag);
             float randomNumber = Random.value;
             if (randomNumber < CalculatedMineAttackPercentage && FactionManager.Factions[tag].GetFactionMineralResourcesAmount() < SAFE_MINERAL_OVERFLOW_AMOUNT && BuildingManager.BuildingAmountsByFactionAndType[targetFaction][Selectable.Types.mine.ToString()].Count > 0 && !IsThereSafeAvailableAsteroidField()) {

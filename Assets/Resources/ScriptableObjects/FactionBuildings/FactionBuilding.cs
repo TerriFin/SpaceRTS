@@ -20,5 +20,6 @@ public class FactionBuilding : ScriptableObject {
     public float buildTime;
     public int mineralCost;
     public int moneyCost;
+    public string requiredPrefString;
 
 }

@@ -18,7 +18,7 @@ public class BuildableBuildingsManager : MonoBehaviour {
         FactionBuilding[] foundBuildings = Resources.LoadAll<FactionBuilding>("ScriptableObjects/FactionBuildings");
 
         foreach (FactionBuilding building in foundBuildings) {
-            if (building != null && FactionManager.Factions.ContainsKey(building.faction)) {
+            if (building != null && FactionManager.Factions.ContainsKey(building.faction) && (building.requiredPrefString == "" || PlayerPrefs.HasKey(building.requiredPrefString))) {
                 BuildableBuildings[building.faction].Add(building);
             }
         }

@@ -124,6 +124,7 @@ MonoBehaviour:
   repairAmount: 204
   doesNotHeal: 0
   armed: 0
+  IGNORES_STAGE_BORDERS: 0
 --- !u!114 &8612128046854581515
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -189,6 +190,7 @@ MonoBehaviour:
   productionTime: 70
   productionLimit: 1
   on: 1
+  follower: 0
   productionBar: {fileID: 3872933452904820574, guid: 84e7668b1b0dc1f47b821902fc0827ba,
     type: 3}
 --- !u!114 &2354239215928084731
@@ -279,6 +281,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c281705f4bfb656438d5c5fa19cf9692, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PRICE: 0
   UPDATE_TIMER: 15
 --- !u!58 &2447984417498771646
 CircleCollider2D:

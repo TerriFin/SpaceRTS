@@ -122,6 +122,7 @@ MonoBehaviour:
   repairAmount: 85
   doesNotHeal: 0
   armed: 0
+  IGNORES_STAGE_BORDERS: 0
 --- !u!114 &-5090566365226765863
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -183,10 +184,11 @@ MonoBehaviour:
   producedShip: {fileID: 477859437812526896, guid: 08690d784621403478c954a146b30589,
     type: 3}
   moneyCost: 525
-  metalCost: 120
+  metalCost: 117
   productionTime: 8.5
   productionLimit: 4
   on: 1
+  follower: 0
   productionBar: {fileID: 3872933452904820574, guid: 84e7668b1b0dc1f47b821902fc0827ba,
     type: 3}
 --- !u!114 &5068654882026552661
@@ -251,6 +253,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c281705f4bfb656438d5c5fa19cf9692, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PRICE: 0
   UPDATE_TIMER: 15
 --- !u!61 &5669505818684368977
 BoxCollider2D:

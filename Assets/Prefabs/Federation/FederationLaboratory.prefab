@@ -123,7 +123,7 @@ MonoBehaviour:
   asteroid: 0
   DESTRUCTION_OPINION_PENALTY: 20
   maxHp: 5000
-  repairDuration: 7
+  repairDuration: 6
   repairAmount: 250
   doesNotHeal: 0
   armed: 1
@@ -173,7 +173,7 @@ MonoBehaviour:
   mineralStorageBar: {fileID: 1457231408096033473, guid: 6bd221621fa92004c9cffa6b03c84524,
     type: 3}
   currentMineralStorage: 0
-  maxMineralStorage: 8500
+  maxMineralStorage: 5000
 --- !u!114 &3039333322685448411
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -189,8 +189,8 @@ MonoBehaviour:
   producedShip: {fileID: 3056937041603306427, guid: ba0d9772e99ec7b40a366d6f891e9d5e,
     type: 3}
   moneyCost: 30000
-  metalCost: 7500
-  productionTime: 200
+  metalCost: 3500
+  productionTime: 220
   productionLimit: 1
   on: 1
   follower: 0
@@ -361,7 +361,7 @@ Transform:
   m_GameObject: {fileID: 2384938379066916394}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 150, y: 150, z: 1}
+  m_LocalScale: {x: 300, y: 300, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 940567062768450969}

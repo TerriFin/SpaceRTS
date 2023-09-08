@@ -111,7 +111,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e415c8169801e3f48a2d1a59705dc514, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedForceAmount: 110
+  speedForceAmount: 120
   rotationForceAmount: 240
   primaryDeadArea: 1.75
   secondaryDeadArea: 0.75
@@ -139,7 +139,7 @@ MonoBehaviour:
   explosionSize: 2
   asteroid: 0
   DESTRUCTION_OPINION_PENALTY: 0
-  maxHp: 155
+  maxHp: 175
   repairDuration: 2
   repairAmount: 16
   doesNotHeal: 0
@@ -310,6 +310,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8152272244134938606}
     m_Modifications:
+    - target: {fileID: -7674726357164308188, guid: b170f8c0788d4c74da126e3bb332a8bc,
+        type: 3}
+      propertyPath: m_Volume
+      value: 0.19
+      objectReference: {fileID: 0}
     - target: {fileID: 56668337874301652, guid: b170f8c0788d4c74da126e3bb332a8bc,
         type: 3}
       propertyPath: m_Name

@@ -52,13 +52,13 @@ public class SkirmishMapManager : MonoBehaviour {
                                         case 4:
                                             currentFoundFactionAiBase.aiDecisionTimer = 0.8f;
                                             currentFoundFaction.aiBonusMultiplier = 1.25f;
-                                            if (aiCargoManager != null) aiCargoManager.MINE_CARGO_POINTS += 5;
+                                            if (aiCargoManager != null) aiCargoManager.MINE_CARGO_POINTS += 7;
                                             if (aiBuildingManager != null) aiBuildingManager.CHANCE_TO_BUILD_PRODUCTION_WHEN_NOT_ENOUGH_RESOURCE_FLOW += 0.15f;
                                             break;
                                         case 5:
                                             currentFoundFactionAiBase.aiDecisionTimer = 0.7f;
                                             currentFoundFaction.aiBonusMultiplier = 1.5f;
-                                            if (aiCargoManager != null) aiCargoManager.MINE_CARGO_POINTS += 10;
+                                            if (aiCargoManager != null) aiCargoManager.MINE_CARGO_POINTS += 14;
                                             if (aiBuildingManager != null) aiBuildingManager.CHANCE_TO_BUILD_PRODUCTION_WHEN_NOT_ENOUGH_RESOURCE_FLOW += 0.2f;
                                             break;
                                     }

@@ -99,8 +99,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 11
-  timeExisting: 0.7
-  projectileSpeed: 11
+  timeExisting: 0.8
+  projectileSpeed: 9
   origin: {x: 0, y: 0}
   MINING_PROJECTILE: 0
 --- !u!70 &2080063071578276614
@@ -117,5 +117,5 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.065, y: 0.16}
+  m_Size: {x: 0.07, y: 0.18}
   m_Direction: 0

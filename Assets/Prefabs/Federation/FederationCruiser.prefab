@@ -147,7 +147,7 @@ MonoBehaviour:
   explosionSize: 5
   asteroid: 0
   DESTRUCTION_OPINION_PENALTY: 0
-  maxHp: 800
+  maxHp: 750
   repairDuration: 2
   repairAmount: 30
   doesNotHeal: 0

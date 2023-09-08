@@ -1504,7 +1504,7 @@ MonoBehaviour:
   fleetRegroupDistance: 4
   orderLengthSeconds: 200
   orderRepeatSeconds: 12
-  howManyMoreDefenceFleets: 1
+  howManyMoreDefenceFleets: 2
   updateTime: 5
   ignoreCruisers: 0
 --- !u!114 &378675479
@@ -1604,7 +1604,7 @@ MonoBehaviour:
     mine: 0
     defense: 0
     desiredAmount: 1
-    maxPercentageOfAllBuildings: 0.1
+    maxPercentageOfAllBuildings: 0.125
   - building: {fileID: 11400000, guid: a64b69dcdf16bda4bbc420639c78ef14, type: 2}
     commandCenter: 0
     mine: 0
@@ -1623,6 +1623,12 @@ MonoBehaviour:
     defense: 0
     desiredAmount: 1
     maxPercentageOfAllBuildings: 0
+  - building: {fileID: 11400000, guid: d46f1b1e301842f46b17493393040679, type: 2}
+    commandCenter: 0
+    mine: 0
+    defense: 0
+    desiredAmount: 0
+    maxPercentageOfAllBuildings: 0.075
 --- !u!114 &378675483
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1657,9 +1663,9 @@ MonoBehaviour:
   maxSkips: 40
   MIN_FLEETS: 1
   MAX_FLEETS: 8
-  PLANET_ATTACK_PERCENTAGE: 0.25
+  PLANET_ATTACK_PERCENTAGE: 0.33
   MINE_ATTACK_PERCENTAGE: 0.45
-  ATTACK_ENEMY_VULNERABLE_MINE_PERCENTAGE: 0.2
+  ATTACK_ENEMY_VULNERABLE_MINE_PERCENTAGE: 0.4
   COMMAND_CENTER_ATTACK_PERCENTAGE: 0.33
   REQUIRED_ENEMY_AMOUNT_TO_DEFEND: 2.3
   SAFE_MINERAL_OVERFLOW_AMOUNT: 0
@@ -1741,7 +1747,7 @@ MonoBehaviour:
   minSkips: 10
   maxSkips: 20
   COMMAND_CENTER_CARGO_POINTS: 3
-  MINE_CARGO_POINTS: 16
+  MINE_CARGO_POINTS: 17
   PRODUCTION_CARGO_POINTS: 1
   SMALL_CARGO_POINT_COST: 3
   MEDIUM_CARGO_POINT_COST: 9
@@ -4951,6 +4957,7 @@ MonoBehaviour:
   clickIndicator: {fileID: 4186882218027370042, guid: 5201bf13e074c304ca0f27756b1d3106,
     type: 3}
   enemyBuildingCheckRadiusInPath: 0
+  SCREENSHOT_PATH: 
 --- !u!1 &1087662506
 GameObject:
   m_ObjectHideFlags: 0
@@ -5673,7 +5680,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.000061035156, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1409620261
@@ -6898,7 +6905,7 @@ MonoBehaviour:
     mine: 0
     defense: 0
     desiredAmount: 3
-    maxPercentageOfAllBuildings: 0.15
+    maxPercentageOfAllBuildings: 0.175
   - building: {fileID: 11400000, guid: bb2115765d4a0c54a82031f80017f56d, type: 2}
     commandCenter: 0
     mine: 0
@@ -6916,7 +6923,13 @@ MonoBehaviour:
     mine: 0
     defense: 0
     desiredAmount: 1
-    maxPercentageOfAllBuildings: 0.05
+    maxPercentageOfAllBuildings: 0.075
+  - building: {fileID: 11400000, guid: 8e8e0037e5b98f446b7c1205fbea728b, type: 2}
+    commandCenter: 0
+    mine: 0
+    defense: 0
+    desiredAmount: 0
+    maxPercentageOfAllBuildings: 0
 --- !u!114 &1563128016
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6934,8 +6947,8 @@ MonoBehaviour:
   maxSkips: 36
   MIN_FLEETS: 1
   MAX_FLEETS: 8
-  PLANET_ATTACK_PERCENTAGE: 0.35
-  MINE_ATTACK_PERCENTAGE: 0.6
+  PLANET_ATTACK_PERCENTAGE: 0.6
+  MINE_ATTACK_PERCENTAGE: 0.3
   ATTACK_ENEMY_VULNERABLE_MINE_PERCENTAGE: 0.85
   COMMAND_CENTER_ATTACK_PERCENTAGE: 0.1
   REQUIRED_ENEMY_AMOUNT_TO_DEFEND: 2.4
@@ -6985,9 +6998,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3de221636f68a4a4ca5686c1fbc8f7b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackFleetSize: 7
-  defenceFleetSize: 3
-  shipRequiredHpPercentage: 0.66
+  attackFleetSize: 4
+  defenceFleetSize: 2
+  shipRequiredHpPercentage: 0.95
   fleetAtDestinationDistance: 2
   fleetRegroupDistance: 5
   orderLengthSeconds: 170
@@ -7084,7 +7097,7 @@ MonoBehaviour:
   minSkips: 10
   maxSkips: 20
   COMMAND_CENTER_CARGO_POINTS: 3
-  MINE_CARGO_POINTS: 15
+  MINE_CARGO_POINTS: 16
   PRODUCTION_CARGO_POINTS: 1
   SMALL_CARGO_POINT_COST: 3
   MEDIUM_CARGO_POINT_COST: 9
@@ -7652,7 +7665,7 @@ MonoBehaviour:
   factionTag: Pirate
   money: 30000
   maxMoney: 100000
-  mineMineralScore: 15
+  mineMineralScore: 12
   playerFaction: 0
   aiBonusMultiplier: 1
   ai: {fileID: 1563128018}
@@ -7694,7 +7707,7 @@ MonoBehaviour:
   factionTag: Empire
   money: 30000
   maxMoney: 100000
-  mineMineralScore: 15
+  mineMineralScore: 13
   playerFaction: 0
   aiBonusMultiplier: 1
   ai: {fileID: 378675480}
@@ -7736,7 +7749,7 @@ MonoBehaviour:
   factionTag: Federation
   money: 30000
   maxMoney: 100000
-  mineMineralScore: 16
+  mineMineralScore: 14
   playerFaction: 0
   aiBonusMultiplier: 1
   ai: {fileID: 2022676772}
@@ -7776,8 +7789,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CACHE_REFRESH_TIME: 4
-  FACTION_LOSS_ASSET_SCORE_PERCENTAGE: 0.1
-  FACTION_LOSS_DUEL_ASSET_SCORE_PERCENTAGE: 0.175
+  FACTION_LOSS_ASSET_SCORE_PERCENTAGE: 0.15
+  FACTION_LOSS_DUEL_ASSET_SCORE_PERCENTAGE: 0.2
   GAME_END_SCREEN: {fileID: 404570633}
   FACTION_WON_TEXT: {fileID: 1530144520}
 --- !u!1 &1909147066
@@ -8505,20 +8518,20 @@ MonoBehaviour:
     mine: 0
     defense: 0
     desiredAmount: 2
-    maxPercentageOfAllBuildings: 0.1
+    maxPercentageOfAllBuildings: 0.125
   - building: {fileID: 11400000, guid: 226305a3e525d6c4b830fb51939db73f, type: 2}
     commandCenter: 0
     mine: 0
     defense: 0
     desiredAmount: 1
-    maxPercentageOfAllBuildings: 0.05
+    maxPercentageOfAllBuildings: 0.1
   - building: {fileID: 11400000, guid: f998c6ec1412d8c459e50535fd03ba30, type: 2}
     commandCenter: 0
     mine: 0
     defense: 1
     desiredAmount: 3
     maxPercentageOfAllBuildings: 0
-  - building: {fileID: 11400000, guid: fa4982e66a542c346b1f860c233b6dc4, type: 2}
+  - building: {fileID: 11400000, guid: 2b76361a74222d7488ba9d6c5297ba3e, type: 2}
     commandCenter: 0
     mine: 0
     defense: 0
@@ -8530,6 +8543,12 @@ MonoBehaviour:
     defense: 0
     desiredAmount: 0
     maxPercentageOfAllBuildings: 0.075
+  - building: {fileID: 11400000, guid: fa4982e66a542c346b1f860c233b6dc4, type: 2}
+    commandCenter: 0
+    mine: 0
+    defense: 0
+    desiredAmount: 0
+    maxPercentageOfAllBuildings: 0.05
 --- !u!114 &2022676772
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8564,7 +8583,7 @@ MonoBehaviour:
   fleetRegroupDistance: 5
   orderLengthSeconds: 200
   orderRepeatSeconds: 12
-  howManyMoreDefenceFleets: 1
+  howManyMoreDefenceFleets: 3
   updateTime: 5
   ignoreCruisers: 0
 --- !u!114 &2022676774
@@ -8628,10 +8647,10 @@ MonoBehaviour:
   maxSkips: 40
   MIN_FLEETS: 2
   MAX_FLEETS: 8
-  PLANET_ATTACK_PERCENTAGE: 0.33
+  PLANET_ATTACK_PERCENTAGE: 0.45
   MINE_ATTACK_PERCENTAGE: 0.33
-  ATTACK_ENEMY_VULNERABLE_MINE_PERCENTAGE: 0.45
-  COMMAND_CENTER_ATTACK_PERCENTAGE: 0.66
+  ATTACK_ENEMY_VULNERABLE_MINE_PERCENTAGE: 0.5
+  COMMAND_CENTER_ATTACK_PERCENTAGE: 0.6
   REQUIRED_ENEMY_AMOUNT_TO_DEFEND: 2.2
   SAFE_MINERAL_OVERFLOW_AMOUNT: 0
   SAFE_MONEY_OVERFLOW_AMOUNT: 0
@@ -8712,7 +8731,7 @@ MonoBehaviour:
   minSkips: 10
   maxSkips: 20
   COMMAND_CENTER_CARGO_POINTS: 3
-  MINE_CARGO_POINTS: 17
+  MINE_CARGO_POINTS: 18
   PRODUCTION_CARGO_POINTS: 1
   SMALL_CARGO_POINT_COST: 3
   MEDIUM_CARGO_POINT_COST: 9

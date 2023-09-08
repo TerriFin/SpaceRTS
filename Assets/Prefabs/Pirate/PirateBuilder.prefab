@@ -110,8 +110,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speedForceAmount: 320
   rotationForceAmount: 40
-  primaryDeadArea: 0.2
-  secondaryDeadArea: 0.2
+  primaryDeadArea: 0.175
+  secondaryDeadArea: 0.175
   allowedMissAmount: 2
   halfThrustMissAmount: 4
   LOOKAT: 0

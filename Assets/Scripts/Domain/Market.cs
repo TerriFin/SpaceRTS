@@ -72,7 +72,7 @@ public class Market : MonoBehaviour {
             trader.GiveMinerals(amountToSell);
 
             if (trader.CompareTag(tag)) {
-                FactionManager.Factions[tag].ModifyMoney((int)(amountToSell * 2 * FactionManager.Factions[tag].aiBonusMultiplier));
+                FactionManager.Factions[tag].ModifyMoney((int)(amountToSell * 3 * FactionManager.Factions[tag].aiBonusMultiplier));
             } else {
                 FactionManager.Factions[tag].ModifyMoney((int)(amountToSell * 6 * FactionManager.Factions[tag].aiBonusMultiplier));
                 FactionOpinionManager.ModifyFactionOpinion(tag, trader.tag, (float) amountToSell / 50.0f);

@@ -8,7 +8,7 @@ public class HuntEnemyBuildingsAll : MonoBehaviour, IScenarioEffect {
     public void Effect() {
         foreach (Hitpoints ship in ShipsManager.MilShips[ORIGIN_FACTION]) {
             IShipMovement shipMovement = ship.GetComponent<IShipMovement>();
-            if (shipMovement.AreWeThereYet()) shipMovement.SetPrimaryTargetPos(BuildingManager.GetFactionRandomBuilding(RelationShipManager.GetRandomFactionWeAreAttacking(ORIGIN_FACTION)).transform.position);
+            if (shipMovement.AreWeThereYet()) shipMovement.SetPrimaryTargetPos(BuildingManager.GetFactionRandomBuilding(RelationShipManager.GetRandomOrGoodTargetFaction(ORIGIN_FACTION)).transform.position);
         }
     }
 }

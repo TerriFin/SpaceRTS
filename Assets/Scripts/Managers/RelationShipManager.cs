@@ -160,7 +160,12 @@ public class RelationShipManager : MonoBehaviour {
         }
     }
 
-    public static string GetRandomFactionWeAreAttacking(string tag) {
+    /// <summary>
+    /// Returns a random faction that is being attacked by caller faction. If calling faction is on par with enemies, picks randomly. If winning, focuses on the bigger one. If losing, focuses on the smaller one.
+    /// </summary>
+    /// <param name="tag">Faction we want to get a random attack target for</param>
+    /// <returns>Selected faction to attack</returns>
+    public static string GetRandomOrGoodTargetFaction(string tag) {
         if (War[tag].Count == 0) return null;
 
         int totalEnemyScores = 0;
@@ -168,10 +173,13 @@ public class RelationShipManager : MonoBehaviour {
             totalEnemyScores += FactionManager.FactionScoresManager.FactionAssetScores[enemy];
         }
 
-        float randomNumber = Random.Range(0.0f, 1.0f);
-        foreach (string enemy in War[tag]) {
-            if (randomNumber < (float) FactionManager.FactionScoresManager.FactionAssetScores[enemy] / (float) totalEnemyScores) {
-                return enemy;
+        if ((float)FactionManager.FactionScoresManager.FactionAssetScores[tag] / (float)totalEnemyScores < 0.75f) {
+            foreach (string enemy in War[tag]) {
+                if (Random.Range(0.0f, 1.0f) > 0.3f && (float)FactionManager.FactionScoresManager.FactionAssetScores[enemy] / (float)totalEnemyScores >= 0.65f) return enemy;
+            }
+        } else {
+            foreach (string enemy in War[tag]) {
+                if (Random.Range(0.0f, 1.0f) > 0.3f && (float)FactionManager.FactionScoresManager.FactionAssetScores[enemy] / (float)totalEnemyScores < 0.4f) return enemy;
             }
         }
 
