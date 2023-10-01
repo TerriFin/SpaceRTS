@@ -1498,13 +1498,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackFleetSize: 6
-  defenceFleetSize: 3
+  defenceFleetSize: 2
   shipRequiredHpPercentage: 0.75
   fleetAtDestinationDistance: 2
   fleetRegroupDistance: 4
-  orderLengthSeconds: 200
-  orderRepeatSeconds: 12
-  howManyMoreDefenceFleets: 2
+  orderLengthSeconds: 220
+  orderRepeatSeconds: 20
+  howManyMoreDefenceFleets: 1
   updateTime: 5
   ignoreCruisers: 0
 --- !u!114 &378675479
@@ -1598,13 +1598,13 @@ MonoBehaviour:
     mine: 0
     defense: 0
     desiredAmount: 2
-    maxPercentageOfAllBuildings: 0.15
+    maxPercentageOfAllBuildings: 0.125
   - building: {fileID: 11400000, guid: d3c14f683799ff846ac3dc2cbd892eef, type: 2}
     commandCenter: 0
     mine: 0
     defense: 0
     desiredAmount: 1
-    maxPercentageOfAllBuildings: 0.125
+    maxPercentageOfAllBuildings: 0.1
   - building: {fileID: 11400000, guid: a64b69dcdf16bda4bbc420639c78ef14, type: 2}
     commandCenter: 0
     mine: 0
@@ -1659,8 +1659,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   WORKS_WITHOUT_BASE: 1
-  minSkips: 20
-  maxSkips: 40
+  minSkips: 26
+  maxSkips: 72
   MIN_FLEETS: 1
   MAX_FLEETS: 8
   PLANET_ATTACK_PERCENTAGE: 0.33
@@ -6880,7 +6880,7 @@ MonoBehaviour:
   presetBuildingTime: 220
   enemyBuildingCheckRadiusInPath: 2.75
   START_WITH_MINE: 1
-  HOW_MANY_PLANETS_TO_CLAIM_AT_START: 4
+  HOW_MANY_PLANETS_TO_CLAIM_AT_START: 5
   buildings:
   - building: {fileID: 11400000, guid: a40e95ee055a71c44aef88eac92e6509, type: 2}
     commandCenter: 1
@@ -6899,13 +6899,13 @@ MonoBehaviour:
     mine: 0
     defense: 0
     desiredAmount: 0
-    maxPercentageOfAllBuildings: 0.075
+    maxPercentageOfAllBuildings: 0.05
   - building: {fileID: 11400000, guid: 4cd7a7cc74ed6f644a3f100cc05cef2b, type: 2}
     commandCenter: 0
     mine: 0
     defense: 0
     desiredAmount: 3
-    maxPercentageOfAllBuildings: 0.175
+    maxPercentageOfAllBuildings: 0.15
   - building: {fileID: 11400000, guid: bb2115765d4a0c54a82031f80017f56d, type: 2}
     commandCenter: 0
     mine: 0
@@ -6923,7 +6923,7 @@ MonoBehaviour:
     mine: 0
     defense: 0
     desiredAmount: 1
-    maxPercentageOfAllBuildings: 0.075
+    maxPercentageOfAllBuildings: 0.033
   - building: {fileID: 11400000, guid: 8e8e0037e5b98f446b7c1205fbea728b, type: 2}
     commandCenter: 0
     mine: 0
@@ -6943,8 +6943,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   WORKS_WITHOUT_BASE: 1
-  minSkips: 18
-  maxSkips: 36
+  minSkips: 22
+  maxSkips: 48
   MIN_FLEETS: 1
   MAX_FLEETS: 8
   PLANET_ATTACK_PERCENTAGE: 0.6
@@ -6998,13 +6998,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3de221636f68a4a4ca5686c1fbc8f7b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackFleetSize: 4
+  attackFleetSize: 7
   defenceFleetSize: 2
   shipRequiredHpPercentage: 0.95
   fleetAtDestinationDistance: 2
   fleetRegroupDistance: 5
   orderLengthSeconds: 170
-  orderRepeatSeconds: 8
+  orderRepeatSeconds: 16
   howManyMoreDefenceFleets: 0
   updateTime: 5
   ignoreCruisers: 1
@@ -7665,7 +7665,7 @@ MonoBehaviour:
   factionTag: Pirate
   money: 30000
   maxMoney: 100000
-  mineMineralScore: 12
+  mineMineralScore: 13
   playerFaction: 0
   aiBonusMultiplier: 1
   ai: {fileID: 1563128018}
@@ -7707,7 +7707,7 @@ MonoBehaviour:
   factionTag: Empire
   money: 30000
   maxMoney: 100000
-  mineMineralScore: 13
+  mineMineralScore: 14
   playerFaction: 0
   aiBonusMultiplier: 1
   ai: {fileID: 378675480}
@@ -7749,7 +7749,7 @@ MonoBehaviour:
   factionTag: Federation
   money: 30000
   maxMoney: 100000
-  mineMineralScore: 14
+  mineMineralScore: 15
   playerFaction: 0
   aiBonusMultiplier: 1
   ai: {fileID: 2022676772}
@@ -7789,7 +7789,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CACHE_REFRESH_TIME: 4
-  FACTION_LOSS_ASSET_SCORE_PERCENTAGE: 0.15
+  FACTION_LOSS_ASSET_SCORE_PERCENTAGE: 0.1
   FACTION_LOSS_DUEL_ASSET_SCORE_PERCENTAGE: 0.2
   GAME_END_SCREEN: {fileID: 404570633}
   FACTION_WON_TEXT: {fileID: 1530144520}
@@ -8524,7 +8524,7 @@ MonoBehaviour:
     mine: 0
     defense: 0
     desiredAmount: 1
-    maxPercentageOfAllBuildings: 0.1
+    maxPercentageOfAllBuildings: 0.075
   - building: {fileID: 11400000, guid: f998c6ec1412d8c459e50535fd03ba30, type: 2}
     commandCenter: 0
     mine: 0
@@ -8576,14 +8576,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3de221636f68a4a4ca5686c1fbc8f7b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackFleetSize: 4
+  attackFleetSize: 5
   defenceFleetSize: 2
   shipRequiredHpPercentage: 0.7
   fleetAtDestinationDistance: 2
   fleetRegroupDistance: 5
-  orderLengthSeconds: 200
-  orderRepeatSeconds: 12
-  howManyMoreDefenceFleets: 3
+  orderLengthSeconds: 220
+  orderRepeatSeconds: 20
+  howManyMoreDefenceFleets: 2
   updateTime: 5
   ignoreCruisers: 0
 --- !u!114 &2022676774
@@ -8643,9 +8643,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   WORKS_WITHOUT_BASE: 1
-  minSkips: 20
-  maxSkips: 40
-  MIN_FLEETS: 2
+  minSkips: 26
+  maxSkips: 72
+  MIN_FLEETS: 1
   MAX_FLEETS: 8
   PLANET_ATTACK_PERCENTAGE: 0.45
   MINE_ATTACK_PERCENTAGE: 0.33

@@ -19,7 +19,7 @@ GameObject:
   - component: {fileID: -8877728215770860851}
   - component: {fileID: -5134515360320278600}
   - component: {fileID: -4352774753883001580}
-  - component: {fileID: -6337511530363528130}
+  - component: {fileID: -2943734777518591723}
   - component: {fileID: 7594508181546237417}
   - component: {fileID: 7594508181546237416}
   - component: {fileID: 1341488566094852226}
@@ -113,10 +113,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e415c8169801e3f48a2d1a59705dc514, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedForceAmount: 225
-  rotationForceAmount: 70
+  speedForceAmount: 235
+  rotationForceAmount: 95
   primaryDeadArea: 1
-  secondaryDeadArea: 0.5
+  secondaryDeadArea: 0.75
   allowedMissAmount: 8
   halfThrustMissAmount: 30
   LOOKAT: 0
@@ -137,13 +137,12 @@ MonoBehaviour:
     type: 3}
   explosion: {fileID: 7686513493736892033, guid: 1d2137dc9fd71c14a852e1c16c189b74,
     type: 3}
-  shouldExplode: 1
   explosionSize: 3
   asteroid: 0
   DESTRUCTION_OPINION_PENALTY: 0
-  maxHp: 1100
+  maxHp: 1200
   repairDuration: 2
-  repairAmount: 38
+  repairAmount: 40
   doesNotHeal: 0
   armed: 1
   IGNORES_STAGE_BORDERS: 0
@@ -223,7 +222,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   aiActive: 1
   combatModuleActive: 1
-  combatModuleActivationNeededCivilians: 5
+  combatModuleActivationNeededCivilians: 3
   combatModuleActivationTime: 0.25
   updateTime: 1.25
 --- !u!114 &-5134515360320278600
@@ -254,7 +253,7 @@ MonoBehaviour:
   shipPreference: 0.2
   answerHelpRequestsPercentage: 0.75
   patrolsMilitaryShips: 0
---- !u!114 &-6337511530363528130
+--- !u!114 &-2943734777518591723
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -269,9 +268,9 @@ MonoBehaviour:
   active: 0
   preferredCombatDistance: 4.66
   howManyLoopsIgnoreNewTargetsAfterFindingOne: 3
-  RETREAT_HP_PERCENTAGE: 0.6
-  RETREAT_ENEMY_ADVANTAGE_PERCENTAGE: 2.5
-  updateTime: 0.3
+  RETREAT_HP_PERCENTAGE: 0.5
+  RETREAT_ENEMY_ADVANTAGE_PERCENTAGE: 3
+  updateTime: 0.33
 --- !u!70 &7594508181546237417
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

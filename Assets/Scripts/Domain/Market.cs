@@ -72,9 +72,9 @@ public class Market : MonoBehaviour {
             trader.GiveMinerals(amountToSell);
 
             if (trader.CompareTag(tag)) {
-                FactionManager.Factions[tag].ModifyMoney((int)(amountToSell * 3 * FactionManager.Factions[tag].aiBonusMultiplier));
+                FactionManager.Factions[tag].ModifyMoney((int)(amountToSell * 2 * FactionManager.Factions[tag].aiBonusMultiplier));
             } else {
-                FactionManager.Factions[tag].ModifyMoney((int)(amountToSell * 6 * FactionManager.Factions[tag].aiBonusMultiplier));
+                FactionManager.Factions[tag].ModifyMoney((int)(amountToSell * 4 * FactionManager.Factions[tag].aiBonusMultiplier));
                 FactionOpinionManager.ModifyFactionOpinion(tag, trader.tag, (float) amountToSell / 50.0f);
                 FactionOpinionManager.ModifyFactionOpinion(trader.tag, tag, (float) amountToSell / 100.0f);
             }
@@ -95,7 +95,7 @@ public class Market : MonoBehaviour {
             if (trader.CompareTag(tag)) {
                 FactionManager.Factions[tag].ModifyMoney((int)(amountToBuy * 3 * FactionManager.Factions[tag].aiBonusMultiplier));
             } else {
-                FactionManager.Factions[tag].ModifyMoney((int)(amountToBuy * 7 * FactionManager.Factions[tag].aiBonusMultiplier));
+                FactionManager.Factions[tag].ModifyMoney((int)(amountToBuy * 6 * FactionManager.Factions[tag].aiBonusMultiplier));
                 FactionOpinionManager.ModifyFactionOpinion(tag, trader.tag, (float) amountToBuy / 50.0f);
                 FactionOpinionManager.ModifyFactionOpinion(trader.tag, tag, (float) amountToBuy / 100.0f);
             }

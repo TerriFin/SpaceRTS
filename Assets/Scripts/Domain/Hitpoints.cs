@@ -6,7 +6,6 @@ public class Hitpoints : MonoBehaviour {
 
     public GameObject healthBar;
     public GameObject explosion;
-    public bool shouldExplode;
     public float explosionSize;
     public bool asteroid;
     public float DESTRUCTION_OPINION_PENALTY;
@@ -82,7 +81,7 @@ public class Hitpoints : MonoBehaviour {
 
     private void Update() {
         if (CurrentHp <= 0) {
-            if (shouldExplode) {
+            if (explosion != null) {
                 Explosion currentExplosion = Instantiate(explosion, transform.position, Quaternion.identity).GetComponent<Explosion>();
                 currentExplosion.Explode(tag, explosionSize, 0, transform.position, 0.03f);
             }
@@ -90,6 +89,14 @@ public class Hitpoints : MonoBehaviour {
             SelectionManager.HandleDestruction(gameObject.GetComponent<Selectable>());
             Destroy(gameObject);
         }
+    }
+    public void DestroyThis(bool explode) {
+        if (explode && explosion != null) {
+            Explosion currentExplosion = Instantiate(explosion, transform.position, Quaternion.identity).GetComponent<Explosion>();
+            currentExplosion.Explode(tag, explosionSize, 0, transform.position, 0.03f);
+        }
+
+        Destroy(gameObject);
     }
 
     public float GetCurrentHpPercentage() {
@@ -115,10 +122,6 @@ public class Hitpoints : MonoBehaviour {
         } else {
             return false;
         }
-    }
-
-    public void DestroyThis() {
-        CurrentHp = -1000;
     }
 
     IEnumerator Heal() {

@@ -20,3 +20,4 @@ MonoBehaviour:
   buildTime: 12
   mineralCost: 660
   moneyCost: 16500
+  requiredPrefString: 

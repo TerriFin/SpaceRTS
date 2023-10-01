@@ -65,16 +65,16 @@ public class RaiderAi : MonoBehaviour, IAi {
 
         foreach (PlanetCaptureLogic planet in PlanetManager.FactionPlanets[faction]) {
             Collider2D[] colliders = Physics2D.OverlapCircleAll(planet.transform.position, 8.0f);
-            bool foundDefence = false;
+            bool foundDefences = false;
 
             foreach (Collider2D collider in colliders) {
                 if (collider.gameObject.layer == LayerMask.NameToLayer("Building") && RelationShipManager.AreFactionsInWar(tag, collider.tag)) {
-                    foundDefence = true;
+                    foundDefences = true;
                     break;
                 }
             }
 
-            if (!foundDefence) {
+            if (!foundDefences) {
                 float currentDistance = Vector2.Distance(transform.position, planet.transform.position);
                 if (currentDistance < distance) {
                     toReturn = planet;

@@ -46,7 +46,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   STARTING_ASTEROIDS: 5
   MAX_ASTEROIDS: 8
-  FIELD_RADIUS: 6
+  FIELD_RADIUS: 5.75
   ASTEROIDS_RESPAWN: 1
   MIN_RESPAWN_RATE: 9
   MAX_RESPAWN_RATE: 9
@@ -58,3 +58,4 @@ MonoBehaviour:
     type: 3}
   BIG_ASTEROID: {fileID: 6991140395242985567, guid: cc2383b1e2c19f043bf30f5a129c9113,
     type: 3}
+  CurrentAsteroids: 0

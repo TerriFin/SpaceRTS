@@ -111,8 +111,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e415c8169801e3f48a2d1a59705dc514, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedForceAmount: 120
-  rotationForceAmount: 240
+  speedForceAmount: 110
+  rotationForceAmount: 230
   primaryDeadArea: 1.75
   secondaryDeadArea: 0.75
   allowedMissAmount: 4
@@ -135,11 +135,10 @@ MonoBehaviour:
     type: 3}
   explosion: {fileID: 7686513493736892033, guid: 1d2137dc9fd71c14a852e1c16c189b74,
     type: 3}
-  shouldExplode: 1
   explosionSize: 2
   asteroid: 0
   DESTRUCTION_OPINION_PENALTY: 0
-  maxHp: 175
+  maxHp: 165
   repairDuration: 2
   repairAmount: 16
   doesNotHeal: 0
@@ -388,7 +387,7 @@ PrefabInstance:
     - target: {fileID: 8405510029904318016, guid: b170f8c0788d4c74da126e3bb332a8bc,
         type: 3}
       propertyPath: firingSpeed
-      value: 0.205
+      value: 0.225
       objectReference: {fileID: 0}
     - target: {fileID: 8405510029904318016, guid: b170f8c0788d4c74da126e3bb332a8bc,
         type: 3}
@@ -399,11 +398,6 @@ PrefabInstance:
         type: 3}
       propertyPath: rotationSpeed
       value: 235
-      objectReference: {fileID: 0}
-    - target: {fileID: 8405510029904318016, guid: b170f8c0788d4c74da126e3bb332a8bc,
-        type: 3}
-      propertyPath: turretInaccuracy
-      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8405510029904318016, guid: b170f8c0788d4c74da126e3bb332a8bc,
         type: 3}

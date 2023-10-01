@@ -25,7 +25,7 @@ public class BuildingManager : MonoBehaviour {
 
     public static void RemoveFactionBuildings(string faction) {
         foreach (Hitpoints building in Buildings[faction]) {
-            Destroy(building.gameObject);
+            building.DestroyThis(true);
         }
     }
 

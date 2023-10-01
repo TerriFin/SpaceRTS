@@ -80,9 +80,7 @@ public class ConstructionShipAi : MonoBehaviour, IAi {
 
         // This is so that selection screen is updated
         GetComponent<ShipAlert>().enabled = false;
-        Hitpoints hitpoints = GetComponent<Hitpoints>();
-        hitpoints.shouldExplode = false;
-        hitpoints.DestroyThis();
+        GetComponent<Hitpoints>().DestroyThis(false);
     }
 
     private Vector2 CalculateAllColliderPosInArea(Collider2D[] colliders) {

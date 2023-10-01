@@ -214,9 +214,9 @@ public class FactionScoresManager : MonoBehaviour {
 
     public bool IsFactionInGame(string faction) {
         if (FACTION_LOSS_ASSET_SCORE_PERCENTAGE == 0 && FACTION_LOSS_DUEL_ASSET_SCORE_PERCENTAGE == 0) return true;
-        if (FactionManager.PlayerFaction != null && FactionManager.PlayerFaction.factionTag == faction) return (float)FactionAssetScores[faction] / (float)TotalFactionsAssetScore() > FACTION_LOSS_ASSET_SCORE_PERCENTAGE / 2;
-        if (FactionManager.Factions.Count == 2) return (float)FactionAssetScores[faction] / (float)TotalFactionsAssetScore() > FACTION_LOSS_DUEL_ASSET_SCORE_PERCENTAGE;
-        return BuildingManager.BuildingAmountsByFactionAndType[faction][Selectable.Types.commandCenter.ToString()].Count > 0 || (float)FactionAssetScores[faction] / (float)TotalFactionsAssetScore() > FACTION_LOSS_ASSET_SCORE_PERCENTAGE;
+        if (FactionManager.PlayerFaction != null && FactionManager.PlayerFaction.factionTag == faction) return BuildingManager.Buildings[faction].Count > 0 || ShipsManager.MilShips[faction].Count > 0;
+        if (FactionManager.Factions.Count == 2) return Time.timeSinceLevelLoad < 180 || (float)FactionAssetScores[faction] / (float)TotalFactionsAssetScore() > FACTION_LOSS_DUEL_ASSET_SCORE_PERCENTAGE;
+        return (float)FactionAssetScores[faction] / (float)TotalFactionsAssetScore() > FACTION_LOSS_ASSET_SCORE_PERCENTAGE;
     }
 
     public int GetActiveFactionCount() {

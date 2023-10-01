@@ -134,7 +134,7 @@ public class MapGeneratorManager : MonoBehaviour {
                 int currentTries = 0;
                 while (currentTries < 50) {
                     Vector2 randomPointInMap = GetRandomPointInMap();
-                    if (CheckAsteroidFieldEnoughSpace(randomPointInMap, fields, chosenAsteroidField.GetComponent<AsteroidField>().FIELD_RADIUS * 4.5f)) {
+                    if (CheckAsteroidFieldEnoughSpace(randomPointInMap, fields, chosenAsteroidField.GetComponent<AsteroidField>().FIELD_RADIUS * 5.0f)) {
                         for (int i = 0; i < factionsInGame.Count; i++) {
                             fields.Add(Instantiate(chosenAsteroidField, Quaternion.Euler(0, 0, 360 / factionsInGame.Count * i) * randomPointInMap, Quaternion.identity).GetComponent<AsteroidField>());
                         }
@@ -179,7 +179,7 @@ public class MapGeneratorManager : MonoBehaviour {
                 int currentTries = 0;
                 while (currentTries < 50) {
                     Vector2 randomPointInMap = GetRandomPointInMap();
-                    if (CheckAsteroidFieldEnoughSpace(randomPointInMap, fields, chosenAsteroidField.GetComponent<AsteroidField>().FIELD_RADIUS * 4.5f)) {
+                    if (CheckAsteroidFieldEnoughSpace(randomPointInMap, fields, chosenAsteroidField.GetComponent<AsteroidField>().FIELD_RADIUS * 5.0f)) {
                         fields.Add(Instantiate(chosenAsteroidField, randomPointInMap, Quaternion.identity).GetComponent<AsteroidField>());
                         break;
                     }

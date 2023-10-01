@@ -18,7 +18,8 @@ public class BuildableBuildingsManager : MonoBehaviour {
         FactionBuilding[] foundBuildings = Resources.LoadAll<FactionBuilding>("ScriptableObjects/FactionBuildings");
 
         foreach (FactionBuilding building in foundBuildings) {
-            if (building != null && FactionManager.Factions.ContainsKey(building.faction) && (building.requiredPrefString == "" || PlayerPrefs.HasKey(building.requiredPrefString))) {
+            // No idea why building.requiredPrefString can be a null, it just can be sometimes, ok?
+            if (building != null && FactionManager.Factions.ContainsKey(building.faction) && (building.requiredPrefString == "" || building.requiredPrefString == null || PlayerPrefs.HasKey(building.requiredPrefString))) {
                 BuildableBuildings[building.faction].Add(building);
             }
         }

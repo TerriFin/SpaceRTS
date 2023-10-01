@@ -117,22 +117,22 @@ public class SkirmishMenuDropdown : MonoBehaviour {
                 MAP_MANAGER.MEDIUM_ASTEROID_FIELD_CHANCE = 0.85f;
                 break;
             case 1:
-                MAP_MANAGER.DESIRED_ASTEROID_FIELDS_AMOUNT = 12;
+                MAP_MANAGER.DESIRED_ASTEROID_FIELDS_AMOUNT = 9;
                 MAP_MANAGER.SMALL_ASTEROID_FIELD_CHANCE = 0.3f;
                 MAP_MANAGER.MEDIUM_ASTEROID_FIELD_CHANCE = 0.8f;
                 break;
             case 2:
-                MAP_MANAGER.DESIRED_ASTEROID_FIELDS_AMOUNT = 28;
+                MAP_MANAGER.DESIRED_ASTEROID_FIELDS_AMOUNT = 16;
                 MAP_MANAGER.SMALL_ASTEROID_FIELD_CHANCE = 0.25f;
                 MAP_MANAGER.MEDIUM_ASTEROID_FIELD_CHANCE = 0.75f;
                 break;
             case 3:
-                MAP_MANAGER.DESIRED_ASTEROID_FIELDS_AMOUNT = 45;
+                MAP_MANAGER.DESIRED_ASTEROID_FIELDS_AMOUNT = 30;
                 MAP_MANAGER.SMALL_ASTEROID_FIELD_CHANCE = 0.2f;
                 MAP_MANAGER.MEDIUM_ASTEROID_FIELD_CHANCE = 0.7f;
                 break;
             case 4:
-                MAP_MANAGER.DESIRED_ASTEROID_FIELDS_AMOUNT = 60;
+                MAP_MANAGER.DESIRED_ASTEROID_FIELDS_AMOUNT = 100;
                 MAP_MANAGER.SMALL_ASTEROID_FIELD_CHANCE = 0.2f;
                 MAP_MANAGER.MEDIUM_ASTEROID_FIELD_CHANCE = 0.65f;
                 break;
@@ -145,19 +145,19 @@ public class SkirmishMenuDropdown : MonoBehaviour {
     public void UpdatePlanetsAmount(int index) {
         switch (index) {
             case 0:
-                MAP_MANAGER.DESIRED_PLANET_FACTION_SCORE = 60;
+                MAP_MANAGER.DESIRED_PLANET_FACTION_SCORE = 30;
                 break;
             case 1:
-                MAP_MANAGER.DESIRED_PLANET_FACTION_SCORE = 90;
+                MAP_MANAGER.DESIRED_PLANET_FACTION_SCORE = 60;
                 break;
             case 2:
-                MAP_MANAGER.DESIRED_PLANET_FACTION_SCORE = 120;
+                MAP_MANAGER.DESIRED_PLANET_FACTION_SCORE = 90;
                 break;
             case 3:
-                MAP_MANAGER.DESIRED_PLANET_FACTION_SCORE = 160;
+                MAP_MANAGER.DESIRED_PLANET_FACTION_SCORE = 150;
                 break;
             case 4:
-                MAP_MANAGER.DESIRED_PLANET_FACTION_SCORE = 220;
+                MAP_MANAGER.DESIRED_PLANET_FACTION_SCORE = 300;
                 break;
         }
 

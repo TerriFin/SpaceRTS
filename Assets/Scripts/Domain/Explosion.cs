@@ -35,7 +35,7 @@ public class Explosion : MonoBehaviour {
         foreach (Collider2D collider in colliders) {
             if (collider.gameObject.layer == LayerMask.NameToLayer("Ship") || collider.gameObject.layer == LayerMask.NameToLayer("Building") || collider.tag == "Asteroid") {
                 if (collider.tag == "Asteroid" || RelationShipManager.AreFactionsInWar(factionName, collider.tag)) {
-                    if (destroysAsteroids && collider.tag == "Asteroid") collider.GetComponent<Hitpoints>().TakeDamage(damage * 7, origin, factionName);
+                    if (destroysAsteroids && collider.tag == "Asteroid") collider.GetComponent<Hitpoints>().TakeDamage(damage * 16, origin, factionName);
                     else collider.GetComponent<Hitpoints>().TakeDamage(damage, origin, factionName);
                 }
             }
@@ -45,7 +45,7 @@ public class Explosion : MonoBehaviour {
         if (Source != null) {
             if (size < 3) {
                 Source.clip = SMALL_EXPLOSION;
-                Source.volume = 0.05f;
+                Source.volume = 0.33f;
             } else if (size < 6) {
                 Source.clip = MEDIUM_EXPLOSION;
                 Source.volume = 0.5f;
@@ -62,11 +62,11 @@ public class Explosion : MonoBehaviour {
 
     private IEnumerator FadeExplosion() {
         while (true) {
-            yield return new WaitForSeconds(0.1f);
+            yield return new WaitForSeconds(0.09f);
             Color tmp = sprite.color;
             tmp.a -= alphaDecayRate;
 
-            if (tmp.a <= 0.25f) {
+            if (tmp.a <= 0.2f) {
                 Destroy(gameObject);
             }
 

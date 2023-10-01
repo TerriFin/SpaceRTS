@@ -7,7 +7,7 @@ public class SiegeCombatModule : CombatModule {
     public bool TURRET;
 
     public override void SetNewTargetArmed() {
-        if (TURRET) {
+        if ((FactionManager.PlayerFaction != null && CompareTag(FactionManager.PlayerFaction.factionTag)) || TURRET) {
             Collider2D closestMilitaryEnemy = Sensors.GetClosestMilitaryEnemy();
             if (closestMilitaryEnemy != null && Vector2.Distance(transform.position, closestMilitaryEnemy.transform.position) <= preferredCombatDistance * 0.5f) {
                 Controls.SetSecondaryTargetPos(closestMilitaryEnemy.transform.position);

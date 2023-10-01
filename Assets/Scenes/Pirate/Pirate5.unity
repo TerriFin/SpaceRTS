@@ -5926,7 +5926,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SHIP: {fileID: 5508972834936203583, guid: b1195f1cbc1038d48a9cc8f519fbc1ae, type: 3}
-  AMOUNT: 6
+  AMOUNT: 5
 --- !u!114 &770899470
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8864,6 +8864,7 @@ MonoBehaviour:
   clickIndicator: {fileID: 4186882218027370042, guid: 5201bf13e074c304ca0f27756b1d3106,
     type: 3}
   enemyBuildingCheckRadiusInPath: 0
+  SCREENSHOT_PATH: 
 --- !u!1 &1066868470
 GameObject:
   m_ObjectHideFlags: 0
@@ -11385,7 +11386,7 @@ GameObject:
   - component: {fileID: 1328279794}
   - component: {fileID: 1328279793}
   m_Layer: 0
-  m_Name: EmpireSpawnPrototypeLoop300
+  m_Name: EmpireSpawnPrototypeLoop330
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11432,7 +11433,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97f59a7ce94acf1408e7017f7e6060f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TIMER: 300
+  TIMER: 330
   LOOPS: 1
 --- !u!1001 &1331088075
 PrefabInstance:

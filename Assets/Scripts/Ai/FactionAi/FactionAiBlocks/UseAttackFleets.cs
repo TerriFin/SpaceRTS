@@ -39,7 +39,7 @@ public class UseAttackFleets : FactionBlockWithSkips, ICallHelp {
     }
 
     public override void Block() {
-        int currentMinFleets = FactionScores.GetFactionMilitaryScoreShare(tag) < 0.5f ? MIN_FLEETS : MIN_FLEETS * 2;
+        int currentMinFleets = FactionScores.GetFactionMilitaryScoreShare(tag) < 0.5f ? MIN_FLEETS : MIN_FLEETS * 3;
 
         int enemyFactionScores = 0;
         foreach (Faction faction in FactionManager.Factions.Values) {

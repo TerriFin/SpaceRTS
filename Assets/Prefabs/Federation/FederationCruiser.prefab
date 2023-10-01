@@ -119,8 +119,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e415c8169801e3f48a2d1a59705dc514, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedForceAmount: 230
-  rotationForceAmount: 80
+  speedForceAmount: 225
+  rotationForceAmount: 70
   primaryDeadArea: 0.75
   secondaryDeadArea: 0.3
   allowedMissAmount: 1.6
@@ -143,13 +143,12 @@ MonoBehaviour:
     type: 3}
   explosion: {fileID: 7686513493736892033, guid: 1d2137dc9fd71c14a852e1c16c189b74,
     type: 3}
-  shouldExplode: 1
   explosionSize: 5
   asteroid: 0
   DESTRUCTION_OPINION_PENALTY: 0
-  maxHp: 750
+  maxHp: 650
   repairDuration: 2
-  repairAmount: 30
+  repairAmount: 32
   doesNotHeal: 0
   armed: 1
   IGNORES_STAGE_BORDERS: 0
@@ -214,7 +213,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   refreshTime: 1
-  sensorAreaRadius: 10
+  sensorAreaRadius: 11
 --- !u!114 &4113661023683786575
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -275,7 +274,7 @@ MonoBehaviour:
   PROJECTILE: {fileID: 5952016723302452423, guid: ddb23b7998f2ebd4784dd8a51fa77c90,
     type: 3}
   PROJECTILE_ORIGIN: {fileID: 4091721617174748221}
-  SHOOTING_DISTANCE: 11
+  SHOOTING_DISTANCE: 12
   RELOAD_TIMER: 4
   SHOOTS_SHIPS: 1
   SHOOTS_BUILDINGS: 1

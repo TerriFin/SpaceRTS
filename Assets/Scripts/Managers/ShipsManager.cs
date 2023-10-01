@@ -19,11 +19,11 @@ public class ShipsManager : MonoBehaviour {
 
     public static void RemoveFactionShips(string faction) {
         foreach (Hitpoints civShip in CivShips[faction]) {
-            Destroy(civShip.gameObject);
+            civShip.DestroyThis(true);
         }
 
         foreach (Hitpoints milShip in MilShips[faction]) {
-            Destroy(milShip.gameObject);
+            milShip.DestroyThis(true);
         }
     }
 

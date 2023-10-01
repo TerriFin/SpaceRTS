@@ -134,7 +134,6 @@ MonoBehaviour:
     type: 3}
   explosion: {fileID: 7686513493736892033, guid: 1d2137dc9fd71c14a852e1c16c189b74,
     type: 3}
-  shouldExplode: 1
   explosionSize: 6
   asteroid: 0
   DESTRUCTION_OPINION_PENALTY: 50
@@ -143,6 +142,7 @@ MonoBehaviour:
   repairAmount: 300
   doesNotHeal: 0
   armed: 1
+  IGNORES_STAGE_BORDERS: 0
 --- !u!114 &6782904515862460075
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -170,9 +170,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44e0bfb6f02d39c4dbcc583849be4704, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  factionMoneyValue: 15
+  factionMoneyValue: 19
   timer: 30
-  FACTION_MONEY_STORAGE: 0
+  FACTION_MONEY_STORAGE: 10000
   MONEY_BAR: {fileID: 862890505525518727, guid: db42eee91af526749a8ff312eacf5931,
     type: 3}
 --- !u!114 &-3750955954651802240
@@ -188,7 +188,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timer: 10
-  mineralAmount: 100
+  mineralAmount: 85
 --- !u!114 &6502412480360492559
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -268,6 +268,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c281705f4bfb656438d5c5fa19cf9692, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PRICE: 0
   UPDATE_TIMER: 99999
 --- !u!114 &2552140616847879871
 MonoBehaviour:

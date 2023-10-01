@@ -99,8 +99,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SMALL_EXPLOSION: {fileID: 8300000, guid: ad7cadc77bb063145aff55ec029cb957, type: 3}
-  MEDIUM_EXPLOSION: {fileID: 8300000, guid: 94e2a2c0f6b7bb4448670c9533bdaaf3, type: 3}
-  BIG_EXPLOSION: {fileID: 8300000, guid: 1e6b3888a9bf99947a2975123fe97139, type: 3}
+  MEDIUM_EXPLOSION: {fileID: 8300000, guid: cd6cd3f9d03526048bcdea4cd168c81b, type: 3}
+  BIG_EXPLOSION: {fileID: 8300000, guid: 2dd99b207420a7b4ea1869d87a4df242, type: 3}
 --- !u!82 &-8291801610825891559
 AudioSource:
   m_ObjectHideFlags: 0

@@ -114,10 +114,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e415c8169801e3f48a2d1a59705dc514, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedForceAmount: 175
-  rotationForceAmount: 115
+  speedForceAmount: 170
+  rotationForceAmount: 105
   primaryDeadArea: 1
-  secondaryDeadArea: 0.5
+  secondaryDeadArea: 0.75
   allowedMissAmount: 8
   halfThrustMissAmount: 40
   LOOKAT: 0
@@ -138,13 +138,12 @@ MonoBehaviour:
     type: 3}
   explosion: {fileID: 7686513493736892033, guid: 1d2137dc9fd71c14a852e1c16c189b74,
     type: 3}
-  shouldExplode: 1
   explosionSize: 3
   asteroid: 0
   DESTRUCTION_OPINION_PENALTY: 0
   maxHp: 425
   repairDuration: 2
-  repairAmount: 21
+  repairAmount: 26
   doesNotHeal: 0
   armed: 1
   IGNORES_STAGE_BORDERS: 0
@@ -209,7 +208,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   refreshTime: 0.5
-  sensorAreaRadius: 8.75
+  sensorAreaRadius: 9
 --- !u!114 &2515803756487321549
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -271,7 +270,7 @@ MonoBehaviour:
   preferredCombatDistance: 6.25
   howManyLoopsIgnoreNewTargetsAfterFindingOne: 2
   RETREAT_HP_PERCENTAGE: 0.5
-  RETREAT_ENEMY_ADVANTAGE_PERCENTAGE: 2.5
+  RETREAT_ENEMY_ADVANTAGE_PERCENTAGE: 2.75
   updateTime: 0.33
 --- !u!70 &1015899777007869499
 CapsuleCollider2D:
@@ -396,7 +395,7 @@ PrefabInstance:
     - target: {fileID: 4898290794942688877, guid: ccf9baffe3afcde4d86dbe171e8cf5f9,
         type: 3}
       propertyPath: firingRange
-      value: 6.85
+      value: 6.75
       objectReference: {fileID: 0}
     - target: {fileID: 4898290794942688877, guid: ccf9baffe3afcde4d86dbe171e8cf5f9,
         type: 3}
@@ -491,7 +490,7 @@ PrefabInstance:
     - target: {fileID: 4898290794942688877, guid: ccf9baffe3afcde4d86dbe171e8cf5f9,
         type: 3}
       propertyPath: firingRange
-      value: 6.85
+      value: 6.75
       objectReference: {fileID: 0}
     - target: {fileID: 4898290794942688877, guid: ccf9baffe3afcde4d86dbe171e8cf5f9,
         type: 3}

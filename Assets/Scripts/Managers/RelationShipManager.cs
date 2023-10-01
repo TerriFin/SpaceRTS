@@ -173,13 +173,14 @@ public class RelationShipManager : MonoBehaviour {
             totalEnemyScores += FactionManager.FactionScoresManager.FactionAssetScores[enemy];
         }
 
-        if ((float)FactionManager.FactionScoresManager.FactionAssetScores[tag] / (float)totalEnemyScores < 0.75f) {
+        float ownScoreRelatedToEnemyScores = (float)FactionManager.FactionScoresManager.FactionAssetScores[tag] / (float)totalEnemyScores;
+        if (ownScoreRelatedToEnemyScores < 0.5f) {
             foreach (string enemy in War[tag]) {
-                if (Random.Range(0.0f, 1.0f) > 0.3f && (float)FactionManager.FactionScoresManager.FactionAssetScores[enemy] / (float)totalEnemyScores >= 0.65f) return enemy;
+                if (Random.Range(0.0f, 1.0f) > 0.3f && (float)FactionManager.FactionScoresManager.FactionAssetScores[enemy] / (float)totalEnemyScores >= 0.6f) return enemy;
             }
-        } else {
+        } else if (ownScoreRelatedToEnemyScores > 0.66f) {
             foreach (string enemy in War[tag]) {
-                if (Random.Range(0.0f, 1.0f) > 0.3f && (float)FactionManager.FactionScoresManager.FactionAssetScores[enemy] / (float)totalEnemyScores < 0.4f) return enemy;
+                if (Random.Range(0.0f, 1.0f) > 0.3f && (float)FactionManager.FactionScoresManager.FactionAssetScores[enemy] / (float)totalEnemyScores < 0.5f) return enemy;
             }
         }
 

@@ -251,7 +251,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   active: 0
-  preferredCombatDistance: 5
+  preferredCombatDistance: 3
   howManyLoopsIgnoreNewTargetsAfterFindingOne: 6
   RETREAT_HP_PERCENTAGE: 0.75
   RETREAT_ENEMY_ADVANTAGE_PERCENTAGE: 4.5

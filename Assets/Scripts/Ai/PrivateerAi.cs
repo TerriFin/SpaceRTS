@@ -27,6 +27,7 @@ public class PrivateerAi : MonoBehaviour, IAi {
             bool foundField = false;
             if (fields.Count > 0) {
                 for (int i = 0; i < fields.Count; i++) {
+                    if (fields[i].CurrentAsteroids <= 2) continue;
                     Collider2D[] colliders = Physics2D.OverlapCircleAll(fields[i].transform.position, 5.0f);
                     bool currentOk = true;
                     foreach (Collider2D collider in colliders) {
@@ -37,14 +38,27 @@ public class PrivateerAi : MonoBehaviour, IAi {
                     }
 
                     if (currentOk) {
-                        Target = fields[i].gameObject;
-                        foundField = true;
-                        break;
+                        Asteroid[] asteroids = fields[i].GetComponentsInChildren<Asteroid>();
+                        Asteroid closestAsteroid = null;
+                        float distance = float.MaxValue;
+                        foreach (Asteroid asteroid in asteroids) {
+                            float distanceToAsteroid = Vector2.Distance(transform.position, asteroid.transform.position);
+                            if (distanceToAsteroid < distance) {
+                                distance = distanceToAsteroid;
+                                closestAsteroid = asteroid;
+                            }
+                        }
+
+                        if (closestAsteroid != null) {
+                            Target = closestAsteroid.gameObject;
+                            foundField = true;
+                            break;
+                        }
                     }
                 }
 
                 if (!foundField) Target = fields[0].gameObject;
-                Controls.SetPrimaryTargetPos(Target.transform.position + new Vector3(Random.Range(-3.0f, 3.0f), Random.Range(-3.0f, 3.0f), 0));
+                Controls.SetPrimaryTargetPos(Target.transform.position);
             }
         } else {
             if (Target == null || Target.CompareTag("Untagged") || !RelationShipManager.IsFactionAttackingFaction(tag, Target.tag)) {

@@ -18,7 +18,7 @@ public class AsteroidField : MonoBehaviour {
 
     public int MinesOnTheWay { get; set; }
 
-    private int CurrentAsteroids;
+    public int CurrentAsteroids;
 
     private void Start() {
         AsteroidFieldManager.AsteroidFields.Add(this);

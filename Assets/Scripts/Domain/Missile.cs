@@ -56,7 +56,7 @@ public class Missile : MonoBehaviour {
             if (collision.tag == "Asteroid" || RelationShipManager.AreFactionsInWar(tag, collision.tag)) {
                 collision.GetComponent<Hitpoints>().TakeDamage(DIRECT_DAMAGE, ORIGIN, tag);
                 Explosion explosion = Instantiate(EXPLOSION, transform.position, Quaternion.identity).GetComponent<Explosion>();
-                explosion.Explode(tag, EXPLOSION_RADIUS, EXPLOSION_DAMAGE, ORIGIN, 0.06f, DESTROYS_ASTEROIDS);
+                explosion.Explode(tag, EXPLOSION_RADIUS, EXPLOSION_DAMAGE, ORIGIN, 0.04f, DESTROYS_ASTEROIDS);
                 Destroy(gameObject);
 
                 if (collision.tag == "Asteroid" && DESTROYS_ASTEROIDS) Destroy(collision.gameObject);

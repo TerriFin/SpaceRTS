@@ -9,7 +9,7 @@ public class BrawlerCombatModule : CombatModule {
         Hitpoints = GetComponent<Hitpoints>();
     }
     public override void SetNewTargetArmed() {
-        if ((FactionManager.PlayerFaction != null && CompareTag(FactionManager.PlayerFaction.factionTag)) || (float) Hitpoints.CurrentHp > (float) Hitpoints.maxHp * RETREAT_HP_PERCENTAGE || (float) (Sensors.ArmedAllies.Count + 1) * RETREAT_ENEMY_ADVANTAGE_PERCENTAGE < Sensors.ArmedEnemies.Count) {
+        if ((FactionManager.PlayerFaction != null && CompareTag(FactionManager.PlayerFaction.factionTag)) || ((float) Hitpoints.CurrentHp > (float) Hitpoints.maxHp * RETREAT_HP_PERCENTAGE && (float) (Sensors.ArmedAllies.Count + 1) * RETREAT_ENEMY_ADVANTAGE_PERCENTAGE > Sensors.ArmedEnemies.Count)) {
             if (AttachedTurret.Target != null) {
                 float randomNumber = Random.Range(0, Mathf.PI * 2);
                 Vector2 randomCircleSpot = new Vector2(Mathf.Sin(randomNumber), Mathf.Cos(randomNumber)) * preferredCombatDistance;
@@ -25,6 +25,7 @@ public class BrawlerCombatModule : CombatModule {
 
                 if (closestArmedEnemy != null) {
                     Vector2 targetRetreatPos = closestArmedEnemy.transform.position + (transform.position - closestArmedEnemy.transform.position).normalized * preferredCombatDistance * 5;
+                    Controls.SetPrimaryTargetPos(targetRetreatPos);
                     Controls.SetSecondaryTargetPos(targetRetreatPos);
                 }
             } else {

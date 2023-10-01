@@ -104,7 +104,7 @@ MonoBehaviour:
   CONTROLLED: 0
   DIRECT_DAMAGE: 500
   EXPLOSION_RADIUS: 8
-  EXPLOSION_DAMAGE: 40
+  EXPLOSION_DAMAGE: 55
   MISSILE_SPEED: 900
   MISSILE_TURN_RATE: 0
   MISSILE_LIFESPAN: 1.9
@@ -125,7 +125,7 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.11, y: 0.16}
+  m_Size: {x: 0.15, y: 0.16}
   m_Direction: 0
 --- !u!50 &1589950001308691656
 Rigidbody2D:

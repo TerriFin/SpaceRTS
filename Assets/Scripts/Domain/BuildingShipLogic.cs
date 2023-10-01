@@ -37,7 +37,6 @@ public class BuildingShipLogic : MonoBehaviour {
         GetComponent<ShipAlert>().enabled = false;
         Hitpoints hitpoints = GetComponent<Hitpoints>();
         createdBuilding.GetComponent<Hitpoints>().SetHpToPercentage(hitpoints.GetCurrentHpPercentage());
-        hitpoints.shouldExplode = false;
-        hitpoints.DestroyThis();
+        hitpoints.DestroyThis(false);
     }
 }

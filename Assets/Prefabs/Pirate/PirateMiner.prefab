@@ -243,7 +243,6 @@ MonoBehaviour:
     type: 3}
   explosion: {fileID: 7686513493736892033, guid: 1d2137dc9fd71c14a852e1c16c189b74,
     type: 3}
-  shouldExplode: 1
   explosionSize: 2
   asteroid: 0
   DESTRUCTION_OPINION_PENALTY: 0
@@ -299,7 +298,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b7a68604e4798444a02ea056eec6a67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  refreshTime: 0.5
+  refreshTime: 1.5
   sensorAreaRadius: 6
 --- !u!114 &4885062728200078191
 MonoBehaviour:

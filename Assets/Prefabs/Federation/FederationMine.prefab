@@ -112,7 +112,6 @@ MonoBehaviour:
     type: 3}
   explosion: {fileID: 7686513493736892033, guid: 1d2137dc9fd71c14a852e1c16c189b74,
     type: 3}
-  shouldExplode: 1
   explosionSize: 5
   asteroid: 0
   DESTRUCTION_OPINION_PENALTY: 12
@@ -121,6 +120,7 @@ MonoBehaviour:
   repairAmount: 150
   doesNotHeal: 0
   armed: 0
+  IGNORES_STAGE_BORDERS: 0
 --- !u!114 &-5057017690483349417
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -183,9 +183,10 @@ MonoBehaviour:
     type: 3}
   moneyCost: 0
   metalCost: 0
-  productionTime: 12
+  productionTime: 9
   productionLimit: 3
   on: 1
+  follower: 0
   productionBar: {fileID: 3872933452904820574, guid: 84e7668b1b0dc1f47b821902fc0827ba,
     type: 3}
 --- !u!114 &8943316350299695799
@@ -250,6 +251,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c281705f4bfb656438d5c5fa19cf9692, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PRICE: 0
   UPDATE_TIMER: 12
 --- !u!58 &4515873518533453802
 CircleCollider2D:

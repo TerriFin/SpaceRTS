@@ -6559,7 +6559,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SHIP: {fileID: 8286392458817412692, guid: bed968fd9051fb44fa8366e11cb240c9, type: 3}
-  AMOUNT: 4
+  AMOUNT: 3
   MOVE_SHIPS_TO_STAGE_AT_START: 0
   SHIP_AI_ACTIVE: 0
 --- !u!114 &974500578
@@ -7175,6 +7175,7 @@ MonoBehaviour:
   clickIndicator: {fileID: 4186882218027370042, guid: 5201bf13e074c304ca0f27756b1d3106,
     type: 3}
   enemyBuildingCheckRadiusInPath: 0
+  SCREENSHOT_PATH: 
 --- !u!1001 &1082687820
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9543,7 +9544,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SHIP: {fileID: 8152272244134938593, guid: 63650ee3fce3e2e419b04b7fbb3defce, type: 3}
-  AMOUNT: 6
+  AMOUNT: 5
   MOVE_SHIPS_TO_STAGE_AT_START: 0
   SHIP_AI_ACTIVE: 0
 --- !u!114 &1480939951
@@ -12271,7 +12272,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SHIP: {fileID: 8152272244134938593, guid: 63650ee3fce3e2e419b04b7fbb3defce, type: 3}
-  AMOUNT: 7
+  AMOUNT: 6
   MOVE_SHIPS_TO_STAGE_AT_START: 0
   SHIP_AI_ACTIVE: 0
 --- !u!114 &1888353349

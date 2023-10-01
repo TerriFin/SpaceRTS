@@ -39,13 +39,6 @@ public class FactionOpinionManager : MonoBehaviour {
                     }
                 }
             }
-            foreach (string faction1 in new List<string>(FactionOpinions.Keys)) {
-                foreach (string faction2 in new List<string>(FactionOpinions.Keys)) {
-                    if (faction1 != faction2) {
-                        print(faction1 + " OPINION OF " + faction2 + ": " + FactionOpinions[faction1][faction2]);
-                    }
-                }
-            }
         }
     }
 

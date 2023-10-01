@@ -107,10 +107,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e415c8169801e3f48a2d1a59705dc514, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedForceAmount: 230
+  speedForceAmount: 240
   rotationForceAmount: 40
-  primaryDeadArea: 0.175
-  secondaryDeadArea: 0.175
+  primaryDeadArea: 0.15
+  secondaryDeadArea: 0.15
   allowedMissAmount: 2
   halfThrustMissAmount: 4
   LOOKAT: 0
@@ -131,7 +131,6 @@ MonoBehaviour:
     type: 3}
   explosion: {fileID: 7686513493736892033, guid: 1d2137dc9fd71c14a852e1c16c189b74,
     type: 3}
-  shouldExplode: 1
   explosionSize: 4
   asteroid: 0
   DESTRUCTION_OPINION_PENALTY: 0

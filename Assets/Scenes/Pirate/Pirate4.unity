@@ -7745,7 +7745,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SHIP: {fileID: 1015899777007869501, guid: b4ff680f58e14d241956e2a81bb566ca, type: 3}
-  AMOUNT: 3
+  AMOUNT: 2
   MOVE_SHIPS_TO_STAGE_AT_START: 1
   SHIP_AI_ACTIVE: 0
 --- !u!114 &785283206
@@ -10217,6 +10217,7 @@ MonoBehaviour:
   clickIndicator: {fileID: 4186882218027370042, guid: 5201bf13e074c304ca0f27756b1d3106,
     type: 3}
   enemyBuildingCheckRadiusInPath: 0
+  SCREENSHOT_PATH: 
 --- !u!1 &1066868470
 GameObject:
   m_ObjectHideFlags: 0
@@ -11640,7 +11641,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SHIP: {fileID: 1578078182420795071, guid: cf6da5b9ac575a648926f6e05e588517, type: 3}
-  AMOUNT: 3
+  AMOUNT: 2
   MOVE_SHIPS_TO_STAGE_AT_START: 1
   SHIP_AI_ACTIVE: 0
 --- !u!114 &1197286973
@@ -11656,7 +11657,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SHIP: {fileID: 1015899777007869501, guid: b4ff680f58e14d241956e2a81bb566ca, type: 3}
-  AMOUNT: 12
+  AMOUNT: 10
   MOVE_SHIPS_TO_STAGE_AT_START: 1
   SHIP_AI_ACTIVE: 0
 --- !u!114 &1197286974
@@ -13025,7 +13026,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SHIP: {fileID: 7594508181546237423, guid: 5f91b6ccf814db7448fb380de0c9070a, type: 3}
-  AMOUNT: 14
+  AMOUNT: 8
   MOVE_SHIPS_TO_STAGE_AT_START: 1
   SHIP_AI_ACTIVE: 0
 --- !u!114 &1367902516
@@ -16663,7 +16664,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SHIP: {fileID: 7594508181546237423, guid: 5f91b6ccf814db7448fb380de0c9070a, type: 3}
-  AMOUNT: 4
+  AMOUNT: 3
   MOVE_SHIPS_TO_STAGE_AT_START: 1
   SHIP_AI_ACTIVE: 0
 --- !u!114 &1736760238

@@ -113,7 +113,6 @@ MonoBehaviour:
     type: 3}
   explosion: {fileID: 7686513493736892033, guid: 1d2137dc9fd71c14a852e1c16c189b74,
     type: 3}
-  shouldExplode: 1
   explosionSize: 4
   asteroid: 0
   DESTRUCTION_OPINION_PENALTY: 3
@@ -183,7 +182,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   producedShip: {fileID: 4222341225281556822, guid: 049b4664e1fcbe248a51a1866bcb1d45,
     type: 3}
-  moneyCost: 500
+  moneyCost: 575
   metalCost: 48
   productionTime: 6
   productionLimit: 4

@@ -104,14 +104,15 @@ MonoBehaviour:
   healthBar: {fileID: 793192655619639282, guid: c90c2b0cc03225241a9316068ca1372f,
     type: 3}
   explosion: {fileID: 0}
-  shouldExplode: 0
   explosionSize: 0
   asteroid: 1
-  maxHp: 3350
+  DESTRUCTION_OPINION_PENALTY: 0
+  maxHp: 2750
   repairDuration: 0
   repairAmount: 0
   doesNotHeal: 1
   armed: 0
+  IGNORES_STAGE_BORDERS: 0
 --- !u!114 &2438807658000140222
 MonoBehaviour:
   m_ObjectHideFlags: 0

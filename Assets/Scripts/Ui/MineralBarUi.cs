@@ -30,6 +30,17 @@ public class MineralBarUi : MonoBehaviour {
 
     private IEnumerator MineralUpdaterLoop() {
         while (true) {
+            if (FactionManager.PlayerFaction == null) {
+                maxMineralBarRoot.localScale = new Vector3(1, 0, 1);
+                totalMineralBarRoot.localScale = new Vector3(1, 0, 1);
+                maxMineralBarRootCost.localScale = new Vector3(1, 0, 1);
+                totalMineralBarRootCost.localScale = new Vector3(1, 0, 1);
+
+                currentMaxMineralsText.text = "0";
+                currentTotalMineralsText.text = "0";
+
+                break;
+            }
             int currentTotal = 0;
             int currentMaxMinerals = 0;
             int totalCommandCenterMaxMinerals = 1;  // This is one because it cannot be zero, and we add other mineral capacities.
