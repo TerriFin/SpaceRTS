@@ -24798,7 +24798,7 @@ PrefabInstance:
     - target: {fileID: 3039333322685448411, guid: df83e7e6a70292e41aef9b6aa899adec,
         type: 3}
       propertyPath: productionLimit
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5727477988830720115, guid: df83e7e6a70292e41aef9b6aa899adec,
         type: 3}

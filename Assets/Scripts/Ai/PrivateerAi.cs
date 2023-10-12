@@ -27,7 +27,7 @@ public class PrivateerAi : MonoBehaviour, IAi {
             bool foundField = false;
             if (fields.Count > 0) {
                 for (int i = 0; i < fields.Count; i++) {
-                    if (fields[i].CurrentAsteroids <= 2) continue;
+                    if (fields[i].CurrentAsteroids <= 2 && fields[i].MAX_AI_MINES <= 2) continue;
                     Collider2D[] colliders = Physics2D.OverlapCircleAll(fields[i].transform.position, 5.0f);
                     bool currentOk = true;
                     foreach (Collider2D collider in colliders) {

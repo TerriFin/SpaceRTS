@@ -115,7 +115,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speedForceAmount: 170
-  rotationForceAmount: 105
+  rotationForceAmount: 120
   primaryDeadArea: 1
   secondaryDeadArea: 0.75
   allowedMissAmount: 8
@@ -141,7 +141,7 @@ MonoBehaviour:
   explosionSize: 3
   asteroid: 0
   DESTRUCTION_OPINION_PENALTY: 0
-  maxHp: 425
+  maxHp: 475
   repairDuration: 2
   repairAmount: 26
   doesNotHeal: 0
@@ -402,11 +402,6 @@ PrefabInstance:
       propertyPath: facesForward
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 4898290794942688877, guid: ccf9baffe3afcde4d86dbe171e8cf5f9,
-        type: 3}
-      propertyPath: rotationSpeed
-      value: 110
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ccf9baffe3afcde4d86dbe171e8cf5f9, type: 3}
 --- !u!4 &1258631080621397983 stripped
@@ -496,11 +491,6 @@ PrefabInstance:
         type: 3}
       propertyPath: facesForward
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4898290794942688877, guid: ccf9baffe3afcde4d86dbe171e8cf5f9,
-        type: 3}
-      propertyPath: rotationSpeed
-      value: 110
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ccf9baffe3afcde4d86dbe171e8cf5f9, type: 3}

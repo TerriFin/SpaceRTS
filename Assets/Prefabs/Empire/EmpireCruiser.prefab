@@ -144,7 +144,7 @@ MonoBehaviour:
   DESTRUCTION_OPINION_PENALTY: 0
   maxHp: 2000
   repairDuration: 2
-  repairAmount: 42
+  repairAmount: 41
   doesNotHeal: 0
   armed: 1
   IGNORES_STAGE_BORDERS: 0
@@ -288,7 +288,7 @@ MonoBehaviour:
   FIGHTER: {fileID: 9049299962807796413, guid: ac05a702fc4cb7c48a9ee331237146b9, type: 3}
   FIGHTER_DEAD_ZONE: 1
   MAX_AMOUNT: 7
-  PRODUCTION_TIME: 7
+  PRODUCTION_TIME: 5.5
   CHECK_ENEMIES_TIMER: 1
 --- !u!70 &8399453566840234672
 CapsuleCollider2D:
@@ -493,7 +493,7 @@ PrefabInstance:
     - target: {fileID: 9021469195139787800, guid: f1f5ee4b1de00434d91cb5d67873b347,
         type: 3}
       propertyPath: firingSpeed
-      value: 0.11
+      value: 0.145
       objectReference: {fileID: 0}
     - target: {fileID: 9021469195139787800, guid: f1f5ee4b1de00434d91cb5d67873b347,
         type: 3}
@@ -678,7 +678,7 @@ PrefabInstance:
     - target: {fileID: 9021469195139787800, guid: f1f5ee4b1de00434d91cb5d67873b347,
         type: 3}
       propertyPath: firingSpeed
-      value: 0.11
+      value: 0.145
       objectReference: {fileID: 0}
     - target: {fileID: 9021469195139787800, guid: f1f5ee4b1de00434d91cb5d67873b347,
         type: 3}
@@ -768,7 +768,7 @@ PrefabInstance:
     - target: {fileID: 9021469195139787800, guid: f1f5ee4b1de00434d91cb5d67873b347,
         type: 3}
       propertyPath: firingSpeed
-      value: 0.11
+      value: 0.145
       objectReference: {fileID: 0}
     - target: {fileID: 9021469195139787800, guid: f1f5ee4b1de00434d91cb5d67873b347,
         type: 3}

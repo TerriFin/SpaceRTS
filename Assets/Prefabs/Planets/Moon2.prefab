@@ -123,7 +123,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   refreshTime: 3
-  radius: 2
+  radius: 2.5
   ALERT_RESET_TIMER: 6
   PLANET_DISTANCE_REQUIREMENT: 8
 --- !u!1 &671462311204830524

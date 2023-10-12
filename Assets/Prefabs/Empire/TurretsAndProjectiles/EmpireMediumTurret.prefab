@@ -106,7 +106,7 @@ MonoBehaviour:
   allowedMissDegree: 5
   kickBack: 2
   firingRange: 0
-  forwardCompensation: 0.33
+  forwardCompensation: 0.4
   facesForward: 0
   miningTurret: 0
 --- !u!82 &-1926486625646297114

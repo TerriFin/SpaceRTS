@@ -16,7 +16,8 @@ MonoBehaviour:
   building: {fileID: 9175082911192700769, guid: b208d9fd633e1e34f83bfbf17c8e09b5,
     type: 3}
   type: 3
-  buildingRadius: 3.5
+  buildingRadius: 4
   buildTime: 5
   mineralCost: 330
   moneyCost: 4400
+  requiredPrefString: 

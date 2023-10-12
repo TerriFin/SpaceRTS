@@ -109,14 +109,15 @@ MonoBehaviour:
     type: 3}
   explosion: {fileID: 7686513493736892033, guid: 1d2137dc9fd71c14a852e1c16c189b74,
     type: 3}
-  shouldExplode: 1
   explosionSize: 4
   asteroid: 0
+  DESTRUCTION_OPINION_PENALTY: 0
   maxHp: 800
   repairDuration: 0.125
-  repairAmount: 8
+  repairAmount: 4
   doesNotHeal: 0
   armed: 0
+  IGNORES_STAGE_BORDERS: 0
 --- !u!114 &1543981551014574690
 MonoBehaviour:
   m_ObjectHideFlags: 0

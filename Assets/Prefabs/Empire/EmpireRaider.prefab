@@ -253,7 +253,7 @@ MonoBehaviour:
   howManyLoopsIgnoreNewTargetsAfterFindingOne: 6
   RETREAT_HP_PERCENTAGE: 0
   RETREAT_ENEMY_ADVANTAGE_PERCENTAGE: 0
-  updateTime: 0.2
+  updateTime: 0.175
 --- !u!70 &5508972834936203577
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

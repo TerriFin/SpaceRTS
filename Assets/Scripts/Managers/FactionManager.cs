@@ -28,7 +28,7 @@ public class FactionManager : MonoBehaviour {
             }
         }
 
-        if (!playerInGame) MusicManager.PlayTheme("Menu");
+        if (!playerInGame) MusicManager.PlayTheme(foundFactions[Random.Range(0, foundFactions.Count)].factionTag);
 
         FactionScoresManager = factionsGameobject.GetComponent<FactionScoresManager>();
     }

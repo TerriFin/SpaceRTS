@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1211112ceb93004facd7c4caeb270c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  STARTING_ASTEROIDS: 5
+  STARTING_ASTEROIDS: 8
   MAX_ASTEROIDS: 8
   FIELD_RADIUS: 5.75
   ASTEROIDS_RESPAWN: 1

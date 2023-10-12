@@ -210,7 +210,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SPIN_SPEED: 240
-  MOVEMENT_FORCE: 1000
+  MOVEMENT_FORCE: 1085
   PRIMARY_DEAD_AREA: 0.5
   SECONDARY_DEAD_AREA: 0.1
   ORIGIN: {fileID: 0}
@@ -234,7 +234,7 @@ MonoBehaviour:
   asteroid: 0
   DESTRUCTION_OPINION_PENALTY: 0
   maxHp: 500
-  repairDuration: 0.21
+  repairDuration: 0.225
   repairAmount: 8
   doesNotHeal: 0
   armed: 1
@@ -364,7 +364,7 @@ MonoBehaviour:
   RETREAT_ENEMY_ADVANTAGE_PERCENTAGE: 0
   updateTime: 0.125
   circleAdvancementAmount: 0.7
-  REVERSE_DISTANCE: 1.25
+  REVERSE_DISTANCE: 1.1
   REVERSE_COOLDOWN_TIMER: 5
 --- !u!114 &3414870361985422500
 MonoBehaviour:

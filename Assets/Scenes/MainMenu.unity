@@ -28068,8 +28068,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: a35d8dbce3978f5449f6882fc7ddf8f3, type: 3}
   TUTORIAL_TEXTS:
   - Hello, and welcome to Casual Space RTS! The RTS game that does not require crazy
-    multitasking skills to have fun in! Press the arrow on the right to progress
-    this tutorial.
+    multitasking skills to play! Press the arrow on the right to progress this tutorial.
   - In a nutshell, all you need to as a player is build buildings, control the largest
     military ships, decide how many cargo ships you want to have and set prices for
     minerals (this is automated by default, but you can also do it manually!)
@@ -28130,7 +28129,8 @@ MonoBehaviour:
     again by pressing the button when you do not have something selected!
   - In the diplomacy view you see other factions currently in the game. You can also
     stop/start trading, or start/stop fighting. Keep in mind that other factions
-    will respond to what you do, and they can hold a grudge.
+    will respond to what you do, and they can hold a grudge. Diplomacy is often disabled
+    in campaign maps.
   - 'There are three factions in the game. From left to right they are: Federation,
     Empire and Pirates. They have different strenghts and weaknesses.'
   - Federation has slow ships that fire far. They use both minerals and money, but
@@ -28143,11 +28143,11 @@ MonoBehaviour:
     with a medium weapon as opposed to small. Their cruiser is also a raiding ship
     specialized in hit-and-run attacks. Pirates use AOE damage missiles in frigates
     and cruisers.
-  - 'And there it is! You now should know how to play the game! Enjoy the campaigns
+  - And there it is! You now should know how to play the game! Enjoy the campaigns
     i made and try out the skirmish mode! You can also make the AIs fight in the
     skirmish mode algodoo style! If you beat the "Unfair" AI 1 on 1 with mirrored
     tiny map, please contact me with a video of it. I might sent a small reward your
-    way! '
+    way! You will also unlock a factions "mega ship" by beating a factions campaign!
   TUTORIAL_TEXT_HOLDER: {fileID: 819170439}
   TUTORIAL_IMAGE_HOLDER: {fileID: 998548185}
   FORWARD_BUTTON: {fileID: 549962136}

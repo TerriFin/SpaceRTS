@@ -119,8 +119,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e415c8169801e3f48a2d1a59705dc514, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedForceAmount: 225
-  rotationForceAmount: 70
+  speedForceAmount: 235
+  rotationForceAmount: 75
   primaryDeadArea: 0.75
   secondaryDeadArea: 0.3
   allowedMissAmount: 1.6
@@ -681,11 +681,6 @@ PrefabInstance:
         type: 3}
       propertyPath: firingSpeed
       value: 1.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4362152314986530187, guid: 97a44bf5d6861844991251281a4768d4,
-        type: 3}
-      propertyPath: rotationSpeed
-      value: 80
       objectReference: {fileID: 0}
     - target: {fileID: 5253017064012511519, guid: 97a44bf5d6861844991251281a4768d4,
         type: 3}

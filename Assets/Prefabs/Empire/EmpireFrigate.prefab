@@ -142,7 +142,7 @@ MonoBehaviour:
   DESTRUCTION_OPINION_PENALTY: 0
   maxHp: 1200
   repairDuration: 2
-  repairAmount: 40
+  repairAmount: 35
   doesNotHeal: 0
   armed: 1
   IGNORES_STAGE_BORDERS: 0
@@ -428,11 +428,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2392173072589067676, guid: ffbfc5a561d7e7c4ab97d52b1dbd803a,
         type: 3}
-      propertyPath: firingSpeed
-      value: 0.11
-      objectReference: {fileID: 0}
-    - target: {fileID: 2392173072589067676, guid: ffbfc5a561d7e7c4ab97d52b1dbd803a,
-        type: 3}
       propertyPath: facesForward
       value: 1
       objectReference: {fileID: 0}
@@ -600,11 +595,6 @@ PrefabInstance:
         type: 3}
       propertyPath: firingRange
       value: 6.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2392173072589067676, guid: ffbfc5a561d7e7c4ab97d52b1dbd803a,
-        type: 3}
-      propertyPath: firingSpeed
-      value: 0.11
       objectReference: {fileID: 0}
     - target: {fileID: 2392173072589067676, guid: ffbfc5a561d7e7c4ab97d52b1dbd803a,
         type: 3}

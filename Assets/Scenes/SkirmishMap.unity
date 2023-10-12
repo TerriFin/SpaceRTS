@@ -1569,10 +1569,10 @@ MonoBehaviour:
   CHANCE_TO_BUILD_PRODUCTION_WHEN_NOT_ENOUGH_RESOURCE_FLOW: 0.7
   winningThreshold: 62
   chanceToBuildWhileWinning: 0.6
-  defenseScanRadius: 9
+  defenseScanRadius: 9.75
   planetDefenseAmount: 3
   asteroidFieldDefenseAmount: 5
-  chanceToBuildProductionNearMines: 0.3
+  chanceToBuildProductionNearMines: 0.35
   howManySkipsBetweenMines: 1
   howManySkipsBetweenCommandCenters: 1
   asteroidFieldSelectionRandomness: 25
@@ -6866,11 +6866,11 @@ MonoBehaviour:
   minSkips: 2
   maxSkips: 5
   desiredMineralOverflowAmount: 20
-  desiredMoneyOverflowAmount: 300
-  CHANCE_TO_BUILD_PRODUCTION_WHEN_NOT_ENOUGH_RESOURCE_FLOW: 0.75
-  winningThreshold: 42
-  chanceToBuildWhileWinning: 0.75
-  defenseScanRadius: 9
+  desiredMoneyOverflowAmount: 100
+  CHANCE_TO_BUILD_PRODUCTION_WHEN_NOT_ENOUGH_RESOURCE_FLOW: 0.85
+  winningThreshold: 52
+  chanceToBuildWhileWinning: 0.85
+  defenseScanRadius: 9.75
   planetDefenseAmount: 2
   asteroidFieldDefenseAmount: 2
   chanceToBuildProductionNearMines: 0.75
@@ -6944,14 +6944,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   WORKS_WITHOUT_BASE: 1
   minSkips: 22
-  maxSkips: 48
+  maxSkips: 54
   MIN_FLEETS: 1
   MAX_FLEETS: 8
   PLANET_ATTACK_PERCENTAGE: 0.6
   MINE_ATTACK_PERCENTAGE: 0.3
   ATTACK_ENEMY_VULNERABLE_MINE_PERCENTAGE: 0.85
   COMMAND_CENTER_ATTACK_PERCENTAGE: 0.1
-  REQUIRED_ENEMY_AMOUNT_TO_DEFEND: 2.4
+  REQUIRED_ENEMY_AMOUNT_TO_DEFEND: 2.325
   SAFE_MINERAL_OVERFLOW_AMOUNT: 0
   SAFE_MONEY_OVERFLOW_AMOUNT: 0
 --- !u!114 &1563128017
@@ -8489,7 +8489,7 @@ MonoBehaviour:
   CHANCE_TO_BUILD_PRODUCTION_WHEN_NOT_ENOUGH_RESOURCE_FLOW: 0.65
   winningThreshold: 62
   chanceToBuildWhileWinning: 0.65
-  defenseScanRadius: 9
+  defenseScanRadius: 9.75
   planetDefenseAmount: 3
   asteroidFieldDefenseAmount: 3
   chanceToBuildProductionNearMines: 0.55
@@ -8576,11 +8576,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3de221636f68a4a4ca5686c1fbc8f7b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackFleetSize: 5
+  attackFleetSize: 6
   defenceFleetSize: 2
   shipRequiredHpPercentage: 0.7
   fleetAtDestinationDistance: 2
-  fleetRegroupDistance: 5
+  fleetRegroupDistance: 6
   orderLengthSeconds: 220
   orderRepeatSeconds: 20
   howManyMoreDefenceFleets: 2
@@ -8650,8 +8650,8 @@ MonoBehaviour:
   PLANET_ATTACK_PERCENTAGE: 0.45
   MINE_ATTACK_PERCENTAGE: 0.33
   ATTACK_ENEMY_VULNERABLE_MINE_PERCENTAGE: 0.5
-  COMMAND_CENTER_ATTACK_PERCENTAGE: 0.6
-  REQUIRED_ENEMY_AMOUNT_TO_DEFEND: 2.2
+  COMMAND_CENTER_ATTACK_PERCENTAGE: 0.5
+  REQUIRED_ENEMY_AMOUNT_TO_DEFEND: 2.275
   SAFE_MINERAL_OVERFLOW_AMOUNT: 0
   SAFE_MONEY_OVERFLOW_AMOUNT: 0
 --- !u!114 &2022676778

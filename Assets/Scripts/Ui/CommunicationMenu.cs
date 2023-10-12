@@ -53,4 +53,8 @@ public class CommunicationMenu : MonoBehaviour {
         COMMUNICATION_MENU_TEXT.color = textColor;
         COMMUNICATION_MENU_IMAGE.sprite = FactionManager.Factions[MESSAGE_FACTIONS[index]].factionLeader;
     }
+
+    private void OnDestroy() {
+        IS_PAUSED = false;
+    }
 }

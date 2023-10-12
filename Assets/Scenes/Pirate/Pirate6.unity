@@ -123,6 +123,131 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &3694332
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3694333}
+  - component: {fileID: 3694338}
+  - component: {fileID: 3694337}
+  - component: {fileID: 3694336}
+  - component: {fileID: 3694335}
+  - component: {fileID: 3694334}
+  - component: {fileID: 3694339}
+  m_Layer: 0
+  m_Name: PirateSpawnMercenaries4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3694333
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3694332}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -42.5, y: 64, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 431066859}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3694334
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3694332}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47bff8ccc2b1e734db554d36704f15c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SHIP: {fileID: 2688512850584440221, guid: 35e29cbb61cb9d74097b54bc43323d2a, type: 3}
+  AMOUNT: 1
+--- !u!114 &3694335
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3694332}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47bff8ccc2b1e734db554d36704f15c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SHIP: {fileID: 8152272244134938593, guid: 63650ee3fce3e2e419b04b7fbb3defce, type: 3}
+  AMOUNT: 10
+--- !u!114 &3694336
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3694332}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6d2eae111c0918489dde62c2452590b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TIMER: 1
+  FACTION: Pirate
+  AMOUNT: 750000
+  LESS_THAN: 0
+  GREATER_THAN: 1
+  LOOPS: 1
+--- !u!114 &3694337
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3694332}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97f59a7ce94acf1408e7017f7e6060f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TIMER: 70
+  LOOPS: 1
+--- !u!114 &3694338
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3694332}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf17f6ef1e1a34e4d99b491450dc3abc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TIMER: 1
+--- !u!114 &3694339
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3694332}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c2faee346e4f444b80b697cae19ea0b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FACTION: Pirate
+  AMOUNT: -6000
+  SET_MONEY: 0
 --- !u!1 &4640804
 GameObject:
   m_ObjectHideFlags: 0
@@ -6846,6 +6971,11 @@ Transform:
   - {fileID: 1327692586}
   - {fileID: 121957281}
   - {fileID: 146768709}
+  - {fileID: 1713514340}
+  - {fileID: 451718988}
+  - {fileID: 1860152555}
+  - {fileID: 3694333}
+  - {fileID: 989383005}
   - {fileID: 1037260651}
   - {fileID: 1058484367}
   - {fileID: 2052061604}
@@ -7060,6 +7190,116 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 180d9cda845bd0a49aa038fedc2d925c, type: 3}
+--- !u!1 &451718987
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 451718988}
+  - component: {fileID: 451718992}
+  - component: {fileID: 451718991}
+  - component: {fileID: 451718990}
+  - component: {fileID: 451718989}
+  - component: {fileID: 451718993}
+  m_Layer: 0
+  m_Name: PirateSpawnMercenaries2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &451718988
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 451718987}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -42.5, y: 64, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 431066859}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &451718989
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 451718987}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47bff8ccc2b1e734db554d36704f15c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SHIP: {fileID: 8152272244134938593, guid: 63650ee3fce3e2e419b04b7fbb3defce, type: 3}
+  AMOUNT: 6
+--- !u!114 &451718990
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 451718987}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6d2eae111c0918489dde62c2452590b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TIMER: 1
+  FACTION: Pirate
+  AMOUNT: 400000
+  LESS_THAN: 0
+  GREATER_THAN: 1
+  LOOPS: 1
+--- !u!114 &451718991
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 451718987}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97f59a7ce94acf1408e7017f7e6060f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TIMER: 45
+  LOOPS: 1
+--- !u!114 &451718992
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 451718987}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf17f6ef1e1a34e4d99b491450dc3abc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TIMER: 1
+--- !u!114 &451718993
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 451718987}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c2faee346e4f444b80b697cae19ea0b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FACTION: Pirate
+  AMOUNT: -3000
+  SET_MONEY: 0
 --- !u!1001 &455229141
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14013,6 +14253,131 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 985189275}
   m_CullTransparentMesh: 0
+--- !u!1 &989383004
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 989383005}
+  - component: {fileID: 989383010}
+  - component: {fileID: 989383009}
+  - component: {fileID: 989383008}
+  - component: {fileID: 989383007}
+  - component: {fileID: 989383006}
+  - component: {fileID: 989383011}
+  m_Layer: 0
+  m_Name: PirateSpawnMercenaries5
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &989383005
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 989383004}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -42.5, y: 64, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 431066859}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &989383006
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 989383004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47bff8ccc2b1e734db554d36704f15c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SHIP: {fileID: 2688512850584440221, guid: 35e29cbb61cb9d74097b54bc43323d2a, type: 3}
+  AMOUNT: 2
+--- !u!114 &989383007
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 989383004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47bff8ccc2b1e734db554d36704f15c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SHIP: {fileID: 8152272244134938593, guid: 63650ee3fce3e2e419b04b7fbb3defce, type: 3}
+  AMOUNT: 12
+--- !u!114 &989383008
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 989383004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6d2eae111c0918489dde62c2452590b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TIMER: 1
+  FACTION: Pirate
+  AMOUNT: 950000
+  LESS_THAN: 0
+  GREATER_THAN: 1
+  LOOPS: 1
+--- !u!114 &989383009
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 989383004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97f59a7ce94acf1408e7017f7e6060f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TIMER: 85
+  LOOPS: 1
+--- !u!114 &989383010
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 989383004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf17f6ef1e1a34e4d99b491450dc3abc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TIMER: 1
+--- !u!114 &989383011
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 989383004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c2faee346e4f444b80b697cae19ea0b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FACTION: Pirate
+  AMOUNT: -8000
+  SET_MONEY: 0
 --- !u!1001 &999019747
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14752,7 +15117,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 431066859}
-  m_RootOrder: 4
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1037260652
 MonoBehaviour:
@@ -15143,7 +15508,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 431066859}
-  m_RootOrder: 5
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1058484368
 MonoBehaviour:
@@ -19039,8 +19404,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MESSAGES:
+  - Also, there are some mercenaries willing to do our bidding! The more money you
+    have, the more mercenaries will come to help you out!
   - Oops, did i say 750000$? In the last comm? I meant 500000$!
   MESSAGES_FACTIONS:
+  - Pirate
   - Pirate
 --- !u!114 &1327692589
 MonoBehaviour:
@@ -24244,6 +24612,116 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 64d4c5022a87b844fa00134cc6ac3167, type: 3}
+--- !u!1 &1713514339
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1713514340}
+  - component: {fileID: 1713514344}
+  - component: {fileID: 1713514343}
+  - component: {fileID: 1713514342}
+  - component: {fileID: 1713514341}
+  - component: {fileID: 1713514345}
+  m_Layer: 0
+  m_Name: PirateSpawnMercenaries1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1713514340
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1713514339}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -42.5, y: 64, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 431066859}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1713514341
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1713514339}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47bff8ccc2b1e734db554d36704f15c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SHIP: {fileID: 8152272244134938593, guid: 63650ee3fce3e2e419b04b7fbb3defce, type: 3}
+  AMOUNT: 3
+--- !u!114 &1713514342
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1713514339}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6d2eae111c0918489dde62c2452590b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TIMER: 1
+  FACTION: Pirate
+  AMOUNT: 250000
+  LESS_THAN: 0
+  GREATER_THAN: 1
+  LOOPS: 1
+--- !u!114 &1713514343
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1713514339}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97f59a7ce94acf1408e7017f7e6060f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TIMER: 30
+  LOOPS: 1
+--- !u!114 &1713514344
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1713514339}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf17f6ef1e1a34e4d99b491450dc3abc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TIMER: 1
+--- !u!114 &1713514345
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1713514339}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c2faee346e4f444b80b697cae19ea0b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FACTION: Pirate
+  AMOUNT: -1500
+  SET_MONEY: 0
 --- !u!1001 &1724767093
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -25511,7 +25989,7 @@ PrefabInstance:
     - target: {fileID: 3039333322685448411, guid: df83e7e6a70292e41aef9b6aa899adec,
         type: 3}
       propertyPath: productionLimit
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5727477988830720115, guid: df83e7e6a70292e41aef9b6aa899adec,
         type: 3}
@@ -26079,6 +26557,131 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0de68dcd20a94fb45a7f95d22073a646, type: 3}
+--- !u!1 &1860152554
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1860152555}
+  - component: {fileID: 1860152560}
+  - component: {fileID: 1860152559}
+  - component: {fileID: 1860152558}
+  - component: {fileID: 1860152557}
+  - component: {fileID: 1860152556}
+  - component: {fileID: 1860152561}
+  m_Layer: 0
+  m_Name: PirateSpawnMercenaries3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1860152555
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1860152554}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -42.5, y: 64, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 431066859}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1860152556
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1860152554}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47bff8ccc2b1e734db554d36704f15c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SHIP: {fileID: 2688512850584440221, guid: 35e29cbb61cb9d74097b54bc43323d2a, type: 3}
+  AMOUNT: 1
+--- !u!114 &1860152557
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1860152554}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47bff8ccc2b1e734db554d36704f15c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SHIP: {fileID: 8152272244134938593, guid: 63650ee3fce3e2e419b04b7fbb3defce, type: 3}
+  AMOUNT: 8
+--- !u!114 &1860152558
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1860152554}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6d2eae111c0918489dde62c2452590b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TIMER: 1
+  FACTION: Pirate
+  AMOUNT: 500000
+  LESS_THAN: 0
+  GREATER_THAN: 1
+  LOOPS: 1
+--- !u!114 &1860152559
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1860152554}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97f59a7ce94acf1408e7017f7e6060f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TIMER: 60
+  LOOPS: 1
+--- !u!114 &1860152560
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1860152554}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf17f6ef1e1a34e4d99b491450dc3abc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TIMER: 1
+--- !u!114 &1860152561
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1860152554}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c2faee346e4f444b80b697cae19ea0b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FACTION: Pirate
+  AMOUNT: -5000
+  SET_MONEY: 0
 --- !u!1001 &1864236220
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27414,7 +28017,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 431066859}
-  m_RootOrder: 7
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1969059491
 MonoBehaviour:
@@ -28610,7 +29213,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 431066859}
-  m_RootOrder: 6
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2052061605
 MonoBehaviour:

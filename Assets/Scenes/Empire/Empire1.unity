@@ -2155,6 +2155,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2920243625132941087, guid: 089eec00e3b60304f8a9ee44b849e6d4,
+        type: 3}
+      propertyPath: currentMineralStorage
+      value: 650
+      objectReference: {fileID: 0}
     - target: {fileID: 7707713103101989621, guid: 089eec00e3b60304f8a9ee44b849e6d4,
         type: 3}
       propertyPath: m_RootOrder
@@ -8526,6 +8531,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2920243625132941087, guid: 089eec00e3b60304f8a9ee44b849e6d4,
+        type: 3}
+      propertyPath: currentMineralStorage
+      value: 650
+      objectReference: {fileID: 0}
     - target: {fileID: 7707713103101989621, guid: 089eec00e3b60304f8a9ee44b849e6d4,
         type: 3}
       propertyPath: m_RootOrder
@@ -10530,6 +10540,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: EmpireBigStation
+      objectReference: {fileID: 0}
+    - target: {fileID: 7228888600029736478, guid: 07ece9d7a32f6f549a5166cabea1f61d,
+        type: 3}
+      propertyPath: currentMineralStorage
+      value: 850
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 07ece9d7a32f6f549a5166cabea1f61d, type: 3}

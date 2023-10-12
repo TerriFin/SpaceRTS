@@ -174,7 +174,6 @@ MonoBehaviour:
     type: 3}
   explosion: {fileID: 7686513493736892033, guid: 1d2137dc9fd71c14a852e1c16c189b74,
     type: 3}
-  shouldExplode: 1
   explosionSize: 12
   asteroid: 0
   DESTRUCTION_OPINION_PENALTY: 0
@@ -482,11 +481,6 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2392173072589067676, guid: ffbfc5a561d7e7c4ab97d52b1dbd803a,
         type: 3}
-      propertyPath: firingRange
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2392173072589067676, guid: ffbfc5a561d7e7c4ab97d52b1dbd803a,
-        type: 3}
       propertyPath: firingSpeed
       value: 0.11
       objectReference: {fileID: 0}
@@ -580,11 +574,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8399453566840234681}
     m_Modifications:
-    - target: {fileID: 2392173072589067676, guid: ffbfc5a561d7e7c4ab97d52b1dbd803a,
-        type: 3}
-      propertyPath: firingRange
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2392173072589067676, guid: ffbfc5a561d7e7c4ab97d52b1dbd803a,
         type: 3}
       propertyPath: firingSpeed
@@ -870,11 +859,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8399453566840234681}
     m_Modifications:
-    - target: {fileID: 2392173072589067676, guid: ffbfc5a561d7e7c4ab97d52b1dbd803a,
-        type: 3}
-      propertyPath: firingRange
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2392173072589067676, guid: ffbfc5a561d7e7c4ab97d52b1dbd803a,
         type: 3}
       propertyPath: firingSpeed

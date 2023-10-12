@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class RaiderCombatModule : CombatModule {
     public override void SetNewTargetArmed() {
-        if (Sensors.ArmedAllies.Count >= Sensors.ArmedEnemies.Count) {
+        if (Sensors.ArmedAlliesMilitary.Count >= 0 || Sensors.ArmedAllies.Count + 1 >= Sensors.ArmedEnemies.Count) {
             SetNewTargetNotArmed();
         } else {
             SetEscapeTargetPosFromClosestArmedEnemy(BuildingManager.GetFactionCenterPoint(tag));

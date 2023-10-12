@@ -25922,17 +25922,17 @@ PrefabInstance:
     - target: {fileID: 3039333322685448411, guid: df83e7e6a70292e41aef9b6aa899adec,
         type: 3}
       propertyPath: metalCost
-      value: 5000
+      value: 4500
       objectReference: {fileID: 0}
     - target: {fileID: 3039333322685448411, guid: df83e7e6a70292e41aef9b6aa899adec,
         type: 3}
       propertyPath: productionTime
-      value: 160
+      value: 145
       objectReference: {fileID: 0}
     - target: {fileID: 3039333322685448411, guid: df83e7e6a70292e41aef9b6aa899adec,
         type: 3}
       propertyPath: productionLimit
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5727477988830720115, guid: df83e7e6a70292e41aef9b6aa899adec,
         type: 3}

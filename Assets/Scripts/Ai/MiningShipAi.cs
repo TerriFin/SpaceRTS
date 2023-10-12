@@ -20,7 +20,7 @@ public class MiningShipAi : MonoBehaviour, IAi {
 
     public void ExecuteStep() {
         if (Controls.ORIGIN == null) {
-            Destroy(gameObject);
+            GetComponent<Hitpoints>().DestroyThis(true);
         }
 
         if (Storage.FreeStorage() == 0 || Sensors.Asteroids.Count == 0) {

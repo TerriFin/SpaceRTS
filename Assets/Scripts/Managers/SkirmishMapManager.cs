@@ -39,7 +39,7 @@ public class SkirmishMapManager : MonoBehaviour {
                                     switch (MapGenerator.FactionDatas[currentGivenFaction].statusIndex) {
                                         case 2:
                                             currentFoundFactionAiBase.aiDecisionTimer = 1.2f;
-                                            currentFoundFaction.aiBonusMultiplier = 0.8f;
+                                            currentFoundFaction.aiBonusMultiplier = 0.85f;
                                             if (aiCargoManager != null) aiCargoManager.MINE_CARGO_POINTS -= 4;
                                             if (aiBuildingManager != null) aiBuildingManager.CHANCE_TO_BUILD_PRODUCTION_WHEN_NOT_ENOUGH_RESOURCE_FLOW -= 0.15f;
                                             break;
@@ -51,15 +51,15 @@ public class SkirmishMapManager : MonoBehaviour {
                                             break;
                                         case 4:
                                             currentFoundFactionAiBase.aiDecisionTimer = 0.8f;
-                                            currentFoundFaction.aiBonusMultiplier = 1.25f;
-                                            if (aiCargoManager != null) aiCargoManager.MINE_CARGO_POINTS += 7;
-                                            if (aiBuildingManager != null) aiBuildingManager.CHANCE_TO_BUILD_PRODUCTION_WHEN_NOT_ENOUGH_RESOURCE_FLOW += 0.15f;
+                                            currentFoundFaction.aiBonusMultiplier = 1.15f;
+                                            if (aiCargoManager != null) aiCargoManager.MINE_CARGO_POINTS += 3;
+                                            if (aiBuildingManager != null) aiBuildingManager.CHANCE_TO_BUILD_PRODUCTION_WHEN_NOT_ENOUGH_RESOURCE_FLOW += 0.125f;
                                             break;
                                         case 5:
                                             currentFoundFactionAiBase.aiDecisionTimer = 0.7f;
-                                            currentFoundFaction.aiBonusMultiplier = 1.5f;
-                                            if (aiCargoManager != null) aiCargoManager.MINE_CARGO_POINTS += 14;
-                                            if (aiBuildingManager != null) aiBuildingManager.CHANCE_TO_BUILD_PRODUCTION_WHEN_NOT_ENOUGH_RESOURCE_FLOW += 0.2f;
+                                            currentFoundFaction.aiBonusMultiplier = 1.35f;
+                                            if (aiCargoManager != null) aiCargoManager.MINE_CARGO_POINTS += 6;
+                                            if (aiBuildingManager != null) aiBuildingManager.CHANCE_TO_BUILD_PRODUCTION_WHEN_NOT_ENOUGH_RESOURCE_FLOW += 0.175f;
                                             break;
                                     }
                                     break;

@@ -101,12 +101,12 @@ MonoBehaviour:
   projectile: {fileID: 2894958772762266531, guid: 2f33a4ee6fe431e4ebdaefb7fdd0a533,
     type: 3}
   rotationSpeed: 280
-  firingSpeed: 0.085
+  firingSpeed: 0.0885
   turretInaccuracy: 12
   allowedMissDegree: 6
   kickBack: 2
   firingRange: 0
-  forwardCompensation: 0.33
+  forwardCompensation: 0.4
   facesForward: 0
   miningTurret: 0
 --- !u!82 &-1912903710797498862

@@ -249,11 +249,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   active: 0
-  preferredCombatDistance: 0.75
+  preferredCombatDistance: 0.66
   howManyLoopsIgnoreNewTargetsAfterFindingOne: 3
   RETREAT_HP_PERCENTAGE: 0
   RETREAT_ENEMY_ADVANTAGE_PERCENTAGE: 0
-  updateTime: 0.2
+  updateTime: 0.175
 --- !u!70 &8152272244134938599
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -377,7 +377,7 @@ PrefabInstance:
     - target: {fileID: 8405510029904318016, guid: b170f8c0788d4c74da126e3bb332a8bc,
         type: 3}
       propertyPath: kickBack
-      value: 32
+      value: 28
       objectReference: {fileID: 0}
     - target: {fileID: 8405510029904318016, guid: b170f8c0788d4c74da126e3bb332a8bc,
         type: 3}
