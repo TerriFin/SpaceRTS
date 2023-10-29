@@ -109,7 +109,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e415c8169801e3f48a2d1a59705dc514, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedForceAmount: 170
+  speedForceAmount: 160
   rotationForceAmount: 80
   primaryDeadArea: 1
   secondaryDeadArea: 0.75
@@ -133,7 +133,6 @@ MonoBehaviour:
     type: 3}
   explosion: {fileID: 7686513493736892033, guid: 1d2137dc9fd71c14a852e1c16c189b74,
     type: 3}
-  shouldExplode: 1
   explosionSize: 3
   asteroid: 0
   DESTRUCTION_OPINION_PENALTY: 0
@@ -253,7 +252,7 @@ MonoBehaviour:
   ownFactionSellMineralsPreference: 5
   otherFactionBuyMineralsPreference: -10
   otherFactionSellMineralsPreference: 0
-  randomness: 8
+  randomness: 16
   refreshTime: 26
   marketFillPercentage: 0.75
   neededDealMoneyMultiplier: 3

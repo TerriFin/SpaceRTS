@@ -149,7 +149,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speedForceAmount: 255
-  rotationForceAmount: 125
+  rotationForceAmount: 130
   primaryDeadArea: 1
   secondaryDeadArea: 0.75
   allowedMissAmount: 10
@@ -199,7 +199,7 @@ MonoBehaviour:
   MISSILE: {fileID: 7947434001017543709, guid: 70efff3db84897f46919e7b5178c131d, type: 3}
   MISSILE_MAGAZINE_SIZE: 1
   TIME_BETWEEN_SHOTS: 0
-  RELOAD_TIME: 5
+  RELOAD_TIME: 4.75
   RAIDER: 0
 --- !u!114 &-339935671214843978
 MonoBehaviour:
@@ -559,7 +559,7 @@ PrefabInstance:
     - target: {fileID: 287521535666240672, guid: 3fd1e750b4dd7974ebb7e8e903344fb4,
         type: 3}
       propertyPath: firingRange
-      value: 2.9
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 287521535666240672, guid: 3fd1e750b4dd7974ebb7e8e903344fb4,
         type: 3}
@@ -654,7 +654,7 @@ PrefabInstance:
     - target: {fileID: 287521535666240672, guid: 3fd1e750b4dd7974ebb7e8e903344fb4,
         type: 3}
       propertyPath: firingRange
-      value: 2.9
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 287521535666240672, guid: 3fd1e750b4dd7974ebb7e8e903344fb4,
         type: 3}

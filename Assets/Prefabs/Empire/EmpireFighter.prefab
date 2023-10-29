@@ -147,9 +147,9 @@ MonoBehaviour:
   explosionSize: 1
   asteroid: 0
   DESTRUCTION_OPINION_PENALTY: 0
-  maxHp: 200
+  maxHp: 125
   repairDuration: 1
-  repairAmount: 8
+  repairAmount: 7
   doesNotHeal: 0
   armed: 1
   IGNORES_STAGE_BORDERS: 0
@@ -184,7 +184,7 @@ MonoBehaviour:
   FIGHTER_RANGE: 12
   TARGET_DEAD_AREA: 2.25
   SPEED: 105
-  TURN_RATE: 100
+  TURN_RATE: 130
   CHECK_NEW_TARGET_TIMER: 3
   PEACE_CHECK_TIMER: 4
   TARGET: {fileID: 0}

@@ -140,7 +140,7 @@ MonoBehaviour:
   DESTRUCTION_OPINION_PENALTY: 0
   maxHp: 100
   repairDuration: 2
-  repairAmount: 8
+  repairAmount: 10
   doesNotHeal: 0
   armed: 1
   IGNORES_STAGE_BORDERS: 0
@@ -233,6 +233,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29626192559b9c54783f851c4007dc68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  REQUIRED_HITPOINTS_PERCENTAGE: 0.75
   timeSpentChasing: 12
   CHANCE_TO_GO_AROUND: 0.5
   CHANCE_TO_TARGET_UNDEFENDED_PLANETS: 0.9
@@ -251,7 +252,7 @@ MonoBehaviour:
   active: 0
   preferredCombatDistance: 2
   howManyLoopsIgnoreNewTargetsAfterFindingOne: 6
-  RETREAT_HP_PERCENTAGE: 0
+  RETREAT_HP_PERCENTAGE: 0.25
   RETREAT_ENEMY_ADVANTAGE_PERCENTAGE: 0
   updateTime: 0.175
 --- !u!70 &8869930590755337206

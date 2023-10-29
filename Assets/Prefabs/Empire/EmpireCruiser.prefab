@@ -115,7 +115,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e415c8169801e3f48a2d1a59705dc514, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedForceAmount: 250
+  speedForceAmount: 255
   rotationForceAmount: 85
   primaryDeadArea: 1
   secondaryDeadArea: 0.75
@@ -142,9 +142,9 @@ MonoBehaviour:
   explosionSize: 4
   asteroid: 0
   DESTRUCTION_OPINION_PENALTY: 0
-  maxHp: 2000
+  maxHp: 1800
   repairDuration: 2
-  repairAmount: 41
+  repairAmount: 42
   doesNotHeal: 0
   armed: 1
   IGNORES_STAGE_BORDERS: 0
@@ -288,7 +288,7 @@ MonoBehaviour:
   FIGHTER: {fileID: 9049299962807796413, guid: ac05a702fc4cb7c48a9ee331237146b9, type: 3}
   FIGHTER_DEAD_ZONE: 1
   MAX_AMOUNT: 7
-  PRODUCTION_TIME: 5.5
+  PRODUCTION_TIME: 2.75
   CHECK_ENEMIES_TIMER: 1
 --- !u!70 &8399453566840234672
 CapsuleCollider2D:

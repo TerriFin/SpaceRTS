@@ -111,8 +111,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e415c8169801e3f48a2d1a59705dc514, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedForceAmount: 200
-  rotationForceAmount: 185
+  speedForceAmount: 165
+  rotationForceAmount: 170
   primaryDeadArea: 1.75
   secondaryDeadArea: 1
   allowedMissAmount: 4
@@ -138,7 +138,7 @@ MonoBehaviour:
   explosionSize: 2
   asteroid: 0
   DESTRUCTION_OPINION_PENALTY: 0
-  maxHp: 265
+  maxHp: 255
   repairDuration: 2
   repairAmount: 13
   doesNotHeal: 0
@@ -233,6 +233,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29626192559b9c54783f851c4007dc68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  REQUIRED_HITPOINTS_PERCENTAGE: 0.75
   timeSpentChasing: 12
   CHANCE_TO_GO_AROUND: 0.5
   CHANCE_TO_TARGET_UNDEFENDED_PLANETS: 0.9
@@ -249,9 +250,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   active: 0
-  preferredCombatDistance: 1.5
+  preferredCombatDistance: 1
   howManyLoopsIgnoreNewTargetsAfterFindingOne: 6
-  RETREAT_HP_PERCENTAGE: 0
+  RETREAT_HP_PERCENTAGE: 0.25
   RETREAT_ENEMY_ADVANTAGE_PERCENTAGE: 0
   updateTime: 0.175
 --- !u!70 &5508972834936203577
@@ -282,7 +283,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1.8
+  m_Mass: 1.5
   m_LinearDrag: 0.8
   m_AngularDrag: 1
   m_GravityScale: 1

@@ -4,16 +4,19 @@ using UnityEngine;
 
 public class RaiderAi : MonoBehaviour, IAi {
 
+    public float REQUIRED_HITPOINTS_PERCENTAGE;
     public float timeSpentChasing;
     public float CHANCE_TO_GO_AROUND;
     public float CHANCE_TO_TARGET_UNDEFENDED_PLANETS;
 
     private IShipMovement Controls;
+    private Hitpoints Hitpoints;
     private LevelBorderManager BorderManager;
     private GameObject Target;
 
     public void InitializeAi() {
         Controls = GetComponent<IShipMovement>();
+        Hitpoints = GetComponent<Hitpoints>();
         BorderManager = FindObjectOfType<LevelBorderManager>();
         Target = null;
     }
@@ -23,7 +26,7 @@ public class RaiderAi : MonoBehaviour, IAi {
             if (Controls.AreWeThereYet()) {
                 Controls.SetPrimaryTargetPos(PlanetManager.GetPlanetsFromFactionSortedByDistanceToLocation("Untagged", transform.position + new Vector3(Random.Range(-8.0f, 8.0f), Random.Range(-8.0f, 8.0f), 0.0f))[0].transform.position);
             }
-        } else if (RelationShipManager.War[tag].Count > 0) {
+        } else if (RelationShipManager.War[tag].Count > 0 && (REQUIRED_HITPOINTS_PERCENTAGE == 0 || (float) Hitpoints.CurrentHp >= (float) Hitpoints.maxHp * REQUIRED_HITPOINTS_PERCENTAGE)) {
             if (Target == null || !RelationShipManager.IsFactionAttackingFaction(tag, Target.tag)) {
                 Target = GetNewTarget();
             }
@@ -37,7 +40,8 @@ public class RaiderAi : MonoBehaviour, IAi {
                 }
             }
         } else {
-             if (Controls.AreWeThereYet() && Controls.GetOrigin() != null) {
+            Target = null;
+            if (Controls.AreWeThereYet() && Controls.GetOrigin() != null) {
                 Controls.SetPrimaryTargetPos(Controls.GetOrigin().transform.position);
             }
         }

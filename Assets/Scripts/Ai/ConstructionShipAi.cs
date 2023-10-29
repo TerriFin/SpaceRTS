@@ -25,6 +25,10 @@ public class ConstructionShipAi : MonoBehaviour, IAi {
         BorderManager = FindObjectOfType<LevelBorderManager>();
     }
 
+    private void OnDestroy() {
+        if (AsteroidField != null) AsteroidField.MinesOnTheWay--;
+    }
+
     public void ExecuteStep() {
         // If we are inside the building range...
         if (Vector2.Distance(transform.position, Target) <= BUILDING_RANGE) {
@@ -33,6 +37,7 @@ public class ConstructionShipAi : MonoBehaviour, IAi {
             // If not, start building, if there is, set the space occupied and start going away
             if (colliders.Length == 0) {
                 StartBuilding();
+                return;
             } else {
                 SpaceOccupied = true;
                 Target = CalculateAllColliderPosInArea(colliders) + new Vector2(Random.Range(-1, 1), Random.Range(-1, 1));
@@ -62,21 +67,18 @@ public class ConstructionShipAi : MonoBehaviour, IAi {
         // If previous space was occupied and we are now flying away, grab first opportunity to start building
         if (SpaceOccupied && Physics2D.OverlapCircle(transform.position, BuildingRadius, 1 << LayerMask.NameToLayer("Building")) == null) {
             StartBuilding();
+            return;
         }
     }
 
     private void StartBuilding() {
         GameObject deployedBuildingShip = Instantiate(deployedBuildingShipPrefab);
         deployedBuildingShip.transform.rotation = transform.rotation;
-        deployedBuildingShip.tag = tag;
         deployedBuildingShip.transform.position = transform.position;
+        deployedBuildingShip.tag = tag;
         deployedBuildingShip.GetComponent<Hitpoints>().SetHpToPercentage(GetComponent<Hitpoints>().GetCurrentHpPercentage());
 
-        BuildingShipLogic buildLogic = deployedBuildingShip.GetComponent<BuildingShipLogic>();
-        buildLogic.building = Building;
-        buildLogic.buildingTime = BuildingTime;
-        buildLogic.AsteroidField = AsteroidField;
-        buildLogic.AddToBuildingsManager();
+        deployedBuildingShip.GetComponent<BuildingShipLogic>().Initialize(Building, BuildingTime, AsteroidField);
 
         // This is so that selection screen is updated
         GetComponent<ShipAlert>().enabled = false;

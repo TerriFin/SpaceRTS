@@ -3,11 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class RaiderCombatModule : CombatModule {
+
+    private Hitpoints Hitpoints;
+
+    private void Start() {
+        Hitpoints = GetComponent<Hitpoints>();
+    }
     public override void SetNewTargetArmed() {
-        if (Sensors.ArmedAlliesMilitary.Count >= 0 || Sensors.ArmedAllies.Count + 1 >= Sensors.ArmedEnemies.Count) {
-            SetNewTargetNotArmed();
-        } else {
+        if ((Sensors.ArmedEnemiesMilitary.Count > 0 && Sensors.ArmedAllies.Count == 0) || (float) Hitpoints.CurrentHp < (float) Hitpoints.maxHp * RETREAT_HP_PERCENTAGE) {
             SetEscapeTargetPosFromClosestArmedEnemy(BuildingManager.GetFactionCenterPoint(tag));
+        } else {
+            SetNewTargetNotArmed();
         }
     }
 

@@ -9,7 +9,7 @@ public class MoneyGenerator : MonoBehaviour {
     public int FACTION_MONEY_STORAGE;
     public GameObject MONEY_BAR;
 
-    public static int FACTION_MONEY_SCORE_PER_POINT = 9;
+    public static int FACTION_MONEY_SCORE_PER_POINT = 10;
 
     private void Start() {
         if (FACTION_MONEY_STORAGE == 0) FACTION_MONEY_STORAGE = factionMoneyValue * FACTION_MONEY_SCORE_PER_POINT * (int) (timer * 1.5f);

@@ -113,7 +113,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e415c8169801e3f48a2d1a59705dc514, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedForceAmount: 235
+  speedForceAmount: 220
   rotationForceAmount: 95
   primaryDeadArea: 1
   secondaryDeadArea: 0.75
@@ -140,7 +140,7 @@ MonoBehaviour:
   explosionSize: 3
   asteroid: 0
   DESTRUCTION_OPINION_PENALTY: 0
-  maxHp: 1200
+  maxHp: 1000
   repairDuration: 2
   repairAmount: 35
   doesNotHeal: 0

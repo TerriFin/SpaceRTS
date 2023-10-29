@@ -134,7 +134,6 @@ MonoBehaviour:
     type: 3}
   explosion: {fileID: 7686513493736892033, guid: 1d2137dc9fd71c14a852e1c16c189b74,
     type: 3}
-  shouldExplode: 1
   explosionSize: 2
   asteroid: 0
   DESTRUCTION_OPINION_PENALTY: 0
@@ -254,7 +253,7 @@ MonoBehaviour:
   ownFactionSellMineralsPreference: -50
   otherFactionBuyMineralsPreference: 10
   otherFactionSellMineralsPreference: 50
-  randomness: 30
+  randomness: 32
   refreshTime: 22
   marketFillPercentage: 1
   neededDealMoneyMultiplier: 5

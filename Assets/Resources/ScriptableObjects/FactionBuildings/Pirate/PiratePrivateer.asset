@@ -19,5 +19,5 @@ MonoBehaviour:
   buildingRadius: 1
   buildTime: 82
   mineralCost: 1750
-  moneyCost: 42500
+  moneyCost: 40000
   requiredPrefString: pirate6

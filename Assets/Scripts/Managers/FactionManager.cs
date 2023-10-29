@@ -17,12 +17,12 @@ public class FactionManager : MonoBehaviour {
         List<Faction> foundFactions = new List<Faction>(factionsGameobject.GetComponents<Faction>());
         MapGeneratorManager mapGenerator = FindObjectOfType<MapGeneratorManager>();
         bool playerInGame = false;
-        foreach (Faction faction in foundFactions) {
-            if (mapGenerator == null || mapGenerator.FactionDatas[faction.factionTag].statusIndex != 0) {
-                Factions[faction.factionTag] = faction;
-                if (faction.playerFaction) {
-                    PlayerFaction = faction;
-                    MusicManager.PlayTheme(faction.factionTag);
+        foreach (Faction faction1 in foundFactions) {
+            if (mapGenerator == null || mapGenerator.FactionDatas[faction1.factionTag].statusIndex != 0) {
+                Factions[faction1.factionTag] = faction1;
+                if (faction1.playerFaction) {
+                    PlayerFaction = faction1;
+                    MusicManager.PlayTheme(faction1.factionTag);
                     playerInGame = true;
                 }
             }

@@ -253,6 +253,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29626192559b9c54783f851c4007dc68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  REQUIRED_HITPOINTS_PERCENTAGE: 0
   timeSpentChasing: 1
   CHANCE_TO_GO_AROUND: 0
   CHANCE_TO_TARGET_UNDEFENDED_PLANETS: 0
@@ -272,7 +273,7 @@ MonoBehaviour:
     type: 3}
   PROJECTILE_ORIGIN: {fileID: 3056937042144288513}
   SHOOTING_DISTANCE: 40
-  RELOAD_TIMER: 8
+  RELOAD_TIMER: 8.33
   SHOOTS_SHIPS: 1
   SHOOTS_BUILDINGS: 1
   RAYCAST_SOURCES:
@@ -781,7 +782,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3056937042144288574}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.427, z: 0}
+  m_LocalPosition: {x: 0, y: 0.6, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

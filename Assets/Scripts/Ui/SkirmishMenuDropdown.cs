@@ -13,7 +13,7 @@ public class SkirmishMenuDropdown : MonoBehaviour {
     public bool MAP_GENERATION_PLANETS_DROPDOWN;
     public bool MAP_GENERATION_TOTAL_WAR_TIMER_DROPDOWN;
     public bool MAP_GENERATION_STARTING_SHIPS_AMOUNT_DROPDOWN;
-    public bool MAP_GENERATION_MIRRORED_TOGGLE;
+    public bool MAP_GENERATION_MIRRORED_DROPDOWN;
 
     public List<TMP_Dropdown> OTHER_DROPDOWNS;
 
@@ -32,7 +32,7 @@ public class SkirmishMenuDropdown : MonoBehaviour {
         else if (MAP_GENERATION_PLANETS_DROPDOWN) dropdown.value = MAP_MANAGER.MAP_PLANETS_LAST_INDEX;
         else if (MAP_GENERATION_TOTAL_WAR_TIMER_DROPDOWN) dropdown.value = MAP_MANAGER.TOTAL_WAR_TIMER_LAST_INDEX;
         else if (MAP_GENERATION_STARTING_SHIPS_AMOUNT_DROPDOWN) dropdown.value = MAP_MANAGER.STARTING_SHIPS_AMOUNT_INDEX;
-        else if (MAP_GENERATION_MIRRORED_TOGGLE) GetComponent<Toggle>().isOn = MAP_MANAGER.MIRRORED;
+        else if (MAP_GENERATION_MIRRORED_DROPDOWN) dropdown.value = MAP_MANAGER.MIRRORED_SIDES_INDEX;
     }
 
     public void UpdateFactionStatus(int index) {
@@ -196,7 +196,8 @@ public class SkirmishMenuDropdown : MonoBehaviour {
         print(MAP_MANAGER.STARTING_SHIPS_AMOUNT_INDEX);
     }
 
-    public void ToggleMirrored(bool toggle) {
-        MAP_MANAGER.MIRRORED = toggle;
+    public void UpdateMirroredIndex(int index) {
+        MAP_MANAGER.MIRRORED_SIDES_INDEX = index;
+        print(MAP_MANAGER.MIRRORED_SIDES_INDEX);
     }
 }

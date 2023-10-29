@@ -1572,7 +1572,7 @@ MonoBehaviour:
   defenseScanRadius: 9.75
   planetDefenseAmount: 3
   asteroidFieldDefenseAmount: 5
-  chanceToBuildProductionNearMines: 0.35
+  chanceToBuildProductionNearMines: 0.55
   howManySkipsBetweenMines: 1
   howManySkipsBetweenCommandCenters: 1
   asteroidFieldSelectionRandomness: 25
@@ -6873,7 +6873,7 @@ MonoBehaviour:
   defenseScanRadius: 9.75
   planetDefenseAmount: 2
   asteroidFieldDefenseAmount: 2
-  chanceToBuildProductionNearMines: 0.75
+  chanceToBuildProductionNearMines: 0.85
   howManySkipsBetweenMines: 1
   howManySkipsBetweenCommandCenters: 1
   asteroidFieldSelectionRandomness: 12
@@ -7097,7 +7097,7 @@ MonoBehaviour:
   minSkips: 10
   maxSkips: 20
   COMMAND_CENTER_CARGO_POINTS: 3
-  MINE_CARGO_POINTS: 16
+  MINE_CARGO_POINTS: 12
   PRODUCTION_CARGO_POINTS: 1
   SMALL_CARGO_POINT_COST: 3
   MEDIUM_CARGO_POINT_COST: 9
@@ -7238,7 +7238,7 @@ MonoBehaviour:
   MAP_PLANETS_LAST_INDEX: 0
   TOTAL_WAR_TIMER_LAST_INDEX: 0
   STARTING_SHIPS_AMOUNT_INDEX: 1
-  MIRRORED: 1
+  MIRRORED_SIDES_INDEX: 0
   WHERE_TO_RETURN_IN_MENU: 
 --- !u!4 &1651866177
 Transform:
@@ -7665,7 +7665,7 @@ MonoBehaviour:
   factionTag: Pirate
   money: 30000
   maxMoney: 100000
-  mineMineralScore: 13
+  mineMineralScore: 14
   playerFaction: 0
   aiBonusMultiplier: 1
   ai: {fileID: 1563128018}
@@ -8492,7 +8492,7 @@ MonoBehaviour:
   defenseScanRadius: 9.75
   planetDefenseAmount: 3
   asteroidFieldDefenseAmount: 3
-  chanceToBuildProductionNearMines: 0.55
+  chanceToBuildProductionNearMines: 0.65
   howManySkipsBetweenMines: 1
   howManySkipsBetweenCommandCenters: 1
   asteroidFieldSelectionRandomness: 12
@@ -8731,7 +8731,7 @@ MonoBehaviour:
   minSkips: 10
   maxSkips: 20
   COMMAND_CENTER_CARGO_POINTS: 3
-  MINE_CARGO_POINTS: 18
+  MINE_CARGO_POINTS: 15
   PRODUCTION_CARGO_POINTS: 1
   SMALL_CARGO_POINT_COST: 3
   MEDIUM_CARGO_POINT_COST: 9

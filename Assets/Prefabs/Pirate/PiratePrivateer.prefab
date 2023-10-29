@@ -458,6 +458,7 @@ GameObject:
   - component: {fileID: 3568934438121660133}
   - component: {fileID: 7844915802538686794}
   - component: {fileID: 5030669755749256560}
+  - component: {fileID: -7391765761577568671}
   - component: {fileID: 7692161008717665318}
   - component: {fileID: 7167315983142673871}
   - component: {fileID: 7167315983142673856}
@@ -618,7 +619,7 @@ MonoBehaviour:
   moneyCost: 0
   metalCost: 38
   productionTime: 3
-  productionLimit: 5
+  productionLimit: 6
   on: 1
   follower: 1
   productionBar: {fileID: 3872933452904820574, guid: 84e7668b1b0dc1f47b821902fc0827ba,
@@ -661,6 +662,20 @@ MonoBehaviour:
     type: 3}
   currentMineralStorage: 0
   maxMineralStorage: 575
+--- !u!114 &-7391765761577568671
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7167315983142673860}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b70e58beda6182346829b1adb4e7e258, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timer: 3.33
+  mineralAmount: 8
 --- !u!114 &7692161008717665318
 MonoBehaviour:
   m_ObjectHideFlags: 0

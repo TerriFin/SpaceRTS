@@ -9,6 +9,7 @@ public class Market : MonoBehaviour {
     public float tradeDisruptionResetTimer;
     public bool selling;
     public bool buying;
+    public int GENERATED_MINERAL_MOVING_INCOME;
 
     private void Start() {
         if (currentMineralPrice == 0) {
@@ -72,9 +73,9 @@ public class Market : MonoBehaviour {
             trader.GiveMinerals(amountToSell);
 
             if (trader.CompareTag(tag)) {
-                FactionManager.Factions[tag].ModifyMoney((int)(amountToSell * 2 * FactionManager.Factions[tag].aiBonusMultiplier));
+                FactionManager.Factions[tag].ModifyMoney((int)(amountToSell * GENERATED_MINERAL_MOVING_INCOME * FactionManager.Factions[tag].aiBonusMultiplier));
             } else {
-                FactionManager.Factions[tag].ModifyMoney((int)(amountToSell * 4 * FactionManager.Factions[tag].aiBonusMultiplier));
+                FactionManager.Factions[tag].ModifyMoney((int)(amountToSell * GENERATED_MINERAL_MOVING_INCOME * 2 * FactionManager.Factions[tag].aiBonusMultiplier));
                 FactionOpinionManager.ModifyFactionOpinion(tag, trader.tag, (float) amountToSell / 50.0f);
                 FactionOpinionManager.ModifyFactionOpinion(trader.tag, tag, (float) amountToSell / 100.0f);
             }
@@ -93,9 +94,9 @@ public class Market : MonoBehaviour {
             trader.TakeMinerals(amountToBuy);
 
             if (trader.CompareTag(tag)) {
-                FactionManager.Factions[tag].ModifyMoney((int)(amountToBuy * 3 * FactionManager.Factions[tag].aiBonusMultiplier));
+                FactionManager.Factions[tag].ModifyMoney((int)(amountToBuy * GENERATED_MINERAL_MOVING_INCOME * FactionManager.Factions[tag].aiBonusMultiplier));
             } else {
-                FactionManager.Factions[tag].ModifyMoney((int)(amountToBuy * 6 * FactionManager.Factions[tag].aiBonusMultiplier));
+                FactionManager.Factions[tag].ModifyMoney((int)(amountToBuy * GENERATED_MINERAL_MOVING_INCOME * 2 * FactionManager.Factions[tag].aiBonusMultiplier));
                 FactionOpinionManager.ModifyFactionOpinion(tag, trader.tag, (float) amountToBuy / 50.0f);
                 FactionOpinionManager.ModifyFactionOpinion(trader.tag, tag, (float) amountToBuy / 100.0f);
             }

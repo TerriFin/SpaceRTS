@@ -154,6 +154,7 @@ MonoBehaviour:
   tradeDisruptionResetTimer: 1
   selling: 0
   buying: 1
+  GENERATED_MINERAL_MOVING_INCOME: 3
 --- !u!114 &2271537710399495332
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -169,7 +170,7 @@ MonoBehaviour:
   mineralStorageBar: {fileID: 1457231408096033473, guid: 6bd221621fa92004c9cffa6b03c84524,
     type: 3}
   currentMineralStorage: 0
-  maxMineralStorage: 2000
+  maxMineralStorage: 1250
 --- !u!114 &8851799694439296012
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -184,7 +185,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   producedShip: {fileID: 8286392458817412692, guid: bed968fd9051fb44fa8366e11cb240c9,
     type: 3}
-  moneyCost: 6250
+  moneyCost: 6000
   metalCost: 300
   productionTime: 34
   productionLimit: 4

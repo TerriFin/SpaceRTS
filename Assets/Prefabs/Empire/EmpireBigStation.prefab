@@ -154,6 +154,7 @@ MonoBehaviour:
   tradeDisruptionResetTimer: 1
   selling: 0
   buying: 1
+  GENERATED_MINERAL_MOVING_INCOME: 0
 --- !u!114 &7228888600029736478
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -185,7 +186,7 @@ MonoBehaviour:
   producedShip: {fileID: 8399453566840234678, guid: 222be1573d7cc9c4b817cbc9a71dc6b8,
     type: 3}
   moneyCost: 6750
-  metalCost: 1000
+  metalCost: 1170
   productionTime: 70
   productionLimit: 1
   on: 1

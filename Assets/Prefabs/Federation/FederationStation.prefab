@@ -154,6 +154,7 @@ MonoBehaviour:
   tradeDisruptionResetTimer: 1
   selling: 0
   buying: 1
+  GENERATED_MINERAL_MOVING_INCOME: 2
 --- !u!114 &2023770493594298249
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -169,7 +170,7 @@ MonoBehaviour:
   mineralStorageBar: {fileID: 1457231408096033473, guid: 6bd221621fa92004c9cffa6b03c84524,
     type: 3}
   currentMineralStorage: 0
-  maxMineralStorage: 2000
+  maxMineralStorage: 1750
 --- !u!114 &8738135452712294177
 MonoBehaviour:
   m_ObjectHideFlags: 0

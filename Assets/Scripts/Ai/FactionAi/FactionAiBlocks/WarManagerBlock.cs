@@ -35,12 +35,12 @@ public class WarManagerBlock : FactionBlockWithSkips {
         // If total war triggered, just fight
         if (TotalWarTriggered) return;
 
-        // If only one other player, fight
+        // If only two factions, fight
         if (FactionManager.Factions.Count == 2) {
             foreach (Faction currentFaction in FactionManager.Factions.Values) {
                 if (!CompareTag(currentFaction.factionTag)) {
                     RelationShipManager.StartWar(tag, currentFaction.factionTag);
-                    print(tag + " STARTED FIGHTING, AS THERE IS ONLY ONE ENEMY");
+                    TotalWarTriggered = true;
                     return;
                 }
             }

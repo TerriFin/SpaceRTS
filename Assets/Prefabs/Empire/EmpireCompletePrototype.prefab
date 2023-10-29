@@ -694,7 +694,6 @@ MonoBehaviour:
     type: 3}
   explosion: {fileID: 7686513493736892033, guid: 1d2137dc9fd71c14a852e1c16c189b74,
     type: 3}
-  shouldExplode: 1
   explosionSize: 20
   asteroid: 0
   DESTRUCTION_OPINION_PENALTY: 0
@@ -807,6 +806,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29626192559b9c54783f851c4007dc68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  REQUIRED_HITPOINTS_PERCENTAGE: 0
   timeSpentChasing: 28
   CHANCE_TO_GO_AROUND: 0
   CHANCE_TO_TARGET_UNDEFENDED_PLANETS: 0
@@ -843,7 +843,7 @@ MonoBehaviour:
   FIGHTER: {fileID: 9049299962807796413, guid: ac05a702fc4cb7c48a9ee331237146b9, type: 3}
   FIGHTER_DEAD_ZONE: 2.25
   MAX_AMOUNT: 26
-  PRODUCTION_TIME: 0.66
+  PRODUCTION_TIME: 0.5
   CHECK_ENEMIES_TIMER: 1
 --- !u!114 &6064893980579704870
 MonoBehaviour:

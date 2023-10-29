@@ -54,7 +54,7 @@ public class MapGeneratorManager : MonoBehaviour {
     public int MAP_PLANETS_LAST_INDEX;
     public int TOTAL_WAR_TIMER_LAST_INDEX;
     public int STARTING_SHIPS_AMOUNT_INDEX;
-    public bool MIRRORED;
+    public int MIRRORED_SIDES_INDEX;
 
     public string WHERE_TO_RETURN_IN_MENU;
 
@@ -79,7 +79,7 @@ public class MapGeneratorManager : MonoBehaviour {
                 MAP_PLANETS_LAST_INDEX = 2;
                 TOTAL_WAR_TIMER_LAST_INDEX = 3;
                 STARTING_SHIPS_AMOUNT_INDEX = 2;
-                MIRRORED = false;
+                MIRRORED_SIDES_INDEX = 0;
 
                 Instance = this;
             }
@@ -115,15 +115,12 @@ public class MapGeneratorManager : MonoBehaviour {
         if (centerField != null) fields.Add(centerField);
         if (centerPlanet != null) planets.Add(centerPlanet);
 
-        if (MIRRORED) {
-            float anchor = Random.Range(0, Mathf.PI * 2);
-            List<string> factionsInGame = PlaceFactionsOnMap(anchor);
-
+        float anchor = Random.Range(0, Mathf.PI * 2);
             int currentAsteroidFieldTries = 0;
             while (currentAsteroidFieldTries < DESIRED_ASTEROID_FIELDS_AMOUNT) {
                 float randomNumber = Random.Range(0.0f, 1.0f);
-                GameObject chosenAsteroidField = null;
-                if (randomNumber < SMALL_ASTEROID_FIELD_CHANCE) {
+            GameObject chosenAsteroidField;
+            if (randomNumber < SMALL_ASTEROID_FIELD_CHANCE) {
                     chosenAsteroidField = SMALL_ASTEROID_FIELD;
                 } else if (randomNumber < MEDIUM_ASTEROID_FIELD_CHANCE) {
                     chosenAsteroidField = MEDIUM_ASTEROID_FIELD;
@@ -135,15 +132,15 @@ public class MapGeneratorManager : MonoBehaviour {
                 while (currentTries < 50) {
                     Vector2 randomPointInMap = GetRandomPointInMap();
                     if (CheckAsteroidFieldEnoughSpace(randomPointInMap, fields, chosenAsteroidField.GetComponent<AsteroidField>().FIELD_RADIUS * 5.0f)) {
-                        for (int i = 0; i < factionsInGame.Count; i++) {
-                            fields.Add(Instantiate(chosenAsteroidField, Quaternion.Euler(0, 0, 360 / factionsInGame.Count * i) * randomPointInMap, Quaternion.identity).GetComponent<AsteroidField>());
+                        for (int i = 0; i < MIRRORED_SIDES_INDEX + 1; i++) {
+                            fields.Add(Instantiate(chosenAsteroidField, Quaternion.Euler(0, 0, 360 / (MIRRORED_SIDES_INDEX + 1) * i) * randomPointInMap, Quaternion.identity).GetComponent<AsteroidField>());
                         }
                         break;
                     }
                     currentTries++;
                 }
 
-                currentAsteroidFieldTries += factionsInGame.Count;
+                currentAsteroidFieldTries += MIRRORED_SIDES_INDEX + 1;
             }
 
             int currentPlanetFactionScore = 0;
@@ -152,8 +149,8 @@ public class MapGeneratorManager : MonoBehaviour {
                 GameObject chosenPlanet = PLANETS[Random.Range(0, PLANETS.Count)];
                 Vector2 randomPointInMap = GetRandomPointInMap();
                 if (CheckPlanetEnoughSpace(randomPointInMap, planets, chosenPlanet.GetComponent<PlanetCaptureLogic>().PLANET_DISTANCE_REQUIREMENT)) {
-                    for (int i = 0; i < factionsInGame.Count; i++) {
-                        planets.Add(Instantiate(chosenPlanet, Quaternion.Euler(0, 0, 360 / factionsInGame.Count * i) * randomPointInMap, Quaternion.identity).GetComponent<PlanetCaptureLogic>());
+                    for (int i = 0; i < MIRRORED_SIDES_INDEX + 1; i++) {
+                        planets.Add(Instantiate(chosenPlanet, Quaternion.Euler(0, 0, 360 / (MIRRORED_SIDES_INDEX + 1) * i) * randomPointInMap, Quaternion.identity).GetComponent<PlanetCaptureLogic>());
                         planets[planets.Count - 1].SetMoneyGenerator();
                         currentPlanetFactionScore += planets[planets.Count - 1].MoneyGenerator.factionMoneyValue;
                     }
@@ -163,50 +160,8 @@ public class MapGeneratorManager : MonoBehaviour {
 
                 if (failedTries >= PLANET_PLACEMENT_TRIES) break;
             }
-        } else {
-            int currentAsteroidFieldTries = 0;
-            while (currentAsteroidFieldTries < DESIRED_ASTEROID_FIELDS_AMOUNT) {
-                float randomNumber = Random.Range(0.0f, 1.0f);
-                GameObject chosenAsteroidField = null;
-                if (randomNumber < SMALL_ASTEROID_FIELD_CHANCE) {
-                    chosenAsteroidField = SMALL_ASTEROID_FIELD;
-                } else if (randomNumber < MEDIUM_ASTEROID_FIELD_CHANCE) {
-                    chosenAsteroidField = MEDIUM_ASTEROID_FIELD;
-                } else {
-                    chosenAsteroidField = LARGE_ASTEROID_FIELD;
-                }
 
-                int currentTries = 0;
-                while (currentTries < 50) {
-                    Vector2 randomPointInMap = GetRandomPointInMap();
-                    if (CheckAsteroidFieldEnoughSpace(randomPointInMap, fields, chosenAsteroidField.GetComponent<AsteroidField>().FIELD_RADIUS * 5.0f)) {
-                        fields.Add(Instantiate(chosenAsteroidField, randomPointInMap, Quaternion.identity).GetComponent<AsteroidField>());
-                        break;
-                    }
-                    currentTries++;
-                }
-
-                currentAsteroidFieldTries++;
-            }
-
-            int currentPlanetFactionScore = 0;
-            int failedTries = 0;
-            while (currentPlanetFactionScore < DESIRED_PLANET_FACTION_SCORE) {
-                GameObject chosenPlanet = PLANETS[Random.Range(0, PLANETS.Count)];
-                Vector2 randomPointInMap = GetRandomPointInMap();
-                if (CheckPlanetEnoughSpace(randomPointInMap, planets, chosenPlanet.GetComponent<PlanetCaptureLogic>().PLANET_DISTANCE_REQUIREMENT)) {
-                    planets.Add(Instantiate(chosenPlanet, randomPointInMap, Quaternion.identity).GetComponent<PlanetCaptureLogic>());
-                    planets[planets.Count - 1].SetMoneyGenerator();
-                    currentPlanetFactionScore += planets[planets.Count - 1].MoneyGenerator.factionMoneyValue;
-                } else {
-                    failedTries++;
-                }
-
-                if (failedTries >= PLANET_PLACEMENT_TRIES) break;
-            }
-
-            PlaceFactionsOnMap(Random.Range(0, Mathf.PI * 2));
-        }
+            PlaceFactionsOnMap(anchor);
     }
 
     private AsteroidField PlaceCenterAsteroidField() {
@@ -243,9 +198,10 @@ public class MapGeneratorManager : MonoBehaviour {
             } else if (factionData.statusIndex > 1) currentFactions.Add(faction);
         }
 
+        int factionPlacementDivider = currentFactions.Count == 2 ? MIRRORED_SIDES_INDEX > 0 ? MIRRORED_SIDES_INDEX + 1 : 2 : currentFactions.Count;
         float distanceFromCenter = Random.Range(MAP_SIZE * 0.33f, MAP_SIZE * 0.75f);
         for (int i = 0; i < currentFactions.Count; i++) {
-            Vector2 factionStartingPosition = new Vector2(Mathf.Sin(anchor + Mathf.PI * 2 / currentFactions.Count * i), Mathf.Cos(anchor + Mathf.PI * 2 / currentFactions.Count * i)) * distanceFromCenter;
+            Vector2 factionStartingPosition = new Vector2(Mathf.Sin(anchor + Mathf.PI * 2 / factionPlacementDivider * i), Mathf.Cos(anchor + Mathf.PI * 2 / factionPlacementDivider * i)) * distanceFromCenter;
             if (currentFactions[i] == "Federation") {
                 Instantiate(FederationCommandCenter, factionStartingPosition, Quaternion.identity);
                 SpawnFactionStartingShips(STARTING_SHIPS_AMOUNT_INDEX, factionStartingPosition, FederationPolice, FederationRaider, FederationFrigate, FederationTrader);

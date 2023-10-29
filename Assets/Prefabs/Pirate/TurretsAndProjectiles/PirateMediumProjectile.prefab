@@ -98,9 +98,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a42c2aa5d49990b45a58cfb1df612c3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 13
-  timeExisting: 1.6
-  projectileSpeed: 5.75
+  damage: 12
+  timeExisting: 1.5
+  projectileSpeed: 6
   origin: {x: 0, y: 0}
   MINING_PROJECTILE: 0
 --- !u!70 &8029794655506444907

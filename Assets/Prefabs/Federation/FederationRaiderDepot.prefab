@@ -113,7 +113,6 @@ MonoBehaviour:
     type: 3}
   explosion: {fileID: 7686513493736892033, guid: 1d2137dc9fd71c14a852e1c16c189b74,
     type: 3}
-  shouldExplode: 1
   explosionSize: 4
   asteroid: 0
   DESTRUCTION_OPINION_PENALTY: 3
@@ -122,6 +121,7 @@ MonoBehaviour:
   repairAmount: 100
   doesNotHeal: 0
   armed: 0
+  IGNORES_STAGE_BORDERS: 0
 --- !u!114 &-6252819963836325478
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -152,6 +152,7 @@ MonoBehaviour:
   tradeDisruptionResetTimer: 1
   selling: 0
   buying: 1
+  GENERATED_MINERAL_MOVING_INCOME: 2
 --- !u!114 &3700532554725846241
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -187,6 +188,7 @@ MonoBehaviour:
   productionTime: 12.5
   productionLimit: 3
   on: 1
+  follower: 0
   productionBar: {fileID: 3872933452904820574, guid: 84e7668b1b0dc1f47b821902fc0827ba,
     type: 3}
 --- !u!114 &1072109522297374607
@@ -251,6 +253,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c281705f4bfb656438d5c5fa19cf9692, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PRICE: 0
   UPDATE_TIMER: 15
 --- !u!58 &8082518851151261933
 CircleCollider2D:

@@ -8,14 +8,18 @@ public class BuildingShipLogic : MonoBehaviour {
     public float buildingTime;
     public AsteroidField AsteroidField { get; set; }
 
-    private void Start() {
-        StartCoroutine(ConstructBuilding());
-    }
+    public void Initialize(GameObject givenBuilding, float givenBuildingTime, AsteroidField givenAsteroidField = null) {
+        building = givenBuilding;
+        buildingTime = givenBuildingTime;
+        AsteroidField = givenAsteroidField;
 
-    public void AddToBuildingsManager() {
+        if (AsteroidField != null) AsteroidField.MinesOnTheWay++;
+
         BuildingManager.Buildings[tag].Add(GetComponent<Hitpoints>());
         Selectable deployedBuildingShipSelectable = GetComponent<Selectable>();
         BuildingManager.BuildingAmountsByFactionAndType[tag][deployedBuildingShipSelectable.selectableType.ToString()].Add(deployedBuildingShipSelectable);
+
+        StartCoroutine(ConstructBuilding());
     }
 
     private void OnDestroy() {
@@ -33,10 +37,10 @@ public class BuildingShipLogic : MonoBehaviour {
         createdBuilding.tag = tag;
         createdBuilding.transform.position = transform.position;
 
-        // This is so that selection screen is updated
-        GetComponent<ShipAlert>().enabled = false;
         Hitpoints hitpoints = GetComponent<Hitpoints>();
         createdBuilding.GetComponent<Hitpoints>().SetHpToPercentage(hitpoints.GetCurrentHpPercentage());
+
+        GetComponent<ShipAlert>().enabled = false;
         hitpoints.DestroyThis(false);
     }
 }

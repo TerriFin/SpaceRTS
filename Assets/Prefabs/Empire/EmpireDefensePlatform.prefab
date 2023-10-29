@@ -114,9 +114,9 @@ MonoBehaviour:
   explosionSize: 4
   asteroid: 0
   DESTRUCTION_OPINION_PENALTY: 1
-  maxHp: 1200
+  maxHp: 1250
   repairDuration: 1
-  repairAmount: 19
+  repairAmount: 25
   doesNotHeal: 0
   armed: 1
   IGNORES_STAGE_BORDERS: 0
@@ -135,7 +135,7 @@ MonoBehaviour:
   FIGHTER: {fileID: 9049299962807796413, guid: ac05a702fc4cb7c48a9ee331237146b9, type: 3}
   FIGHTER_DEAD_ZONE: 1.5
   MAX_AMOUNT: 1
-  PRODUCTION_TIME: 13
+  PRODUCTION_TIME: 10
   CHECK_ENEMIES_TIMER: 1
 --- !u!114 &-7931096179673420793
 MonoBehaviour:

@@ -139,7 +139,7 @@ MonoBehaviour:
   DESTRUCTION_OPINION_PENALTY: 50
   maxHp: 5000
   repairDuration: 10
-  repairAmount: 300
+  repairAmount: 325
   doesNotHeal: 0
   armed: 1
   IGNORES_STAGE_BORDERS: 0
@@ -170,7 +170,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44e0bfb6f02d39c4dbcc583849be4704, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  factionMoneyValue: 19
+  factionMoneyValue: 14
   timer: 30
   FACTION_MONEY_STORAGE: 10000
   MONEY_BAR: {fileID: 862890505525518727, guid: db42eee91af526749a8ff312eacf5931,
@@ -188,7 +188,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timer: 10
-  mineralAmount: 85
+  mineralAmount: 75
 --- !u!114 &6502412480360492559
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -204,6 +204,7 @@ MonoBehaviour:
   tradeDisruptionResetTimer: 1
   selling: 0
   buying: 1
+  GENERATED_MINERAL_MOVING_INCOME: 2
 --- !u!114 &6967127514222091639
 MonoBehaviour:
   m_ObjectHideFlags: 0

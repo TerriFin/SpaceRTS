@@ -115,7 +115,6 @@ MonoBehaviour:
     type: 3}
   explosion: {fileID: 7686513493736892033, guid: 1d2137dc9fd71c14a852e1c16c189b74,
     type: 3}
-  shouldExplode: 1
   explosionSize: 4
   asteroid: 0
   DESTRUCTION_OPINION_PENALTY: 8
@@ -155,6 +154,7 @@ MonoBehaviour:
   tradeDisruptionResetTimer: 1
   selling: 0
   buying: 1
+  GENERATED_MINERAL_MOVING_INCOME: 2
 --- !u!114 &4941492072719159484
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -170,7 +170,7 @@ MonoBehaviour:
   mineralStorageBar: {fileID: 1457231408096033473, guid: 6bd221621fa92004c9cffa6b03c84524,
     type: 3}
   currentMineralStorage: 0
-  maxMineralStorage: 2500
+  maxMineralStorage: 2000
 --- !u!114 &2432581191478976532
 MonoBehaviour:
   m_ObjectHideFlags: 0
