@@ -12,6 +12,6 @@ public class GlobalMessageManager : MonoBehaviour {
     }
 
     public static void GlobalMessage(string message) {
-        newMessageDelegate(message);
+        if (newMessageDelegate != null) newMessageDelegate(message);
     }
 }

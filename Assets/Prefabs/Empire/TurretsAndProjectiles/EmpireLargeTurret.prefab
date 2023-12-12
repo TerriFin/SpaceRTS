@@ -100,8 +100,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectile: {fileID: 6516688944056147589, guid: 424fe4f49c7556a4eaa474a53a5f7bd4,
     type: 3}
-  rotationSpeed: 65
-  firingSpeed: 0.2
+  rotationSpeed: 85
+  firingSpeed: 0.19
   turretInaccuracy: 9
   allowedMissDegree: 5
   kickBack: 2

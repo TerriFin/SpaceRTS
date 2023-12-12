@@ -108,7 +108,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e415c8169801e3f48a2d1a59705dc514, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedForceAmount: 325
+  speedForceAmount: 295
   rotationForceAmount: 40
   primaryDeadArea: 0.15
   secondaryDeadArea: 0.15

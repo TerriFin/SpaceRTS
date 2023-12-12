@@ -210,7 +210,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SPIN_SPEED: 240
-  MOVEMENT_FORCE: 1085
+  MOVEMENT_FORCE: 1095
   PRIMARY_DEAD_AREA: 0.5
   SECONDARY_DEAD_AREA: 0.1
   ORIGIN: {fileID: 0}
@@ -234,7 +234,7 @@ MonoBehaviour:
   asteroid: 0
   DESTRUCTION_OPINION_PENALTY: 0
   maxHp: 500
-  repairDuration: 0.225
+  repairDuration: 0.22
   repairAmount: 8
   doesNotHeal: 0
   armed: 1
@@ -342,6 +342,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29626192559b9c54783f851c4007dc68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  REQUIRED_HITPOINTS_PERCENTAGE: 0
   timeSpentChasing: 6
   CHANCE_TO_GO_AROUND: 0.33
   CHANCE_TO_TARGET_UNDEFENDED_PLANETS: 0.33

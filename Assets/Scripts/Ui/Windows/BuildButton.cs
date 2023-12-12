@@ -8,32 +8,30 @@ using System.Text.RegularExpressions;
 
 public class BuildButton : MonoBehaviour, IPointerEnterHandler {
 
-    private MineralBarUi buildingCosts;
+    private MineralBarUi mineralAmountManager;
     private Button button;
-    private MineralBarUi commandCenterMineralUpdater;
 
     public string buildingName { set; private get; }
     public int mineralCost { set; private get; }
     public int moneyCost{ set; private get; }
 
     private void Start() {
-        buildingCosts = FindObjectOfType<MineralBarUi>();
+        mineralAmountManager = FindObjectOfType<MineralBarUi>();
         button = GetComponent<Button>();
-        commandCenterMineralUpdater = FindObjectOfType<MineralBarUi>();
     }
 
     private void Update() {
-        button.enabled = mineralCost <= commandCenterMineralUpdater.CurrentMaxMinerals && moneyCost <= FactionManager.PlayerFaction.money;
+        button.enabled = mineralCost <= mineralAmountManager.CurrentMaxMinerals && moneyCost <= FactionManager.PlayerFaction.money;
     }
 
     private void OnDestroy() {
-        if (buildingCosts != null) buildingCosts.ToggleBuildingCostTexts(false);
+        if (mineralAmountManager != null) mineralAmountManager.ToggleBuildingCostTexts(false);
     }
 
     public void OnPointerEnter(PointerEventData eventData) {
-        buildingCosts.ToggleBuildingCostTexts(true);
-        buildingCosts.buildingName.text = Regex.Replace(buildingName, "(\\B[A-Z])", " $1");
-        buildingCosts.mineralCost.text = mineralCost + "";
-        buildingCosts.moneyCost.text = moneyCost + "";
+        mineralAmountManager.ToggleBuildingCostTexts(true);
+        mineralAmountManager.buildingName.text = Regex.Replace(buildingName, "(\\B[A-Z])", " $1");
+        mineralAmountManager.mineralCost.text = mineralCost + "";
+        mineralAmountManager.moneyCost.text = moneyCost + "";
     }
 }

@@ -13,6 +13,8 @@ public class WaypointDeselectButton : MonoBehaviour {
         button.onClick.AddListener(HandleClick);
         if (attachedProductionWaypoint != null) {
             button.interactable = true;
+        } else {
+            button.gameObject.SetActive(false);
         }
     }
 

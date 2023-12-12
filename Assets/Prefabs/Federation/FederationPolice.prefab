@@ -138,9 +138,9 @@ MonoBehaviour:
   explosionSize: 2
   asteroid: 0
   DESTRUCTION_OPINION_PENALTY: 0
-  maxHp: 115
+  maxHp: 125
   repairDuration: 2
-  repairAmount: 11
+  repairAmount: 13
   doesNotHeal: 0
   armed: 1
   IGNORES_STAGE_BORDERS: 0
@@ -250,7 +250,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   active: 0
-  preferredCombatDistance: 3
+  preferredCombatDistance: 2.75
   howManyLoopsIgnoreNewTargetsAfterFindingOne: 6
   RETREAT_HP_PERCENTAGE: 0.75
   RETREAT_ENEMY_ADVANTAGE_PERCENTAGE: 4.5

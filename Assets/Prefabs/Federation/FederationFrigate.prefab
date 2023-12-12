@@ -114,10 +114,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e415c8169801e3f48a2d1a59705dc514, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedForceAmount: 170
-  rotationForceAmount: 120
+  speedForceAmount: 168
+  rotationForceAmount: 113
   primaryDeadArea: 1
-  secondaryDeadArea: 0.75
+  secondaryDeadArea: 0.9
   allowedMissAmount: 8
   halfThrustMissAmount: 40
   LOOKAT: 0
@@ -143,7 +143,7 @@ MonoBehaviour:
   DESTRUCTION_OPINION_PENALTY: 0
   maxHp: 485
   repairDuration: 2
-  repairAmount: 27
+  repairAmount: 28
   doesNotHeal: 0
   armed: 1
   IGNORES_STAGE_BORDERS: 0

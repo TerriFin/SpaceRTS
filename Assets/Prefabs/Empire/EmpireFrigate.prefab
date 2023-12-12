@@ -142,7 +142,7 @@ MonoBehaviour:
   DESTRUCTION_OPINION_PENALTY: 0
   maxHp: 1000
   repairDuration: 2
-  repairAmount: 35
+  repairAmount: 36
   doesNotHeal: 0
   armed: 1
   IGNORES_STAGE_BORDERS: 0

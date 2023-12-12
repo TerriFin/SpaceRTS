@@ -13,6 +13,7 @@ public class BrawlerCombatModule : CombatModule {
             if (AttachedTurret.Target != null) {
                 float randomNumber = Random.Range(0, Mathf.PI * 2);
                 Vector2 randomCircleSpot = new Vector2(Mathf.Sin(randomNumber), Mathf.Cos(randomNumber)) * preferredCombatDistance;
+                Controls.SetPrimaryTargetPos(transform.position);
                 Controls.SetSecondaryTargetPos((Vector2)AttachedTurret.Target.transform.position + (randomCircleSpot + (Vector2)(transform.position - AttachedTurret.Target.transform.position).normalized * preferredCombatDistance).normalized * preferredCombatDistance);
             }
         } else {
@@ -37,6 +38,7 @@ public class BrawlerCombatModule : CombatModule {
 
     public override void SetNewTargetNotArmed() {
         if (AttachedTurret.Target != null) {
+            Controls.SetPrimaryTargetPos(transform.position);
             Controls.SetSecondaryTargetPos(AttachedTurret.Target.transform.position);
         }
     }

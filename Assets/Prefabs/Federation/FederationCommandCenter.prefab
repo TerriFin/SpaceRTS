@@ -188,7 +188,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timer: 10
-  mineralAmount: 75
+  mineralAmount: 70
 --- !u!114 &6502412480360492559
 MonoBehaviour:
   m_ObjectHideFlags: 0

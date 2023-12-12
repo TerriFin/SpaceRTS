@@ -7,9 +7,7 @@ using UnityEngine.Audio;
 public class TouchInputHandler : MonoBehaviour {
 
     public float TAP_LENGTH;
-    public float MIN_ZOOM_LEVEL;
-    public float MAX_ZOOM_LEVEL;
-    public float SMOOTH_MAX_ZOOM_LEVEL;
+    
     public GameObject clickIndicator;
 
     private float timeTouchStarted;
@@ -19,6 +17,9 @@ public class TouchInputHandler : MonoBehaviour {
     private Vector3 ZoomStartCameraPos;
     private LevelBorderManager BorderManager;
     private MineralBarUi commandCenterMineralUpdater;
+    private float MIN_ZOOM_LEVEL = 7;
+    private float SMOOTH_MAX_ZOOM_LEVEL = 26;
+    private float MAX_ZOOM_LEVEL = 34;
 
     private void Start() {
         timeTouchStarted = 0f;

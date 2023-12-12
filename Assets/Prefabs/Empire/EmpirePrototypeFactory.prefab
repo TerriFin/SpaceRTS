@@ -274,7 +274,7 @@ MonoBehaviour:
   mineralStorageBar: {fileID: 1457231408096033473, guid: 6bd221621fa92004c9cffa6b03c84524,
     type: 3}
   currentMineralStorage: 0
-  maxMineralStorage: 4000
+  maxMineralStorage: 4500
 --- !u!114 &375742374548259443
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -289,8 +289,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   producedShip: {fileID: 8399453566840234678, guid: 0b1d31bd64da4924ab8d92ef5df13fe9,
     type: 3}
-  moneyCost: 20000
-  metalCost: 2000
+  moneyCost: 30000
+  metalCost: 4000
   productionTime: 180
   productionLimit: 1
   on: 1

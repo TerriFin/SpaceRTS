@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System;
 
 public class RelationShipWindow : MonoBehaviour {
 
@@ -10,34 +11,37 @@ public class RelationShipWindow : MonoBehaviour {
 
     public float UPDATE_TIMER;
     public TMP_Text factionName;
+    public TMP_Text factionMoneyAmount;
+    public TMP_Text diplomacyDisabledText;
     public Image factionLogo;
-    public Button declareWarButton;
-    public Button declarePeaceButton;
-    public Button startBlockadeButton;
-    public Button endBlockadeButton;
+    public Button warButton;
+    public Image warButtonImage;
+    public Button blockadeButton;
+    public Image blockadeButtonImage;
     public Image otherFactionBlockadeStatus;
     public Image otherFactionWarStatus;
-
-    private Image DeclareWarButtonImage;
-    private Image DeclarePeaceButtonImage;
-    private Image StartBlockadeButtonImage;
-    private Image EndBlockadeButtonImage;
+    public Sprite declareWarImage;
+    public Sprite endWarImage;
+    public Sprite declareBlockadeImage;
+    public Sprite endBlockadeImage;
 
     private FactionScoresManager ScoresManager;
 
     private void Start() {
-        DeclareWarButtonImage = declareWarButton.GetComponentsInChildren<Image>()[1];
-        DeclarePeaceButtonImage = declarePeaceButton.GetComponentsInChildren<Image>()[1];
-        StartBlockadeButtonImage = startBlockadeButton.GetComponentsInChildren<Image>()[1];
-        EndBlockadeButtonImage = endBlockadeButton.GetComponentsInChildren<Image>()[1];
-
         factionName.text = Faction.factionTag;
         Color factionColor = Faction.factionColor;
         factionColor.a = 1;
         factionName.color = factionColor;
+        factionMoneyAmount.color = factionColor;
+        diplomacyDisabledText.color = factionColor;
         factionLogo.sprite = Faction.factionLogo;
 
+        if (!RelationShipManager.Locked) Destroy(diplomacyDisabledText.gameObject);
+
         ScoresManager = FindObjectOfType<FactionScoresManager>();
+
+        warButton.onClick.AddListener(HandleWarClick);
+        blockadeButton.onClick.AddListener(HandleBlockadeClick);
 
         StartCoroutine(UpdateRelationshipStatus());
     }
@@ -48,16 +52,17 @@ public class RelationShipWindow : MonoBehaviour {
 
     private IEnumerator UpdateRelationshipStatus() {
         while (true) {
-            if (!ScoresManager.IsFactionInGame(Faction.factionTag)) {
+            if (!FactionManager.Factions.ContainsKey(Faction.factionTag)) {
                 Destroy(this.gameObject);
+                break;
             } else {
                 // Other faction status
-                if (RelationShipManager.IsFactionBlockadingFaction((string)Faction.factionTag, (string)FactionManager.PlayerFaction.factionTag)) {
+                if (RelationShipManager.IsFactionBlockadingFaction(Faction.factionTag, FactionManager.PlayerFaction.factionTag)) {
                     otherFactionBlockadeStatus.enabled = true;
                 } else {
                     otherFactionBlockadeStatus.enabled = false;
                 }
-                if (RelationShipManager.IsFactionAttackingFaction((string)Faction.factionTag, (string)FactionManager.PlayerFaction.factionTag)) {
+                if (RelationShipManager.IsFactionAttackingFaction(Faction.factionTag, FactionManager.PlayerFaction.factionTag)) {
                     otherFactionWarStatus.enabled = true;
                 } else {
                     otherFactionWarStatus.enabled = false;
@@ -65,69 +70,44 @@ public class RelationShipWindow : MonoBehaviour {
 
                 if (!RelationShipManager.Locked) {
                     // Our status
-                    if (RelationShipManager.IsFactionAttackingFaction((string)FactionManager.PlayerFaction.factionTag, (string)Faction.factionTag)) {
-                        declareWarButton.enabled = false;
-                        DeclareWarButtonImage.color = new Color(0.25f, 0.25f, 0.25f, 0.75f);
+                    if (RelationShipManager.IsFactionAttackingFaction(FactionManager.PlayerFaction.factionTag, Faction.factionTag)) {
+                        warButtonImage.sprite = endWarImage;
                     } else {
-                        declareWarButton.enabled = true;
-                        DeclareWarButtonImage.color = new Color(1, 1, 1, 1);
+                        warButtonImage.sprite = declareWarImage;
                     }
 
-                    if (!RelationShipManager.IsFactionAttackingFaction((string)FactionManager.PlayerFaction.factionTag, (string)Faction.factionTag)) {
-                        declarePeaceButton.enabled = false;
-                        DeclarePeaceButtonImage.color = new Color(0.25f, 0.25f, 0.25f, 0.75f);
+                    if (RelationShipManager.IsFactionBlockadingFaction(FactionManager.PlayerFaction.factionTag, Faction.factionTag)) {
+                        blockadeButtonImage.sprite = endBlockadeImage;
                     } else {
-                        declarePeaceButton.enabled = true;
-                        DeclarePeaceButtonImage.color = new Color(1, 1, 1, 1);
-                    }
-
-                    if (RelationShipManager.IsFactionBlockadingFaction((string)FactionManager.PlayerFaction.factionTag, (string)Faction.factionTag)) {
-                        startBlockadeButton.enabled = false;
-                        StartBlockadeButtonImage.color = new Color(0.25f, 0.25f, 0.25f, 0.75f);
-                    } else {
-                        startBlockadeButton.enabled = true;
-                        StartBlockadeButtonImage.color = new Color(1, 1, 1, 1);
-                    }
-
-                    if (!RelationShipManager.IsFactionBlockadingFaction((string)FactionManager.PlayerFaction.factionTag, (string)Faction.factionTag)) {
-                        endBlockadeButton.enabled = false;
-                        EndBlockadeButtonImage.color = new Color(0.25f, 0.25f, 0.25f, 0.75f);
-                    } else {
-                        endBlockadeButton.enabled = true;
-                        EndBlockadeButtonImage.color = new Color(1, 1, 1, 1);
+                        blockadeButtonImage.sprite = declareBlockadeImage;
                     }
                 } else {
-                    declareWarButton.enabled = false;
-                    DeclareWarButtonImage.color = new Color(0.25f, 0.25f, 0.25f, 0.75f);
-
-                    declarePeaceButton.enabled = false;
-                    DeclarePeaceButtonImage.color = new Color(0.25f, 0.25f, 0.25f, 0.75f);
-
-                    startBlockadeButton.enabled = false;
-                    StartBlockadeButtonImage.color = new Color(0.25f, 0.25f, 0.25f, 0.75f);
-
-                    endBlockadeButton.enabled = false;
-                    EndBlockadeButtonImage.color = new Color(0.25f, 0.25f, 0.25f, 0.75f);
+                    warButton.interactable = false;
+                    warButtonImage.color = new Color(1, 1, 1, 0.5f);
+                    blockadeButton.interactable = false;
+                    blockadeButtonImage.color = new Color(1, 1, 1, 0.5f);
                 }
             }
+
+            factionMoneyAmount.SetText(string.Format("{0:C0}", FactionManager.Factions[Faction.factionTag].money));
 
             yield return new WaitForSeconds(UPDATE_TIMER);
         }
     }
 
-    public void StartWar() {
-        RelationShipManager.StartWar((string)FactionManager.PlayerFaction.factionTag, (string)Faction.factionTag);
+    private void HandleWarClick() {
+        if (RelationShipManager.IsFactionAttackingFaction(FactionManager.PlayerFaction.factionTag, Faction.factionTag)) {
+            RelationShipManager.EndWar(FactionManager.PlayerFaction.factionTag, Faction.factionTag);
+        } else {
+            RelationShipManager.StartWar(FactionManager.PlayerFaction.factionTag, Faction.factionTag);
+        }
     }
 
-    public void EndWar() {
-        RelationShipManager.EndWar((string)FactionManager.PlayerFaction.factionTag, (string)Faction.factionTag);
-    }
-
-    public void StartBlockade() {
-        RelationShipManager.StartBlockade((string)FactionManager.PlayerFaction.factionTag, (string)Faction.factionTag);
-    }
-
-    public void EndBlockade() {
-        RelationShipManager.EndBlockade((string)FactionManager.PlayerFaction.factionTag, (string)Faction.factionTag);
+    private void HandleBlockadeClick() {
+        if (RelationShipManager.IsFactionBlockadingFaction(FactionManager.PlayerFaction.factionTag, Faction.factionTag)) {
+            RelationShipManager.EndBlockade(FactionManager.PlayerFaction.factionTag, Faction.factionTag);
+        } else {
+            RelationShipManager.StartBlockade(FactionManager.PlayerFaction.factionTag, Faction.factionTag);
+        }
     }
 }

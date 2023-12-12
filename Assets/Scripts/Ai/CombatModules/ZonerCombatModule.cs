@@ -11,6 +11,7 @@ public class ZonerCombatModule : CombatModule {
     public override void SetNewTargetArmed() {
         if ((FactionManager.PlayerFaction != null && CompareTag(FactionManager.PlayerFaction.factionTag)) || ((float) Hitpoints.CurrentHp > (float) Hitpoints.maxHp * RETREAT_HP_PERCENTAGE && (float) (Sensors.ArmedAllies.Count + 1) * RETREAT_ENEMY_ADVANTAGE_PERCENTAGE > Sensors.ArmedEnemies.Count)) {
             if (AttachedTurret.Target != null) {
+                Controls.SetPrimaryTargetPos(transform.position);
                 Controls.SetSecondaryTargetPos(AttachedTurret.Target.transform.position + (transform.position - AttachedTurret.Target.transform.position).normalized * preferredCombatDistance);
             }
         } else {
@@ -29,6 +30,7 @@ public class ZonerCombatModule : CombatModule {
 
     public override void SetNewTargetNotArmed() {
         if (AttachedTurret.Target != null) {
+            Controls.SetPrimaryTargetPos(transform.position);
             Controls.SetSecondaryTargetPos(AttachedTurret.Target.transform.position + (transform.position - AttachedTurret.Target.transform.position).normalized * preferredCombatDistance * 0.6f);
         }
     }

@@ -20,8 +20,13 @@ public class SelectionManager {
         } else {
             if (selected.Contains(selection)) {
                 if (selected[0].Equals(selection)) {
+                    AiBase firstAi = selected[0].GetComponent<AiBase>();
                     foreach (Selectable inView in onScreen) {
                         if (!selected.Contains(inView) && selected[0].selectableType == inView.selectableType) {
+                            if (firstAi != null) {
+                                AiBase inViewAi = inView.GetComponent<AiBase>();
+                                if (inViewAi != null) inViewAi.SetCombatModuleActive(firstAi.combatModuleActive);
+                            }
                             AddSelection(inView);
                         }
                     }
@@ -29,6 +34,11 @@ public class SelectionManager {
                     MakeSelectionFirst(selection);
                 }
             } else if (selected[0].selectableType == selection.selectableType || (selected[0].controlable && selection.controlable)) {
+                AiBase firstAi = selected[0].GetComponent<AiBase>();
+                if (firstAi != null) {
+                    AiBase inViewAi = selection.GetComponent<AiBase>();
+                    if (inViewAi != null) inViewAi.SetCombatModuleActive(firstAi.combatModuleActive);
+                }
                 AddSelection(selection);
             } else {
                 ClearSelection();

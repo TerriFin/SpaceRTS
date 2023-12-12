@@ -36,7 +36,7 @@ public class Selectable : MonoBehaviour {
     public Hitpoints AttachedHitpoints { get; private set; }
     public MineralStorage AttachedMineralStorage { get; private set; }
     public GameObject CurrentSelectedIndicator { get; private set; }
-    public ControlGroupButton AssignedControlGroupButton { get; set; }
+    public List<ControlGroupButton> AssignedControlGroupButtons { get; set; }
     private IReactToClick clickHandler;
 
     private void Start() {
@@ -45,13 +45,12 @@ public class Selectable : MonoBehaviour {
         AttachedMineralStorage = GetComponent<MineralStorage>();
 
         CurrentSelectedIndicator = null;
+        AssignedControlGroupButtons = new List<ControlGroupButton>();
         clickHandler = gameObject.GetComponent<IReactToClick>();
     }
 
     private void OnDestroy() {
-        if (AssignedControlGroupButton != null) {
-            AssignedControlGroupButton.RemoveSelectable(this);
-        }
+        if (AssignedControlGroupButtons.Count > 0) foreach (ControlGroupButton CGButton in AssignedControlGroupButtons) CGButton.RemoveSelectable(this);
     }
 
     public void WhenSelected() {

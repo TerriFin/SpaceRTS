@@ -456,7 +456,6 @@ GameObject:
   - component: {fileID: 7167315983142673869}
   - component: {fileID: 7167315983142673870}
   - component: {fileID: 3568934438121660133}
-  - component: {fileID: 7844915802538686794}
   - component: {fileID: 5030669755749256560}
   - component: {fileID: -7391765761577568671}
   - component: {fileID: 7692161008717665318}
@@ -569,7 +568,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e415c8169801e3f48a2d1a59705dc514, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedForceAmount: 675
+  speedForceAmount: 665
   rotationForceAmount: 35
   primaryDeadArea: 0.75
   secondaryDeadArea: 0.75
@@ -598,7 +597,7 @@ MonoBehaviour:
   DESTRUCTION_OPINION_PENALTY: 0
   maxHp: 4250
   repairDuration: 0.1
-  repairAmount: 10
+  repairAmount: 8
   doesNotHeal: 0
   armed: 1
   IGNORES_STAGE_BORDERS: 0
@@ -618,30 +617,8 @@ MonoBehaviour:
     type: 3}
   moneyCost: 0
   metalCost: 38
-  productionTime: 3
+  productionTime: 2.5
   productionLimit: 6
-  on: 1
-  follower: 1
-  productionBar: {fileID: 3872933452904820574, guid: 84e7668b1b0dc1f47b821902fc0827ba,
-    type: 3}
---- !u!114 &7844915802538686794
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7167315983142673860}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 871a93c590bec5d4d85b8bc4541d72d4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  producedShip: {fileID: 4222341225281556822, guid: 049b4664e1fcbe248a51a1866bcb1d45,
-    type: 3}
-  moneyCost: 0
-  metalCost: 34
-  productionTime: 2
-  productionLimit: 5
   on: 1
   follower: 1
   productionBar: {fileID: 3872933452904820574, guid: 84e7668b1b0dc1f47b821902fc0827ba,
@@ -1634,7 +1611,7 @@ PrefabInstance:
     - target: {fileID: 8405510029904318016, guid: b170f8c0788d4c74da126e3bb332a8bc,
         type: 3}
       propertyPath: firingRange
-      value: 6.75
+      value: 6.33
       objectReference: {fileID: 0}
     - target: {fileID: 8405510029904318016, guid: b170f8c0788d4c74da126e3bb332a8bc,
         type: 3}
@@ -1729,7 +1706,7 @@ PrefabInstance:
     - target: {fileID: 8405510029904318016, guid: b170f8c0788d4c74da126e3bb332a8bc,
         type: 3}
       propertyPath: firingRange
-      value: 6.75
+      value: 6.33
       objectReference: {fileID: 0}
     - target: {fileID: 8405510029904318016, guid: b170f8c0788d4c74da126e3bb332a8bc,
         type: 3}
@@ -2004,7 +1981,7 @@ PrefabInstance:
     - target: {fileID: 8405510029904318016, guid: b170f8c0788d4c74da126e3bb332a8bc,
         type: 3}
       propertyPath: firingRange
-      value: 6.75
+      value: 6.33
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b170f8c0788d4c74da126e3bb332a8bc, type: 3}

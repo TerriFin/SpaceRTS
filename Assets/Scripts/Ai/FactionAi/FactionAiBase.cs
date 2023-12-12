@@ -52,7 +52,8 @@ public class FactionAiBase : MonoBehaviour {
     }
 
     public Vector2 GetLocationThatCalledHelp() {
-        return CallForHelpLocations[Random.Range(0, callForHelpCacheSize)];
+        if (CallForHelpLocations[Random.Range(0, callForHelpCacheSize)] == Vector2.zero) return BuildingManager.GetFactionCenterPoint(tag);
+        else return CallForHelpLocations[Random.Range(0, callForHelpCacheSize)];
     }
 
     public Vector2 GetLocationThatCalledHelpAndRemoveIt() {

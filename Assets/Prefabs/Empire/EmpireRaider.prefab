@@ -140,7 +140,7 @@ MonoBehaviour:
   DESTRUCTION_OPINION_PENALTY: 0
   maxHp: 255
   repairDuration: 2
-  repairAmount: 13
+  repairAmount: 14
   doesNotHeal: 0
   armed: 1
   IGNORES_STAGE_BORDERS: 0
@@ -191,7 +191,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   refreshTime: 0.75
-  sensorAreaRadius: 5
+  sensorAreaRadius: 5.5
 --- !u!114 &-5340433517312150737
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -250,7 +250,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   active: 0
-  preferredCombatDistance: 1
+  preferredCombatDistance: 0.8
   howManyLoopsIgnoreNewTargetsAfterFindingOne: 6
   RETREAT_HP_PERCENTAGE: 0.25
   RETREAT_ENEMY_ADVANTAGE_PERCENTAGE: 0
@@ -474,6 +474,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9021469195139787800, guid: f1f5ee4b1de00434d91cb5d67873b347,
+        type: 3}
+      propertyPath: firingRange
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 9021469195139787800, guid: f1f5ee4b1de00434d91cb5d67873b347,
         type: 3}

@@ -680,7 +680,7 @@ PrefabInstance:
     - target: {fileID: 4362152314986530187, guid: 97a44bf5d6861844991251281a4768d4,
         type: 3}
       propertyPath: firingSpeed
-      value: 1.5
+      value: 1.75
       objectReference: {fileID: 0}
     - target: {fileID: 4362152314986530187, guid: 97a44bf5d6861844991251281a4768d4,
         type: 3}

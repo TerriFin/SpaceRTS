@@ -101,7 +101,7 @@ MonoBehaviour:
   projectile: {fileID: 4661077459224261514, guid: 3b5ca501eaed35a49becc531c9bc6636,
     type: 3}
   rotationSpeed: 240
-  firingSpeed: 0.085
+  firingSpeed: 0.1
   turretInaccuracy: 16
   allowedMissDegree: 12
   kickBack: 8

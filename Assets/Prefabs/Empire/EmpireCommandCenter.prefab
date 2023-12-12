@@ -205,7 +205,7 @@ MonoBehaviour:
   tradeDisruptionResetTimer: 1
   selling: 0
   buying: 1
-  GENERATED_MINERAL_MOVING_INCOME: 1
+  GENERATED_MINERAL_MOVING_INCOME: 2
 --- !u!114 &8713933072125731420
 MonoBehaviour:
   m_ObjectHideFlags: 0

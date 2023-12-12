@@ -9,6 +9,7 @@ public class ComputerInputHandler : MonoBehaviour {
     public GameObject clickIndicator;
     public float enemyBuildingCheckRadiusInPath;
     public string SCREENSHOT_PATH;
+    public GameObject MESSAGE_SYSTEM;
 
     private float timeClickStarted = 0f;
     private LevelBorderManager BorderManager;
@@ -24,6 +25,11 @@ public class ComputerInputHandler : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.Space)) {
             ScreenCapture.CaptureScreenshot(SCREENSHOT_PATH + System.Guid.NewGuid().ToString() + ".png", 1);
             print("SCREENSHOT TAKEN!");
+        }
+
+        if (Input.GetKeyDown(KeyCode.A)) {
+            Camera.main.orthographicSize = 25;
+            if (MESSAGE_SYSTEM != null) Destroy(MESSAGE_SYSTEM);
         }
 
         if (!PauseMenu.IS_PAUSED && CheckTapIsInPlayArea(Input.mousePosition)) {

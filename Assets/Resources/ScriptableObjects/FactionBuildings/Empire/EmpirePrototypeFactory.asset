@@ -17,7 +17,7 @@ MonoBehaviour:
     type: 3}
   type: 2
   buildingRadius: 7.15
-  buildTime: 60
+  buildTime: 67
   mineralCost: 3500
   moneyCost: 32500
   requiredPrefString: empire6

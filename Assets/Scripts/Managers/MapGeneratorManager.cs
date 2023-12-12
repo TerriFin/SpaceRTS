@@ -70,7 +70,7 @@ public class MapGeneratorManager : MonoBehaviour {
                 DontDestroyOnLoad(transform.gameObject);
 
                 FactionDatas = new Dictionary<string, FactionData>();
-                FactionDatas.Add("Federation", new FactionData(3, 1));
+                FactionDatas.Add("Federation", new FactionData(1, 1));
                 FactionDatas.Add("Empire", new FactionData(3, 1));
                 FactionDatas.Add("Pirate", new FactionData(3, 1));
 
@@ -286,7 +286,7 @@ public class MapGeneratorManager : MonoBehaviour {
 
     private Vector2 GetRandomPointInMap() {
         float randomNumber = Random.Range(0, Mathf.PI * 2);
-        return new Vector2(Mathf.Sin(randomNumber), Mathf.Cos(randomNumber)) * Random.Range(MAP_SIZE * CENTER_DEAD_ZONE, MAP_SIZE * 0.9f);
+        return new Vector2(Mathf.Sin(randomNumber), Mathf.Cos(randomNumber)) * Random.Range(MAP_SIZE * CENTER_DEAD_ZONE * (MIRRORED_SIDES_INDEX <= 2 ? 1.0f : MIRRORED_SIDES_INDEX <= 4 ? 1.5f : 1.75f), MAP_SIZE * 0.9f);
     }
 
     private bool CheckAsteroidFieldEnoughSpace(Vector2 location, List<AsteroidField> fields, float distance) {

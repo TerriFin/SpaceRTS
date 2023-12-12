@@ -185,7 +185,7 @@ MonoBehaviour:
     type: 3}
   moneyCost: 700
   metalCost: 90
-  productionTime: 7.5
+  productionTime: 8.25
   productionLimit: 5
   on: 1
   follower: 0

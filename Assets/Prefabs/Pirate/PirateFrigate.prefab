@@ -148,8 +148,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e415c8169801e3f48a2d1a59705dc514, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedForceAmount: 255
-  rotationForceAmount: 130
+  speedForceAmount: 240
+  rotationForceAmount: 122
   primaryDeadArea: 1
   secondaryDeadArea: 0.75
   allowedMissAmount: 10
@@ -175,9 +175,9 @@ MonoBehaviour:
   explosionSize: 3
   asteroid: 0
   DESTRUCTION_OPINION_PENALTY: 0
-  maxHp: 675
+  maxHp: 685
   repairDuration: 2
-  repairAmount: 52
+  repairAmount: 54
   doesNotHeal: 0
   armed: 1
   IGNORES_STAGE_BORDERS: 0
@@ -559,7 +559,7 @@ PrefabInstance:
     - target: {fileID: 287521535666240672, guid: 3fd1e750b4dd7974ebb7e8e903344fb4,
         type: 3}
       propertyPath: firingRange
-      value: 3
+      value: 2.75
       objectReference: {fileID: 0}
     - target: {fileID: 287521535666240672, guid: 3fd1e750b4dd7974ebb7e8e903344fb4,
         type: 3}
@@ -654,7 +654,7 @@ PrefabInstance:
     - target: {fileID: 287521535666240672, guid: 3fd1e750b4dd7974ebb7e8e903344fb4,
         type: 3}
       propertyPath: firingRange
-      value: 3
+      value: 2.75
       objectReference: {fileID: 0}
     - target: {fileID: 287521535666240672, guid: 3fd1e750b4dd7974ebb7e8e903344fb4,
         type: 3}

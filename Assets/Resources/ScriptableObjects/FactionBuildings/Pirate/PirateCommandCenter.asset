@@ -18,6 +18,6 @@ MonoBehaviour:
   type: 0
   buildingRadius: 10
   buildTime: 30
-  mineralCost: 1250
+  mineralCost: 1350
   moneyCost: 42500
   requiredPrefString: 

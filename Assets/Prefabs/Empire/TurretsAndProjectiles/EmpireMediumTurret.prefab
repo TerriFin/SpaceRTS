@@ -100,13 +100,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectile: {fileID: 2080063071578276613, guid: 26082f6d917fd5e44aa500cf02c91ba5,
     type: 3}
-  rotationSpeed: 130
-  firingSpeed: 0.105
+  rotationSpeed: 135
+  firingSpeed: 0.1075
   turretInaccuracy: 8
   allowedMissDegree: 5
   kickBack: 2
   firingRange: 0
-  forwardCompensation: 0.4
+  forwardCompensation: 0.425
   facesForward: 0
   miningTurret: 0
 --- !u!82 &-1926486625646297114

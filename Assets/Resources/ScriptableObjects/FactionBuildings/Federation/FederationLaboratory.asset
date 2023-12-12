@@ -15,7 +15,7 @@ MonoBehaviour:
   faction: Federation
   building: {fileID: 911738353441899450, guid: df83e7e6a70292e41aef9b6aa899adec, type: 3}
   type: 2
-  buildingRadius: 7.5
+  buildingRadius: 7.25
   buildTime: 70
   mineralCost: 2750
   moneyCost: 50000
