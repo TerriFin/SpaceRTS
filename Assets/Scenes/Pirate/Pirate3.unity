@@ -6129,7 +6129,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 2100000, guid: 62ca1af8f0350af42b028b9ad76b72a2, type: 2}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.64705884}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 0
@@ -12083,9 +12083,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TAP_LENGTH: 0.2
-  MIN_ZOOM_LEVEL: 8
-  MAX_ZOOM_LEVEL: 30
-  SMOOTH_MAX_ZOOM_LEVEL: 24
   clickIndicator: {fileID: 4186882218027370042, guid: 5201bf13e074c304ca0f27756b1d3106,
     type: 3}
 --- !u!114 &1057549797
@@ -14242,7 +14239,7 @@ MonoBehaviour:
   bigCargoMineralPrice: 300
   bigCargoMoneyPrice: 5000
   desiredSmallCargoes: 12
-  desiredMediumCargoes: 24
+  desiredMediumCargoes: 12
   desiredBigCargoes: 0
 --- !u!114 &1194832205
 MonoBehaviour:

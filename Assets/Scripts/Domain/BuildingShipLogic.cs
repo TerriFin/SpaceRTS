@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Unity.Mathematics;
 using UnityEngine;
 
 public class BuildingShipLogic : MonoBehaviour {
@@ -33,9 +34,8 @@ public class BuildingShipLogic : MonoBehaviour {
     private IEnumerator ConstructBuilding() {
         yield return new WaitForSeconds(buildingTime);
 
-        GameObject createdBuilding = Instantiate(building);
+        GameObject createdBuilding = Instantiate(building, transform.position, Quaternion.identity);
         createdBuilding.tag = tag;
-        createdBuilding.transform.position = transform.position;
 
         Hitpoints hitpoints = GetComponent<Hitpoints>();
         createdBuilding.GetComponent<Hitpoints>().SetHpToPercentage(hitpoints.GetCurrentHpPercentage());

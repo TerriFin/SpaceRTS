@@ -270,7 +270,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97f59a7ce94acf1408e7017f7e6060f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TIMER: 345
+  TIMER: 365
   LOOPS: 0
 --- !u!1 &15105552
 GameObject:
@@ -4118,7 +4118,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 2100000, guid: 62ca1af8f0350af42b028b9ad76b72a2, type: 2}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.64705884}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 0
@@ -8082,6 +8082,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackFleetSize: 6
   defenceFleetSize: 2
+  attackFleetSizeRandomness: 0
+  defenceFleetSizeRandomness: 0
   shipRequiredHpPercentage: 0.7
   fleetAtDestinationDistance: 2
   fleetRegroupDistance: 5
@@ -10513,7 +10515,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97f59a7ce94acf1408e7017f7e6060f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TIMER: 550
+  TIMER: 580
   LOOPS: 0
 --- !u!1 &1086690894
 GameObject:
@@ -11713,7 +11715,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97f59a7ce94acf1408e7017f7e6060f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TIMER: 265
+  TIMER: 280
   LOOPS: 0
 --- !u!1 &1255648669
 GameObject:
@@ -14090,6 +14092,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -135
       objectReference: {fileID: 0}
+    - target: {fileID: 8399453566840234687, guid: 0b1d31bd64da4924ab8d92ef5df13fe9,
+        type: 3}
+      propertyPath: speedForceAmount
+      value: 220
+      objectReference: {fileID: 0}
+    - target: {fileID: 8399453566840234687, guid: 0b1d31bd64da4924ab8d92ef5df13fe9,
+        type: 3}
+      propertyPath: rotationForceAmount
+      value: 50
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0b1d31bd64da4924ab8d92ef5df13fe9, type: 3}
 --- !u!1 &1522047059 stripped
@@ -15705,7 +15717,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97f59a7ce94acf1408e7017f7e6060f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TIMER: 145
+  TIMER: 155
   LOOPS: 0
 --- !u!1 &1739746147
 GameObject:
@@ -16805,6 +16817,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackFleetSize: 6
   defenceFleetSize: 3
+  attackFleetSizeRandomness: 0
+  defenceFleetSizeRandomness: 0
   shipRequiredHpPercentage: 0.75
   fleetAtDestinationDistance: 2
   fleetRegroupDistance: 4
@@ -19370,6 +19384,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackFleetSize: 4
   defenceFleetSize: 2
+  attackFleetSizeRandomness: 0
+  defenceFleetSizeRandomness: 0
   shipRequiredHpPercentage: 0.66
   fleetAtDestinationDistance: 2
   fleetRegroupDistance: 5

@@ -11,11 +11,13 @@ public class SkirmishMapManager : MonoBehaviour {
     public List<string> FACTION_TEST_TAGS;
     public List<int> FACTION_TEST_DIFFICULTIES;
     public List<int> FACTION_TEST_STARTING_RESOURCES;
+    public List<int> FACTION_STARTING_SHIPS;
+    public List<int> FACTION_STARTING_EXPANSION;
 
     private MapGeneratorManager MapGenerator;
     public void InitializePlayers() {
         if (MapGenerator == null) MapGenerator = FindObjectOfType<MapGeneratorManager>();
-        if (MapGenerator.FactionDatas == null) MapGenerator.InitializeWithTestData(FACTION_TEST_TAGS, FACTION_TEST_DIFFICULTIES, FACTION_TEST_STARTING_RESOURCES);
+        if (MapGenerator.FactionDatas == null) MapGenerator.InitializeWithTestData(FACTION_TEST_TAGS, FACTION_TEST_DIFFICULTIES, FACTION_TEST_STARTING_RESOURCES, FACTION_STARTING_SHIPS, FACTION_STARTING_EXPANSION);
 
         // Set player faction and Ai:s
         FactionAiBase[] foundFactionAiBases = FACTION_MANAGER.GetComponentsInChildren<FactionAiBase>();

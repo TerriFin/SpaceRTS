@@ -371,6 +371,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackFleetSize: 6
   defenceFleetSize: 3
+  attackFleetSizeRandomness: 0
+  defenceFleetSizeRandomness: 0
   shipRequiredHpPercentage: 0.66
   fleetAtDestinationDistance: 2
   fleetRegroupDistance: 5
@@ -1096,6 +1098,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackFleetSize: 7
   defenceFleetSize: 3
+  attackFleetSizeRandomness: 0
+  defenceFleetSizeRandomness: 0
   shipRequiredHpPercentage: 0.75
   fleetAtDestinationDistance: 2
   fleetRegroupDistance: 4
@@ -6469,6 +6473,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -86.932
       objectReference: {fileID: 0}
+    - target: {fileID: 7167315983142673870, guid: 8c71595f26bd690489f0d7132a055188,
+        type: 3}
+      propertyPath: maxHp
+      value: 1850
+      objectReference: {fileID: 0}
+    - target: {fileID: 7167315983142673870, guid: 8c71595f26bd690489f0d7132a055188,
+        type: 3}
+      propertyPath: repairAmount
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8c71595f26bd690489f0d7132a055188, type: 3}
 --- !u!1 &431066858
@@ -7253,7 +7267,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 2100000, guid: 62ca1af8f0350af42b028b9ad76b72a2, type: 2}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.64705884}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 0
@@ -14573,9 +14587,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TAP_LENGTH: 0.2
-  MIN_ZOOM_LEVEL: 8
-  MAX_ZOOM_LEVEL: 30
-  SMOOTH_MAX_ZOOM_LEVEL: 24
   clickIndicator: {fileID: 4186882218027370042, guid: 5201bf13e074c304ca0f27756b1d3106,
     type: 3}
 --- !u!114 &1057549797
@@ -14950,6 +14961,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackFleetSize: 6
   defenceFleetSize: 3
+  attackFleetSizeRandomness: 0
+  defenceFleetSizeRandomness: 0
   shipRequiredHpPercentage: 0.7
   fleetAtDestinationDistance: 2
   fleetRegroupDistance: 5
@@ -16345,9 +16358,9 @@ MonoBehaviour:
   mediumCargoMoneyPrice: 2500
   bigCargoMineralPrice: 300
   bigCargoMoneyPrice: 5000
-  desiredSmallCargoes: 3
-  desiredMediumCargoes: 2
-  desiredBigCargoes: 0
+  desiredSmallCargoes: 99
+  desiredMediumCargoes: 99
+  desiredBigCargoes: 99
 --- !u!114 &1194832206
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23507,6 +23520,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -57.514
+      objectReference: {fileID: 0}
+    - target: {fileID: 7167315983142673870, guid: 8c71595f26bd690489f0d7132a055188,
+        type: 3}
+      propertyPath: maxHp
+      value: 1850
+      objectReference: {fileID: 0}
+    - target: {fileID: 7167315983142673870, guid: 8c71595f26bd690489f0d7132a055188,
+        type: 3}
+      propertyPath: repairAmount
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8c71595f26bd690489f0d7132a055188, type: 3}

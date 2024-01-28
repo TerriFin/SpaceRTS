@@ -563,6 +563,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 287521535666240672, guid: 3fd1e750b4dd7974ebb7e8e903344fb4,
         type: 3}
+      propertyPath: firingSpeed
+      value: 0.125
+      objectReference: {fileID: 0}
+    - target: {fileID: 287521535666240672, guid: 3fd1e750b4dd7974ebb7e8e903344fb4,
+        type: 3}
       propertyPath: facesForward
       value: 1
       objectReference: {fileID: 0}
@@ -655,6 +660,11 @@ PrefabInstance:
         type: 3}
       propertyPath: firingRange
       value: 2.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 287521535666240672, guid: 3fd1e750b4dd7974ebb7e8e903344fb4,
+        type: 3}
+      propertyPath: firingSpeed
+      value: 0.125
       objectReference: {fileID: 0}
     - target: {fileID: 287521535666240672, guid: 3fd1e750b4dd7974ebb7e8e903344fb4,
         type: 3}

@@ -6,6 +6,8 @@ public class FactionAiFleetManager : MonoBehaviour {
 
     public int attackFleetSize;
     public int defenceFleetSize;
+    public int attackFleetSizeRandomness;
+    public int defenceFleetSizeRandomness;
     public float shipRequiredHpPercentage;
     public float fleetAtDestinationDistance;
     public float fleetRegroupDistance;
@@ -21,6 +23,9 @@ public class FactionAiFleetManager : MonoBehaviour {
     private FactionAiBase factionAiBase;
 
     private void Start() {
+        attackFleetSize += Random.Range(-attackFleetSizeRandomness, attackFleetSizeRandomness + 1);
+        defenceFleetSize += Random.Range(-defenceFleetSizeRandomness, defenceFleetSizeRandomness + 1);
+
         factionAiBase = GetComponent<FactionAiBase>();
 
         DefenceFleets = new List<Fleet>();

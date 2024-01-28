@@ -86,16 +86,27 @@ public class SelectionManager {
     }
 
     public static void SelectAllOfType(Selectable.Types type) {
-        ClearSelection();
         if (type == Selectable.Types.cruiser) {
+            AiBase firstAi = null;
+            if (selected.Count > 0 && (selected[0].selectableType == Selectable.Types.cruiser || selected[0].selectableType == Selectable.Types.specialShip)) {
+                firstAi = selected[0].GetComponent<AiBase>();
+            }
+            ClearSelection();
             foreach (Selectable inView in onScreen) {
                 if (!selected.Contains(inView) && (Selectable.Types.cruiser == inView.selectableType || Selectable.Types.specialShip == inView.selectableType)) {
+                    if (firstAi != null) inView.GetComponent<AiBase>().SetCombatModuleActive(firstAi.combatModuleActive);
                     AddSelection(inView);
                 }
             }
         } else {
+            AiBase firstAi = null;
+            if (selected.Count > 0 && selected[0].selectableType == type) {
+                firstAi = selected[0].GetComponent<AiBase>();
+            }
+            ClearSelection();
             foreach (Selectable inView in onScreen) {
                 if (!selected.Contains(inView) && type == inView.selectableType) {
+                    if (firstAi != null) inView.GetComponent<AiBase>().SetCombatModuleActive(firstAi.combatModuleActive);
                     AddSelection(inView);
                 }
             }

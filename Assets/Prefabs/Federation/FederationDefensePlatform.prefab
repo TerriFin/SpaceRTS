@@ -114,7 +114,7 @@ MonoBehaviour:
   explosionSize: 4
   asteroid: 0
   DESTRUCTION_OPINION_PENALTY: 1
-  maxHp: 825
+  maxHp: 775
   repairDuration: 1
   repairAmount: 27
   doesNotHeal: 0
@@ -311,7 +311,7 @@ PrefabInstance:
     - target: {fileID: 2941497463947268463, guid: bba2bea16534e2849abe4eebb1df06fe,
         type: 3}
       propertyPath: firingRange
-      value: 4.5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6682568893617565179, guid: bba2bea16534e2849abe4eebb1df06fe,
         type: 3}
@@ -401,7 +401,7 @@ PrefabInstance:
     - target: {fileID: 2941497463947268463, guid: bba2bea16534e2849abe4eebb1df06fe,
         type: 3}
       propertyPath: firingRange
-      value: 4.5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6682568893617565179, guid: bba2bea16534e2849abe4eebb1df06fe,
         type: 3}
@@ -488,6 +488,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 9150967800181434690}
     m_Modifications:
+    - target: {fileID: 4362152314986530187, guid: 97a44bf5d6861844991251281a4768d4,
+        type: 3}
+      propertyPath: firingSpeed
+      value: 1.65
+      objectReference: {fileID: 0}
     - target: {fileID: 5253017064012511519, guid: 97a44bf5d6861844991251281a4768d4,
         type: 3}
       propertyPath: m_Name

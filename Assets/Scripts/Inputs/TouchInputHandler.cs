@@ -127,6 +127,6 @@ public class TouchInputHandler : MonoBehaviour {
     }
 
     private bool CheckTapIsInPlayArea(Touch tap) {
-        return EventSystem.current.currentSelectedGameObject == null && tap.position.x > Screen.width / 4.9f;
+        return EventSystem.current.currentSelectedGameObject == null && tap.position.x > Screen.width / 5.1f;
     }
 }

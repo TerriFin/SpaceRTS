@@ -1499,6 +1499,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackFleetSize: 6
   defenceFleetSize: 2
+  attackFleetSizeRandomness: 2
+  defenceFleetSizeRandomness: 0
   shipRequiredHpPercentage: 0.75
   fleetAtDestinationDistance: 2
   fleetRegroupDistance: 4
@@ -2494,7 +2496,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 2100000, guid: 62ca1af8f0350af42b028b9ad76b72a2, type: 2}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.64705884}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 0
@@ -4936,9 +4938,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TAP_LENGTH: 0.2
-  MIN_ZOOM_LEVEL: 8
-  MAX_ZOOM_LEVEL: 30
-  SMOOTH_MAX_ZOOM_LEVEL: 24
   clickIndicator: {fileID: 4186882218027370042, guid: 5201bf13e074c304ca0f27756b1d3106,
     type: 3}
 --- !u!114 &1057549797
@@ -5877,6 +5876,8 @@ MonoBehaviour:
   - Pirate
   FACTION_TEST_DIFFICULTIES: 030000000300000003000000
   FACTION_TEST_STARTING_RESOURCES: 020000000200000002000000
+  FACTION_STARTING_SHIPS: 
+  FACTION_STARTING_EXPANSION: 
 --- !u!114 &1441955534
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7002,6 +7003,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackFleetSize: 7
   defenceFleetSize: 2
+  attackFleetSizeRandomness: 2
+  defenceFleetSizeRandomness: 0
   shipRequiredHpPercentage: 0.95
   fleetAtDestinationDistance: 2
   fleetRegroupDistance: 5
@@ -7220,10 +7223,22 @@ MonoBehaviour:
     type: 3}
   FederationCommandCenter: {fileID: 2552140616847879870, guid: 1faf6fabf745f564fbedd448c5070083,
     type: 3}
+  FederationMine: {fileID: 0}
+  FederationDefenceStation: {fileID: 0}
+  FederationFrigateStation: {fileID: 0}
+  FederationPatrolStation: {fileID: 0}
   EmpireCommandCenter: {fileID: 4266360361290797461, guid: 24cda4fcc47df8e44bf351effe54f099,
     type: 3}
+  EmpireMine: {fileID: 0}
+  EmpireDefenceStation: {fileID: 0}
+  EmpireFrigateStation: {fileID: 0}
+  EmpirePatrolStation: {fileID: 0}
   PirateCommandCenter: {fileID: 7777482088811529733, guid: 2231fb2baad758547a8fbf6d6688edfb,
     type: 3}
+  PirateMine: {fileID: 0}
+  PirateDefenceStation: {fileID: 0}
+  PirateFrigateStation: {fileID: 0}
+  PiratePatrolStation: {fileID: 0}
   MAP_SIZE: 35
   CENTER_DEAD_ZONE: 0.15
   CENTER_ASTEROID_FIELD_CHANCE: 0.5
@@ -7239,7 +7254,6 @@ MonoBehaviour:
   MAP_ASTEROIDS_LAST_INDEX: 0
   MAP_PLANETS_LAST_INDEX: 0
   TOTAL_WAR_TIMER_LAST_INDEX: 0
-  STARTING_SHIPS_AMOUNT_INDEX: 1
   MIRRORED_SIDES_INDEX: 0
   WHERE_TO_RETURN_IN_MENU: 
 --- !u!4 &1651866177
@@ -7691,8 +7705,8 @@ MonoBehaviour:
   mediumCargoMoneyPrice: 2500
   bigCargoMineralPrice: 300
   bigCargoMoneyPrice: 5000
-  desiredSmallCargoes: 3
-  desiredMediumCargoes: 2
+  desiredSmallCargoes: 2
+  desiredMediumCargoes: 3
   desiredBigCargoes: 0
 --- !u!114 &1844774687
 MonoBehaviour:
@@ -7733,8 +7747,8 @@ MonoBehaviour:
   mediumCargoMoneyPrice: 2500
   bigCargoMineralPrice: 300
   bigCargoMoneyPrice: 5000
-  desiredSmallCargoes: 3
-  desiredMediumCargoes: 2
+  desiredSmallCargoes: 2
+  desiredMediumCargoes: 3
   desiredBigCargoes: 0
 --- !u!114 &1844774688
 MonoBehaviour:
@@ -7775,8 +7789,8 @@ MonoBehaviour:
   mediumCargoMoneyPrice: 2500
   bigCargoMineralPrice: 300
   bigCargoMoneyPrice: 5000
-  desiredSmallCargoes: 3
-  desiredMediumCargoes: 2
+  desiredSmallCargoes: 2
+  desiredMediumCargoes: 3
   desiredBigCargoes: 0
 --- !u!114 &1844774689
 MonoBehaviour:
@@ -8580,6 +8594,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackFleetSize: 6
   defenceFleetSize: 2
+  attackFleetSizeRandomness: 1
+  defenceFleetSizeRandomness: 0
   shipRequiredHpPercentage: 0.7
   fleetAtDestinationDistance: 2
   fleetRegroupDistance: 6
@@ -8653,7 +8669,7 @@ MonoBehaviour:
   MINE_ATTACK_PERCENTAGE: 0.33
   ATTACK_ENEMY_VULNERABLE_MINE_PERCENTAGE: 0.5
   COMMAND_CENTER_ATTACK_PERCENTAGE: 0.5
-  REQUIRED_ENEMY_AMOUNT_TO_DEFEND: 2.275
+  REQUIRED_ENEMY_AMOUNT_TO_DEFEND: 2.3
   SAFE_MINERAL_OVERFLOW_AMOUNT: 0
   SAFE_MONEY_OVERFLOW_AMOUNT: 0
 --- !u!114 &2022676778

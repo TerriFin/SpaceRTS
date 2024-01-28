@@ -289,8 +289,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   producedShip: {fileID: 8399453566840234678, guid: 0b1d31bd64da4924ab8d92ef5df13fe9,
     type: 3}
-  moneyCost: 30000
-  metalCost: 4000
+  moneyCost: 32500
+  metalCost: 4250
   productionTime: 180
   productionLimit: 1
   on: 1

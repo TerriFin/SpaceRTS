@@ -397,18 +397,28 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2941497463947268463, guid: bba2bea16534e2849abe4eebb1df06fe,
         type: 3}
+      propertyPath: kickBack
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 2941497463947268463, guid: bba2bea16534e2849abe4eebb1df06fe,
+        type: 3}
       propertyPath: firingRange
       value: 5.5
       objectReference: {fileID: 0}
     - target: {fileID: 2941497463947268463, guid: bba2bea16534e2849abe4eebb1df06fe,
         type: 3}
       propertyPath: firingSpeed
-      value: 0.69
+      value: 0.625
       objectReference: {fileID: 0}
     - target: {fileID: 2941497463947268463, guid: bba2bea16534e2849abe4eebb1df06fe,
         type: 3}
       propertyPath: facesForward
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2941497463947268463, guid: bba2bea16534e2849abe4eebb1df06fe,
+        type: 3}
+      propertyPath: turretInaccuracy
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 6682568893617565179, guid: bba2bea16534e2849abe4eebb1df06fe,
         type: 3}

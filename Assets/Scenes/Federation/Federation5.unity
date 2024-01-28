@@ -3666,6 +3666,75 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 248521338}
   m_CullTransparentMesh: 0
+--- !u!1001 &249065221
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1015899777007869490, guid: b4ff680f58e14d241956e2a81bb566ca,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 260
+      objectReference: {fileID: 0}
+    - target: {fileID: 1015899777007869490, guid: b4ff680f58e14d241956e2a81bb566ca,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.59
+      objectReference: {fileID: 0}
+    - target: {fileID: 1015899777007869490, guid: b4ff680f58e14d241956e2a81bb566ca,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -32.27
+      objectReference: {fileID: 0}
+    - target: {fileID: 1015899777007869490, guid: b4ff680f58e14d241956e2a81bb566ca,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1015899777007869490, guid: b4ff680f58e14d241956e2a81bb566ca,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1015899777007869490, guid: b4ff680f58e14d241956e2a81bb566ca,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1015899777007869490, guid: b4ff680f58e14d241956e2a81bb566ca,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1015899777007869490, guid: b4ff680f58e14d241956e2a81bb566ca,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1015899777007869490, guid: b4ff680f58e14d241956e2a81bb566ca,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1015899777007869490, guid: b4ff680f58e14d241956e2a81bb566ca,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1015899777007869490, guid: b4ff680f58e14d241956e2a81bb566ca,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1015899777007869501, guid: b4ff680f58e14d241956e2a81bb566ca,
+        type: 3}
+      propertyPath: m_Name
+      value: FederationFrigate (67)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b4ff680f58e14d241956e2a81bb566ca, type: 3}
 --- !u!1 &255209774
 GameObject:
   m_ObjectHideFlags: 0
@@ -6521,7 +6590,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 2100000, guid: 62ca1af8f0350af42b028b9ad76b72a2, type: 2}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.64705884}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 0
@@ -20289,6 +20358,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackFleetSize: 4
   defenceFleetSize: 2
+  attackFleetSizeRandomness: 0
+  defenceFleetSizeRandomness: 0
   shipRequiredHpPercentage: 0.7
   fleetAtDestinationDistance: 2
   fleetRegroupDistance: 5
@@ -21024,8 +21095,8 @@ MonoBehaviour:
   mediumCargoMoneyPrice: 2500
   bigCargoMineralPrice: 300
   bigCargoMoneyPrice: 5000
-  desiredSmallCargoes: 3
-  desiredMediumCargoes: 2
+  desiredSmallCargoes: 0
+  desiredMediumCargoes: 0
   desiredBigCargoes: 0
 --- !u!114 &1623301881
 MonoBehaviour:

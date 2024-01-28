@@ -72,9 +72,7 @@ public class ConstructionShipAi : MonoBehaviour, IAi {
     }
 
     private void StartBuilding() {
-        GameObject deployedBuildingShip = Instantiate(deployedBuildingShipPrefab);
-        deployedBuildingShip.transform.rotation = transform.rotation;
-        deployedBuildingShip.transform.position = transform.position;
+        GameObject deployedBuildingShip = Instantiate(deployedBuildingShipPrefab, transform.position, transform.rotation);
         deployedBuildingShip.tag = tag;
         deployedBuildingShip.GetComponent<Hitpoints>().SetHpToPercentage(GetComponent<Hitpoints>().GetCurrentHpPercentage());
 

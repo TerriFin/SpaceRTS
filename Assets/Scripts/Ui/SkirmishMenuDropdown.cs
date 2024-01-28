@@ -8,11 +8,12 @@ public class SkirmishMenuDropdown : MonoBehaviour {
 
     public bool FACTION_TYPE_DROPDOWN;
     public bool FACTION_STARTING_RESOURCES_DROPDOWN;
+    public bool FACTION_STARTING_SHIPS_DROPDOWN;
+    public bool FACTION_STARTING_EXPANSION_DROPDOWN;
     public bool MAP_GENERATION_SIZE_DROPDOWN;
     public bool MAP_GENERATION_ASTEROIDS_DROPDOWN;
     public bool MAP_GENERATION_PLANETS_DROPDOWN;
     public bool MAP_GENERATION_TOTAL_WAR_TIMER_DROPDOWN;
-    public bool MAP_GENERATION_STARTING_SHIPS_AMOUNT_DROPDOWN;
     public bool MAP_GENERATION_MIRRORED_DROPDOWN;
 
     public List<TMP_Dropdown> OTHER_DROPDOWNS;
@@ -27,17 +28,18 @@ public class SkirmishMenuDropdown : MonoBehaviour {
         TMP_Dropdown dropdown = GetComponent<TMP_Dropdown>();
         if (FACTION_TYPE_DROPDOWN) dropdown.value = MAP_MANAGER.FactionDatas[gameObject.transform.parent.tag].statusIndex;
         else if (FACTION_STARTING_RESOURCES_DROPDOWN) dropdown.value = MAP_MANAGER.FactionDatas[gameObject.transform.parent.tag].startingResourcesIndex;
+        else if (FACTION_STARTING_SHIPS_DROPDOWN) dropdown.value = MAP_MANAGER.FactionDatas[gameObject.transform.parent.tag].startingShipsIndex;
+        else if (FACTION_STARTING_EXPANSION_DROPDOWN) dropdown.value = MAP_MANAGER.FactionDatas[gameObject.transform.parent.tag].startingExpansionIndex;
         else if (MAP_GENERATION_SIZE_DROPDOWN) dropdown.value = MAP_MANAGER.MAP_SIZE_LAST_INDEX;
         else if (MAP_GENERATION_ASTEROIDS_DROPDOWN) dropdown.value = MAP_MANAGER.MAP_ASTEROIDS_LAST_INDEX;
         else if (MAP_GENERATION_PLANETS_DROPDOWN) dropdown.value = MAP_MANAGER.MAP_PLANETS_LAST_INDEX;
         else if (MAP_GENERATION_TOTAL_WAR_TIMER_DROPDOWN) dropdown.value = MAP_MANAGER.TOTAL_WAR_TIMER_LAST_INDEX;
-        else if (MAP_GENERATION_STARTING_SHIPS_AMOUNT_DROPDOWN) dropdown.value = MAP_MANAGER.STARTING_SHIPS_AMOUNT_INDEX;
         else if (MAP_GENERATION_MIRRORED_DROPDOWN) dropdown.value = MAP_MANAGER.MIRRORED_SIDES_INDEX;
     }
 
     public void UpdateFactionStatus(int index) {
-        MAP_MANAGER.FactionDatas[gameObject.transform.parent.tag] = new MapGeneratorManager.FactionData(index, MAP_MANAGER.FactionDatas[gameObject.transform.parent.tag].startingResourcesIndex);
-        print(MAP_MANAGER.FactionDatas[gameObject.transform.parent.tag].statusIndex + ", " + MAP_MANAGER.FactionDatas[gameObject.transform.parent.tag].startingResourcesIndex);
+        MAP_MANAGER.FactionDatas[gameObject.transform.parent.tag] = new MapGeneratorManager.FactionData(index, MAP_MANAGER.FactionDatas[gameObject.transform.parent.tag].startingResourcesIndex, MAP_MANAGER.FactionDatas[gameObject.transform.parent.tag].startingShipsIndex, MAP_MANAGER.FactionDatas[gameObject.transform.parent.tag].startingExpansionIndex);
+        print(MAP_MANAGER.FactionDatas[gameObject.transform.parent.tag].statusIndex);
     }
 
     public void ResetPlayerStatus() {
@@ -45,7 +47,7 @@ public class SkirmishMenuDropdown : MonoBehaviour {
             foreach (TMP_Dropdown dropdown in OTHER_DROPDOWNS) {
                 if (MAP_MANAGER.FactionDatas[dropdown.gameObject.transform.parent.tag].statusIndex == 1) {
                     dropdown.value = 3;
-                    MAP_MANAGER.FactionDatas[dropdown.gameObject.transform.parent.tag] = new MapGeneratorManager.FactionData(3, MAP_MANAGER.FactionDatas[gameObject.transform.parent.tag].startingResourcesIndex);
+                    MAP_MANAGER.FactionDatas[dropdown.gameObject.transform.parent.tag] = new MapGeneratorManager.FactionData(3, MAP_MANAGER.FactionDatas[gameObject.transform.parent.tag].startingResourcesIndex, MAP_MANAGER.FactionDatas[gameObject.transform.parent.tag].startingShipsIndex, MAP_MANAGER.FactionDatas[gameObject.transform.parent.tag].startingExpansionIndex);
                 }
             }
         }
@@ -61,14 +63,24 @@ public class SkirmishMenuDropdown : MonoBehaviour {
             if (OTHER_DROPDOWNS.Count - disabledOtherFactions.Count <= 1) {
                 TMP_Dropdown randomDropdown = disabledOtherFactions[Random.Range(0, disabledOtherFactions.Count)];
                 randomDropdown.value = 3;
-                MAP_MANAGER.FactionDatas[randomDropdown.gameObject.transform.parent.tag] = new MapGeneratorManager.FactionData(3, MAP_MANAGER.FactionDatas[gameObject.transform.parent.tag].startingResourcesIndex);
+                MAP_MANAGER.FactionDatas[randomDropdown.gameObject.transform.parent.tag] = new MapGeneratorManager.FactionData(3, MAP_MANAGER.FactionDatas[gameObject.transform.parent.tag].startingResourcesIndex, MAP_MANAGER.FactionDatas[gameObject.transform.parent.tag].startingShipsIndex, MAP_MANAGER.FactionDatas[gameObject.transform.parent.tag].startingExpansionIndex);
             }
         }
     }
 
     public void UpdateFactionStartingResources(int index) {
-        MAP_MANAGER.FactionDatas[gameObject.transform.parent.tag] = new MapGeneratorManager.FactionData(MAP_MANAGER.FactionDatas[gameObject.transform.parent.tag].statusIndex, index);
-        print(MAP_MANAGER.FactionDatas[gameObject.transform.parent.tag].statusIndex + ", " + MAP_MANAGER.FactionDatas[gameObject.transform.parent.tag].startingResourcesIndex);
+        MAP_MANAGER.FactionDatas[gameObject.transform.parent.tag] = new MapGeneratorManager.FactionData(MAP_MANAGER.FactionDatas[gameObject.transform.parent.tag].statusIndex, index, MAP_MANAGER.FactionDatas[gameObject.transform.parent.tag].startingShipsIndex, MAP_MANAGER.FactionDatas[gameObject.transform.parent.tag].startingExpansionIndex);
+        print(MAP_MANAGER.FactionDatas[gameObject.transform.parent.tag].startingResourcesIndex);
+    }
+
+    public void UpdateFactionStartingShips(int index) {
+        MAP_MANAGER.FactionDatas[gameObject.transform.parent.tag] = new MapGeneratorManager.FactionData(MAP_MANAGER.FactionDatas[gameObject.transform.parent.tag].statusIndex, MAP_MANAGER.FactionDatas[gameObject.transform.parent.tag].startingResourcesIndex, index, MAP_MANAGER.FactionDatas[gameObject.transform.parent.tag].startingExpansionIndex);
+        print(MAP_MANAGER.FactionDatas[gameObject.transform.parent.tag].startingShipsIndex);
+    }
+
+    public void UpdateFactionStartingExpansion(int index) {
+        MAP_MANAGER.FactionDatas[gameObject.transform.parent.tag] = new MapGeneratorManager.FactionData(MAP_MANAGER.FactionDatas[gameObject.transform.parent.tag].statusIndex, MAP_MANAGER.FactionDatas[gameObject.transform.parent.tag].startingResourcesIndex, MAP_MANAGER.FactionDatas[gameObject.transform.parent.tag].startingShipsIndex, index);
+        print(MAP_MANAGER.FactionDatas[gameObject.transform.parent.tag].startingExpansionIndex);
     }
 
     public void UpdateMapSize(int index) {
@@ -189,11 +201,6 @@ public class SkirmishMenuDropdown : MonoBehaviour {
 
         MAP_MANAGER.TOTAL_WAR_TIMER_LAST_INDEX = index;
         print(MAP_MANAGER.TOTAL_WAR_TIMER);
-    }
-
-    public void UpdateStartingShipsAmounts(int index) {
-        MAP_MANAGER.STARTING_SHIPS_AMOUNT_INDEX = index;
-        print(MAP_MANAGER.STARTING_SHIPS_AMOUNT_INDEX);
     }
 
     public void UpdateMirroredIndex(int index) {

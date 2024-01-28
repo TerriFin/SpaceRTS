@@ -90,6 +90,6 @@ public class ComputerInputHandler : MonoBehaviour {
     }
 
     private bool CheckTapIsInPlayArea(Vector3 tap) {
-        return EventSystem.current.currentSelectedGameObject == null && tap.x > Screen.width / 4.9f;
+        return EventSystem.current.currentSelectedGameObject == null && tap.x > Screen.width / 5.1f;
     }
 }

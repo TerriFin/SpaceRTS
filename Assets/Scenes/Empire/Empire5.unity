@@ -268,6 +268,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -8877728215770860851, guid: 5f91b6ccf814db7448fb380de0c9070a,
+        type: 3}
+      propertyPath: aiActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7594508181546237408, guid: 5f91b6ccf814db7448fb380de0c9070a,
         type: 3}
       propertyPath: m_RootOrder
@@ -1518,9 +1523,9 @@ MonoBehaviour:
   mediumCargoMoneyPrice: 2500
   bigCargoMineralPrice: 300
   bigCargoMoneyPrice: 5000
-  desiredSmallCargoes: 3
-  desiredMediumCargoes: 2
-  desiredBigCargoes: 0
+  desiredSmallCargoes: 1
+  desiredMediumCargoes: 3
+  desiredBigCargoes: 1
 --- !u!114 &119798317
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3438,6 +3443,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1818960883288239508, guid: 222be1573d7cc9c4b817cbc9a71dc6b8,
+        type: 3}
+      propertyPath: aiActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8399453566840234678, guid: 222be1573d7cc9c4b817cbc9a71dc6b8,
         type: 3}
       propertyPath: m_Name
@@ -5793,7 +5803,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 2100000, guid: 62ca1af8f0350af42b028b9ad76b72a2, type: 2}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.64705884}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 0
@@ -8696,6 +8706,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -8877728215770860851, guid: 5f91b6ccf814db7448fb380de0c9070a,
+        type: 3}
+      propertyPath: aiActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7594508181546237408, guid: 5f91b6ccf814db7448fb380de0c9070a,
         type: 3}
       propertyPath: m_RootOrder
@@ -11026,9 +11041,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TAP_LENGTH: 0.2
-  MIN_ZOOM_LEVEL: 8
-  MAX_ZOOM_LEVEL: 30
-  SMOOTH_MAX_ZOOM_LEVEL: 24
   clickIndicator: {fileID: 4186882218027370042, guid: 5201bf13e074c304ca0f27756b1d3106,
     type: 3}
 --- !u!114 &1057549797
@@ -14907,6 +14919,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1818960883288239508, guid: 222be1573d7cc9c4b817cbc9a71dc6b8,
+        type: 3}
+      propertyPath: aiActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8399453566840234678, guid: 222be1573d7cc9c4b817cbc9a71dc6b8,
         type: 3}
       propertyPath: m_Name
@@ -16172,6 +16189,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -8877728215770860851, guid: 5f91b6ccf814db7448fb380de0c9070a,
+        type: 3}
+      propertyPath: aiActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7594508181546237408, guid: 5f91b6ccf814db7448fb380de0c9070a,
         type: 3}
       propertyPath: m_RootOrder
@@ -19326,6 +19348,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -8877728215770860851, guid: 5f91b6ccf814db7448fb380de0c9070a,
+        type: 3}
+      propertyPath: aiActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7594508181546237408, guid: 5f91b6ccf814db7448fb380de0c9070a,
         type: 3}
       propertyPath: m_RootOrder

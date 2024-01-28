@@ -65,10 +65,8 @@ public class Production : MonoBehaviour {
 
         yield return new WaitForSeconds(productionTime);
 
-        GameObject ship = Instantiate(producedShip);
+        GameObject ship = Instantiate(producedShip, transform.position, transform.rotation);
         ship.tag = tag;
-        ship.transform.position = transform.position;
-        ship.transform.rotation = transform.rotation;
         ship.GetComponent<IShipMovement>().SetOrigin(gameObject);
 
         if (Waypoint != null && Waypoint.WaypointSet) {

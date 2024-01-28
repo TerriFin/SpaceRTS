@@ -56,9 +56,8 @@ public class CommandCenterCargoProduction : MonoBehaviour {
         CargoShipManager.SmallCargoesBeingBuilt[tag].Remove(this);
         CargoShipManager.MediumCargoesBeingBuilt[tag].Remove(this);
         CargoShipManager.BigCargoesBeingBuilt[tag].Remove(this);
-        GameObject ship = Instantiate(producedShip);
+        GameObject ship = Instantiate(producedShip, transform.position, Quaternion.identity);
         ship.tag = tag;
-        ship.transform.position = transform.position;
         ship.GetComponent<ShipMovement>().ORIGIN = gameObject;
         producing = false;
     }
